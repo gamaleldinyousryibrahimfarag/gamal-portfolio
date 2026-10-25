@@ -123,12 +123,18 @@ window.PORTFOLIO_PROJECTS = [
     ]
   },
   {
-    id: 'aspire', number: '10', name: 'Aspire Zone', subtitle: 'Phase 2 · West Zone', sector: 'Sports Infrastructure', region: 'Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'sports', featured: false,
-    label: 'Sports & public realm', role: 'Planning Engineer', scale: 'Two athletics tracks',
-    summary: 'Design-build programme logic covering sports facilities, civil works, utilities and external infrastructure.',
-    overview: 'Structured scheduling logic for athletic tracks, administration facilities, roads, parking, utilities, lighting, irrigation, and landscaping. Coordinated planning dependencies involving KAHRAMAA power supply.',
-    deliverables: ['Design-build baseline logic', 'Integrated civil / MEP / external works sequences', 'Utility and power-supply interface tracking', 'Cross-discipline milestone planning'],
-    methods: ['Design-build', 'Utilities coordination', 'Milestones']
+    id: 'aspire', number: '10', name: 'Aspire Zone', subtitle: 'Phase 2 · West Zone · athletics & sports realm', sector: 'Sports Infrastructure', region: 'Aspire Zone, Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'sports', featured: true,
+    label: 'Sports & public realm', role: 'Planning Engineer', scale: 'Design-build programme · athletics tracks & sports facilities',
+    summary: 'Design-build P6 programme for Aspire Zone West Zone — athletics tracks, sports buildings, parking, utilities and external works.',
+    overview: 'Structured Primavera P6 scheduling for Phase 2 West Zone sports infrastructure: athletics tracks, podium and sports-related buildings, roads, parking, utilities, lighting, irrigation and landscaping. Integrated civil, MEP and external-works sequences and KAHRAMAA power-supply dependencies with engineering, procurement, construction and closeout reporting.',
+    deliverables: ['Design-build baseline & tender programme logic', 'Athletics track & sports facility sequencing', 'Civil / MEP / external works integration', 'Utility and power-supply interface tracking', 'Milestone dashboards & closeout planning'],
+    methods: ['Design-build', 'Utilities coordination', 'Sports infrastructure'],
+    coverImage: 'assets/project-images/aspire-zone-01.jpg',
+    gallery: [
+      {src: 'assets/project-images/aspire-zone-01.jpg', caption: 'Aspire Zone — sports building and athletics track context at sunset.'},
+      {src: 'assets/project-images/aspire-zone-02.jpg', caption: 'West Zone sports facilities — podium building, parking and landscaped realm.'},
+      {src: 'assets/project-images/aspire-zone-03.jpg', caption: 'Aerial view — athletics track, grandstand and sports complex interface.'}
+    ]
   },
   {
     id: 'majles-mosque', number: '11', name: 'Majles, Masjed', subtitle: '& Imam Flat', sector: 'Community Buildings', region: 'Rawdat Aba-Herran, Qatar', categories: ['Buildings', 'Public Works'], kind: 'community', featured: false,
@@ -180,20 +186,31 @@ window.PORTFOLIO_PROJECTS = [
     methods: ['CPM', 'Infrastructure', 'Schedule analysis']
   },
   {
-    id: 'qrcs', number: '16', name: 'FWHC Extension', subtitle: 'Qatar Red Crescent Society', sector: 'Healthcare', region: 'Qatar', categories: ['Buildings', 'Public Works'], kind: 'health', featured: false,
-    label: 'Healthcare extension', role: 'Planning Engineer', scale: null,
-    summary: 'Baseline planning and procurement milestone management for a healthcare facility extension.',
-    overview: 'Prepared the baseline programme and work breakdown structure for a health-centre extension, coordinating civil and structural activity sequences, monitoring planned progress and tracking long-lead structural-steel procurement.',
-    deliverables: ['Baseline programme & WBS', 'Civil / structural sequencing', 'Progress monitoring', 'Structural-steel procurement milestones'],
-    methods: ['WBS', 'Procurement', 'Progress']
+    id: 'qrcs', number: '16', name: 'Fereej Abdulaziz Workers Health Center', subtitle: 'FWHC extension · Qatar Red Crescent Society', sector: 'Healthcare', region: 'Fereej Abdulaziz, Qatar', categories: ['Buildings', 'Public Works'], kind: 'health', featured: true,
+    label: 'Healthcare extension · FWHC', role: 'Planning Engineer', scale: '9-month construction programme',
+    summary: 'Planning and controls for the FWHC extension of Fereej Abdulaziz Workers Health Center — civil, structural, MEP and healthcare fit-out delivered in nine months.',
+    overview: 'Prepared and updated the Primavera P6 baseline and WBS for the Qatar Red Crescent Society (FWHC) extension at Fereej Abdulaziz Workers Health Center. Coordinated civil and structural sequences, long-lead structural steel procurement, MEP and medical support areas, and closeout within a 9-month delivery programme.',
+    deliverables: ['9-month P6 baseline & WBS', 'Civil / structural sequencing', 'Structural-steel procurement milestones', 'MEP & healthcare zone coordination', 'Monthly progress & closeout reporting'],
+    methods: ['WBS', 'Procurement', 'Healthcare delivery'],
+    coverImage: 'assets/project-images/fwhc-fereej-abdulaziz-extension.png',
+    gallery: [
+      {src: 'assets/project-images/fwhc-fereej-abdulaziz-extension.png', caption: 'Fereej Abdulaziz Workers Health Center — FWHC extension building on site.'}
+    ]
   },
   {
-    id: 'residential', number: '17', name: 'Residential & Commercial', subtitle: 'Multi-storey buildings', sector: 'Building Construction', region: 'Qatar', categories: ['Buildings'], kind: 'residential', featured: false,
-    label: 'Multi-storey construction', role: 'Planning Engineer', scale: null,
-    summary: 'Integrated civil, structural, MEP and finishes sequencing with labour and materials planning.',
-    overview: 'Developed construction scheduling logic from excavation and civil works through MEP installation and architectural finishes. Aligned manpower requirements and materials procurement with programme activity sequencing.',
-    deliverables: ['Excavation & civil works sequencing', 'MEP and finishes coordination', 'Manpower planning', 'Material procurement integration'],
-    methods: ['Construction', 'Resource planning', 'MEP coordination']
+    id: 'residential', number: '17', name: 'Mixed-Use Retail & Residences', subtitle: 'Ground-floor retail · upper residential levels', sector: 'Mixed-Use Development', region: 'Qatar', categories: ['Buildings'], kind: 'residential', featured: false,
+    label: 'Multi-storey mixed-use', role: 'Planning Engineer', scale: '36-month programme (~3 years) · 4-storey building',
+    summary: 'Primavera P6 planning for a contemporary mixed-use building — street-level retail with multi-storey residences, terraces and rooftop landscaping.',
+    overview: 'Developed and maintained a 36-month (~3-year) construction programme from substructure and frame through MEP, façade, retail fit-out and residential finishes. Coordinated civil, structural and building services sequences, manpower histograms and material procurement for ground-floor commercial units and upper residential levels including landscaped roof terraces.',
+    deliverables: ['36-month P6 construction baseline', 'Retail vs residential work-package logic', 'Structural frame & envelope sequencing', 'MEP and finishes coordination', 'Monthly progress & S-curve reporting'],
+    methods: ['Mixed-use sequencing', 'Resource planning', 'MEP coordination'],
+    coverImage: 'assets/project-images/mixed-use-retail-residential-01.jpg',
+    gallery: [
+      {src: 'assets/project-images/mixed-use-retail-residential-01.jpg', caption: 'Mixed-use frontage — ground-floor retail with residential levels above.'},
+      {src: 'assets/project-images/mixed-use-retail-residential-02.jpg', caption: 'Street elevation at dusk — boutique retail and residential façade.'},
+      {src: 'assets/project-images/mixed-use-retail-residential-03.jpg', caption: 'Completed building — bronze-framed windows and landscaped perimeter.'},
+      {src: 'assets/project-images/mixed-use-retail-residential-04.jpg', caption: 'Corner view — rooftop terraces and street-level commercial units.'}
+    ]
   }
   ,{
     id: 'private-villa', number: '18', name: 'Private Residential Villa', subtitle: 'Construction baseline & S-curve', sector: 'Residential Construction', region: 'Qatar', categories: ['Buildings'], kind: 'residential', featured: false,

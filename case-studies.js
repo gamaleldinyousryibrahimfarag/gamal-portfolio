@@ -141,12 +141,31 @@ window.PORTFOLIO_CASES = {
     ]
   },
   "aspire": {
-    "eyebrow": "PRE-CONTRACT / TENDER PROGRAMME",
-    "title": "Design-to-handover baseline architecture",
-    "description": "A simplified planning comparison informed by two Aspire-related documents: a West Zone baseline (Buildings A7/A1 and external works), and an athletics-track design-build tender scope. These should not be read as the same contractual programme.",
-    "privacy": "Illustrative relative timelines. Tender drawings, technical appendices, pricing and proprietary documents are not included.",
-    "source": "West Zone baseline (A7/A1 & external works) + athletics tender scope • separate source examples",
+    "eyebrow": "ASPIRE ZONE / SPORTS INFRASTRUCTURE PROGRAMME",
+    "title": "West Zone design-build — athletics & sports realm",
+    "description": "Portfolio illustration of planning controls for Aspire Zone Phase 2 West Zone: design-build programme logic for athletics tracks, sports buildings and external works, with engineering-procurement-construction-closeout dashboards. Informed by West Zone baseline and athletics tender scope examples (not a single merged contract programme).",
+    "privacy": "Portfolio-approved sports-complex visuals. Tender pricing, proprietary drawings and authority submissions are not published.",
+    "source": "Aspire Zone West Zone baseline + athletics design-build programme examples",
     "charts": [
+      {
+        "type": "line",
+        "name": "Monthly cumulative S-curve (illustrative)",
+        "labels": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],
+        "series": [
+          {"name": "Planned", "values": [1,2,4,6,9,13,18,24,31,39,48,57,66,74,81,87,92,95,97,98,99,99.5,99.8,100]},
+          {"name": "Forecast", "values": [0.8,1.8,3.5,5.8,8.8,12.5,17.5,23,30,38,47,56,65,73,80,86,91,94,96.5,97.8,98.5,99,99.5,99.5]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (snapshot)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [92, 68, 54, 12, 56.5]},
+          {"name": "Forecast", "values": [90, 65, 52, 10, 54.3]}
+        ],
+        "max": 100
+      },
       {
         "type": "gantt",
         "name": "Programme workstreams",
@@ -159,38 +178,31 @@ window.PORTFOLIO_CASES = {
           "Closeout"
         ],
         "ranges": [
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            5
-          ],
-          [
-            2,
-            9
-          ],
-          [
-            5,
-            10
-          ],
-          [
-            3,
-            11
-          ],
-          [
-            11,
-            12
-          ]
+          [0, 1],
+          [1, 5],
+          [2, 9],
+          [5, 10],
+          [3, 11],
+          [11, 12]
         ]
+      },
+      {
+        "type": "bars",
+        "name": "Sports scope packages",
+        "labels": ["Athletics tracks", "Sports buildings", "External works", "Utilities / power", "Landscaping"],
+        "series": [
+          {"name": "Planned", "values": [78, 62, 55, 48, 40]},
+          {"name": "Forecast", "values": [75, 60, 53, 46, 38]}
+        ],
+        "max": 100
       }
     ],
     "insights": [
-      "Planned design-and-build tender activities by WBS",
-      "Integrated authority and utilities interfaces with sports infrastructure scope",
-      "Coordinated tender phases across design, civil, MEP and external works",
-      "Linked procurement and construction closeout logic to handover milestones"
+      "Structured design-build P6 logic for athletics tracks and West Zone sports facilities",
+      "Integrated civil, MEP, external works and KAHRAMAA power-supply interfaces",
+      "Coordinated engineering, procurement, construction and closeout milestones",
+      "Aligned parking, roads, lighting and irrigation with track and building handover",
+      "Used milestone dashboards to support tender and delivery-phase reviews"
     ]
   },
   "diriyah": {
@@ -1153,6 +1165,98 @@ window.PORTFOLIO_CASES = {
       "Used weekly look-aheads to protect live-building MEP and lift interfaces",
       "Reported engineering, procurement, construction and closeout on executive dashboards",
       "Completed snag, testing and handover documentation for private occupation on schedule"
+    ]
+  },
+  "residential": {
+    "eyebrow": "MIXED-USE / RETAIL & RESIDENTIAL PROGRAMME",
+    "title": "Mixed-use building — 36-month construction programme (~3 years)",
+    "description": "Portfolio illustration of planning controls for a multi-storey mixed-use development with ground-floor retail and upper residential levels: monthly S-curve, engineering-procurement-construction-closeout dashboard, and relative phasing over a three-year build.",
+    "privacy": "Portfolio-approved architectural visuals. No contractual dates, tenant names or commercial values are published.",
+    "source": "P6 mixed-use construction programme | 4-storey retail & residential | 36-month delivery",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Monthly cumulative S-curve",
+        "labels": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36"],
+        "series": [
+          {"name": "Planned", "values": [0.4,0.7,1.1,1.6,2.4,3.5,5.2,7.6,11.0,15.5,21.5,29.0,38.0,48.0,58.0,67.5,75.5,82.0,87.5,91.5,94.5,96.5,97.8,98.6,99.1,99.4,99.6,99.8,99.9,99.9,100,100,100,100,100,100]},
+          {"name": "Actual", "values": [0.3,0.6,1.0,1.4,2.2,3.2,4.9,7.2,10.5,14.8,20.8,28.0,37.0,47.0,57.0,66.5,74.8,81.2,86.8,90.8,93.8,96.0,97.5,98.4,98.9,99.2,99.5,99.7,99.8,99.9,100,100,100,100,100,100]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (at completion)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 100, 100, 100, 100]},
+          {"name": "Actual", "values": [100, 100, 99, 98, 99.3]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "bars",
+        "name": "Building zone progress (final)",
+        "labels": ["Substructure & frame", "Retail fit-out", "Residential floors", "Roof terraces", "Handover"],
+        "series": [
+          {"name": "Planned", "values": [100, 100, 100, 100, 100]},
+          {"name": "Actual", "values": [100, 100, 99, 100, 98]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Programme phases (relative)",
+        "labels": ["Engineering", "Procurement", "Construction", "Closeout"],
+        "ranges": [[0, 5], [3, 10], [5, 14], [12, 16]]
+      }
+    ],
+    "insights": [
+      "Delivered a 36-month (~3-year) integrated P6 baseline for retail podium and residential upper levels",
+      "Sequenced structural frame, envelope and MEP before ground-floor retail and residential finishes",
+      "Aligned manpower and material procurement with climb schedules on residential floors",
+      "Tracked monthly S-curves and workstream dashboards through retail handover and residential completion",
+      "Closed out landscaped roof terraces, snag lists and occupancy documentation"
+    ]
+  },
+  "qrcs": {
+    "eyebrow": "HEALTHCARE / FWHC EXTENSION PROGRAMME",
+    "title": "Fereej Abdulaziz Workers Health Center — 9-month programme",
+    "description": "Portfolio illustration of planning controls for the Qatar Red Crescent Society (FWHC) extension at Fereej Abdulaziz Workers Health Center: monthly S-curve, engineering-procurement-construction-closeout dashboard, and relative construction phasing over nine months.",
+    "privacy": "Owner-supplied site photograph for portfolio use. No contractual dates, patient areas detail or commercial values are published.",
+    "source": "FWHC extension P6 programme | Fereej Abdulaziz | 9-month delivery",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Monthly cumulative S-curve",
+        "labels": ["01","02","03","04","05","06","07","08","09"],
+        "series": [
+          {"name": "Planned", "values": [2,6,12,20,32,46,62,80,100]},
+          {"name": "Actual", "values": [1,5,11,19,31,45,63,82,100]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (at completion)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 100, 100, 100, 100]},
+          {"name": "Actual", "values": [100, 100, 99, 98, 99.3]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Programme phases (relative)",
+        "labels": ["Engineering", "Procurement", "Construction", "Closeout"],
+        "ranges": [[0, 2], [1, 4], [2, 8], [7, 9]]
+      }
+    ],
+    "insights": [
+      "Delivered the FWHC extension on a 9-month integrated P6 baseline and WBS",
+      "Tracked structural steel and MEP procurement against civil and structural work fronts",
+      "Coordinated healthcare support zones with contractor sequencing and inspections",
+      "Maintained monthly S-curves and workstream dashboards through handover",
+      "Closed out snag lists and commissioning documentation for QRCS acceptance"
     ]
   },
   "tower-404": {
