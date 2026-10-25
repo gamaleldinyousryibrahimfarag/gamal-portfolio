@@ -396,6 +396,600 @@ window.PORTFOLIO_CASES = {
       "Produced a weekly planned S-curve from the programme / cost profile"
     ]
   },
+  "shk-mohammed-palace": {
+    "eyebrow": "OWNER REPRESENTATIVE / PALACE PROGRAMME CONTROLS",
+    "title": "Planned versus actual progress - 28-month programme (~2 yr 4 mo)",
+    "description": "Portfolio illustration of planning controls for SHK Mohammed Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
+    "privacy": "Illustrative portfolio metrics derived from planning methods applied on the project. No confidential BOQ, subcontractor pricing or client reporting packs are published.",
+    "source": "P6 palace master programme | 1,120+ activities | 28-month programme (~2 yr 4 mo)",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Monthly cumulative S-curve",
+        "labels": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28"
+],
+        "series": [
+          {"name": "Planned", "values": [
+          0.4,
+          0.6,
+          0.9,
+          1.4,
+          2.1,
+          3.1,
+          4.7,
+          7.1,
+          10.5,
+          15.3,
+          21.7,
+          29.8,
+          39.4,
+          50.0,
+          60.6,
+          70.2,
+          78.3,
+          84.7,
+          89.5,
+          92.9,
+          95.3,
+          96.9,
+          97.9,
+          98.6,
+          99.1,
+          99.4,
+          99.6,
+          100.0
+]},
+          {"name": "Actual", "values": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.2,
+          1.4,
+          3.8,
+          6.1,
+          10.0,
+          14.3,
+          21.1,
+          29.2,
+          38.8,
+          49.1,
+          59.0,
+          69.3,
+          76.4,
+          84.2,
+          88.3,
+          92.4,
+          94.6,
+          96.2,
+          96.2,
+          97.0,
+          99.0,
+          99.2,
+          99.1,
+          99.6
+]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (latest period)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 62, 40, 12, 53.5]},
+          {"name": "Actual", "values": [97, 63, 45, 12, 54.25]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Programme phases (relative)",
+        "labels": ["Engineering", "Procurement", "Construction", "Closeout"],
+        "ranges": [
+          [
+                    0,
+                    4
+          ],
+          [
+                    2,
+                    8
+          ],
+          [
+                    4,
+                    11
+          ],
+          [
+                    10,
+                    12
+          ]
+]
+      }
+    ],
+    "insights": [
+      "Integrated a 28-month resource-loaded P6 baseline across civil, fit-out and MEP work fronts",
+      "Maintained monthly planned-versus-actual S-curves for owner executive review",
+      "Closed engineering deliverables on schedule while accelerating procurement of long-lead palace finishes",
+      "Recovered three weeks of float on construction sequencing through look-ahead workshops"
+]
+  },
+  "shk-tamim-palace": {
+    "eyebrow": "OWNER REPRESENTATIVE / PALACE PROGRAMME CONTROLS",
+    "title": "Planned versus actual progress - 31-month programme (~2 yr 7 mo)",
+    "description": "Portfolio illustration of planning controls for SHK Tamim Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
+    "privacy": "Illustrative portfolio metrics derived from planning methods applied on the project. No confidential BOQ, subcontractor pricing or client reporting packs are published.",
+    "source": "P6 palace master programme | 980+ activities | 31-month programme (~2 yr 7 mo)",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Monthly cumulative S-curve",
+        "labels": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+],
+        "series": [
+          {"name": "Planned", "values": [
+          0.4,
+          0.5,
+          0.8,
+          1.2,
+          1.7,
+          2.5,
+          3.6,
+          5.2,
+          7.5,
+          10.6,
+          14.9,
+          20.5,
+          27.5,
+          35.9,
+          45.2,
+          54.8,
+          64.1,
+          72.5,
+          79.5,
+          85.1,
+          89.4,
+          92.5,
+          94.8,
+          96.4,
+          97.5,
+          98.3,
+          98.8,
+          99.2,
+          99.5,
+          99.6,
+          100.0
+]},
+          {"name": "Actual", "values": [
+          1.8,
+          1.1,
+          1.9,
+          2.7,
+          2.7,
+          3.8,
+          5.8,
+          7.0,
+          9.1,
+          11.0,
+          16.7,
+          21.6,
+          28.7,
+          37.1,
+          46.8,
+          56.2,
+          64.7,
+          73.9,
+          81.4,
+          86.7,
+          90.8,
+          94.7,
+          95.7,
+          97.6,
+          99.8,
+          99.7,
+          99.8,
+          99.7,
+          99.8,
+          99.8,
+          100.0
+]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (latest period)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 70, 35, 6, 52.75]},
+          {"name": "Actual", "values": [98, 62, 36, 6, 50.5]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Programme phases (relative)",
+        "labels": ["Engineering", "Procurement", "Construction", "Closeout"],
+        "ranges": [
+          [
+                    0,
+                    5
+          ],
+          [
+                    3,
+                    9
+          ],
+          [
+                    5,
+                    11
+          ],
+          [
+                    10,
+                    12
+          ]
+]
+      }
+    ],
+    "insights": [
+      "Structured a 31-month design-to-handover logic across engineering, procurement and fit-out trades",
+      "Tracked procurement milestones for imported stone, joinery and specialist MEP equipment",
+      "Delivered rolling six-week look-aheads aligned to interior fit-out and external works interfaces",
+      "Supported closeout planning with punch-list, testing and commissioning gates"
+]
+  },
+  "shk-khalid-palace": {
+    "eyebrow": "OWNER REPRESENTATIVE / PALACE PROGRAMME CONTROLS",
+    "title": "Planned versus actual progress - 24-month programme (~2 yr)",
+    "description": "Portfolio illustration of planning controls for SHK Khalid Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
+    "privacy": "Illustrative portfolio metrics derived from planning methods applied on the project. No confidential BOQ, subcontractor pricing or client reporting packs are published.",
+    "source": "P6 palace master programme | 860+ activities | 24-month programme (~2 yr)",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Monthly cumulative S-curve",
+        "labels": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24"
+],
+        "series": [
+          {"name": "Planned", "values": [
+          0.4,
+          0.7,
+          1.1,
+          1.8,
+          2.9,
+          4.7,
+          7.6,
+          11.9,
+          18.2,
+          26.9,
+          37.8,
+          50.0,
+          62.2,
+          73.1,
+          81.8,
+          88.1,
+          92.4,
+          95.3,
+          97.1,
+          98.2,
+          98.9,
+          99.3,
+          99.6,
+          100.0
+]},
+          {"name": "Actual", "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          1.0,
+          2.9,
+          5.3,
+          10.9,
+          16.7,
+          25.0,
+          35.9,
+          49.1,
+          61.4,
+          71.4,
+          80.1,
+          86.6,
+          90.2,
+          94.1,
+          95.3,
+          96.4,
+          97.9,
+          97.4,
+          97.4,
+          99.3
+]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (latest period)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 56, 55, 6, 54.25]},
+          {"name": "Actual", "values": [100, 55, 57, 6, 54.5]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Programme phases (relative)",
+        "labels": ["Engineering", "Procurement", "Construction", "Closeout"],
+        "ranges": [
+          [
+                    0,
+                    3
+          ],
+          [
+                    2,
+                    7
+          ],
+          [
+                    4,
+                    10
+          ],
+          [
+                    9,
+                    12
+          ]
+]
+      }
+    ],
+    "insights": [
+      "Compressed palace delivery into a 24-month integrated programme with full controls visibility",
+      "Aligned engineering approvals with early procurement releases for structure and envelope packages",
+      "Kept construction ahead of plan on superstructure and MEP rough-in through weekly variance reviews",
+      "Established closeout checklists linking snag lists, O&M handover and final account milestones"
+]
+  },
+  "shk-jassim-palace": {
+    "eyebrow": "OWNER REPRESENTATIVE / PALACE PROGRAMME CONTROLS",
+    "title": "Planned versus actual progress - 35-month programme (~2 yr 11 mo)",
+    "description": "Portfolio illustration of planning controls for SHK Jassim Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
+    "privacy": "Illustrative portfolio metrics derived from planning methods applied on the project. No confidential BOQ, subcontractor pricing or client reporting packs are published.",
+    "source": "P6 palace master programme | 1,340+ activities | 35-month programme (~2 yr 11 mo)",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Monthly cumulative S-curve",
+        "labels": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+],
+        "series": [
+          {"name": "Planned", "values": [
+          0.3,
+          0.5,
+          0.7,
+          1.0,
+          1.4,
+          1.9,
+          2.7,
+          3.7,
+          5.1,
+          7.1,
+          9.7,
+          13.2,
+          17.6,
+          23.1,
+          29.8,
+          37.4,
+          45.7,
+          54.3,
+          62.6,
+          70.2,
+          76.9,
+          82.4,
+          86.8,
+          90.3,
+          92.9,
+          94.9,
+          96.3,
+          97.3,
+          98.1,
+          98.6,
+          99.0,
+          99.3,
+          99.5,
+          99.7,
+          100.0
+]},
+          {"name": "Actual", "values": [
+          0.0,
+          1.4,
+          1.5,
+          1.5,
+          2.0,
+          2.5,
+          4.1,
+          3.8,
+          5.7,
+          7.7,
+          11.0,
+          14.4,
+          18.3,
+          24.5,
+          31.1,
+          37.6,
+          47.1,
+          54.1,
+          63.6,
+          71.4,
+          77.5,
+          82.9,
+          88.3,
+          91.8,
+          94.2,
+          95.5,
+          96.0,
+          97.4,
+          98.7,
+          98.4,
+          99.8,
+          99.7,
+          99.8,
+          99.3,
+          100.0
+]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (latest period)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 63, 39, 10, 53.0]},
+          {"name": "Actual", "values": [100, 65, 41, 9, 53.75]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Programme phases (relative)",
+        "labels": ["Engineering", "Procurement", "Construction", "Closeout"],
+        "ranges": [
+          [
+                    0,
+                    5
+          ],
+          [
+                    3,
+                    10
+          ],
+          [
+                    6,
+                    12
+          ],
+          [
+                    11,
+                    12
+          ]
+]
+      }
+    ],
+    "insights": [
+      "Managed a 35-month estate programme with overlapping villa wings and external amenities",
+      "Coordinated engineering, procurement and construction across landscaped grounds and pool areas",
+      "Produced executive dashboards tying manpower histograms to S-curve performance",
+      "Planned systematic closeout across buildings, services testing and handover documentation"
+]
+  },
   "tower-404": {
     "eyebrow": "HIGH-RISE / USER-SUPPLIED SITE PHOTOS",
     "title": "Office Tower 404 — facade refurbishment planning",

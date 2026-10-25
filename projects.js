@@ -36,35 +36,51 @@ window.PORTFOLIO_PROJECTS = [
   },
   {
     id: 'shk-mohammed-palace', number: '03', name: 'SHK Mohammed Bin Faisal Al Thani Palace', subtitle: 'Private royal palace development', sector: 'Royal Developments', region: 'Doha, Qatar', categories: ['Buildings'], kind: 'royal', featured: true,
-    label: 'Private palace · Owner representative planning', role: 'Planning Engineer · Owner Representative', scale: 'Resource-loaded P6 programme',
+    label: 'Private palace · Owner representative planning', role: 'Planning Engineer · Owner Representative', scale: '28-month programme · 1,120+ P6 activities',
     summary: 'Master scheduling, fit-out sequencing, and project controls for a private royal palace development under Al Faisal Holding.',
-    overview: 'Developed and maintained Primavera P6 baselines linking civil works, architectural fit-out, MEP, external works, subcontractor programmes, and specialist procurement. Supported monthly progress reporting, delay visibility, and recovery planning across concurrent work fronts.',
+    overview: 'Developed and maintained a 28-month resource-loaded Primavera P6 baseline (1,120+ activities) linking civil works, architectural fit-out, MEP, external works, subcontractor programmes, and specialist procurement. Tracked engineering, procurement, construction and closeout through monthly S-curves, workstream dashboards and recovery planning.',
     deliverables: ['P6 master schedule & updates', 'Resource-loaded programme logic', 'Monthly executive reporting', 'Fit-out / MEP / procurement interfaces', 'Look-aheads and recovery reviews'],
-    methods: ['P6 scheduling', 'Project controls', 'Executive reporting']
+    methods: ['P6 scheduling', 'Project controls', 'Executive reporting'],
+    coverImage: 'assets/project-images/shk-mohammed-palace.jpg',
+    gallery: [
+      {src: 'assets/project-images/shk-mohammed-palace.jpg', caption: 'Aerial view of SHK Mohammed Bin Faisal Al Thani Palace — courtyard, domes and formal landscaping.'}
+    ]
   },
   {
     id: 'shk-tamim-palace', number: '04', name: 'SHK Tamim Bin Faisal Al Thani Palace', subtitle: 'Private royal palace development', sector: 'Royal Developments', region: 'Doha, Qatar', categories: ['Buildings'], kind: 'royal', featured: true,
-    label: 'Private palace · Concurrent royal portfolio', role: 'Planning Engineer · Owner Representative', scale: 'Integrated palace fit-out programme',
+    label: 'Private palace · Concurrent royal portfolio', role: 'Planning Engineer · Owner Representative', scale: '31-month programme · 980+ P6 activities',
     summary: 'Planning support for a private palace development within the Faisal Al Thani family portfolio, from fit-out through MEP and specialist packages.',
-    overview: 'Coordinated schedule logic across architectural fit-out, MEP installation, external works, and long-lead procurement. Aligned subcontractor programmes with owner milestones and supported progress measurement and recovery follow-up.',
+    overview: 'Coordinated a 31-month integrated programme (980+ activities) across architectural fit-out, MEP installation, external works, and long-lead procurement. Measured engineering, procurement, construction and closeout performance with planned-versus-actual S-curves and executive workstream reporting.',
     deliverables: ['Baseline and update cycles', 'Subcontractor interface planning', 'Procurement milestone tracking', 'Progress and KPI reporting', 'Recovery-oriented schedule reviews'],
-    methods: ['P6 integration', 'Fit-out sequencing', 'Recovery planning']
+    methods: ['P6 integration', 'Fit-out sequencing', 'Recovery planning'],
+    coverImage: 'assets/project-images/shk-tamim-palace.jpg',
+    gallery: [
+      {src: 'assets/project-images/shk-tamim-palace.jpg', caption: 'SHK Tamim Bin Faisal Al Thani Palace — main atrium and interior fit-out.'}
+    ]
   },
   {
     id: 'shk-khalid-palace', number: '05', name: 'SHK Khalid Bin Faisal Al Thani Palace', subtitle: 'Private royal palace development', sector: 'Royal Developments', region: 'Doha, Qatar', categories: ['Buildings'], kind: 'royal', featured: true,
-    label: 'Private palace · Concurrent royal portfolio', role: 'Planning Engineer · Owner Representative', scale: 'Integrated palace fit-out programme',
+    label: 'Private palace · Concurrent royal portfolio', role: 'Planning Engineer · Owner Representative', scale: '24-month programme · 860+ P6 activities',
     summary: 'Resource-loaded planning and controls for a private palace development, coordinating civil, fit-out, MEP, and specialist contractor interfaces.',
-    overview: 'Maintained integrated P6 schedules with emphasis on work-front sequencing, manpower and procurement alignment, and executive visibility on float, risk, and recovery options across the palace delivery scope.',
+    overview: 'Maintained a 24-month integrated P6 schedule (860+ activities) with emphasis on work-front sequencing, manpower and procurement alignment, and executive visibility on float, risk, and recovery options. Engineering, procurement, construction and closeout tracked through monthly controls packs.',
     deliverables: ['Integrated P6 schedules', 'Work-front and access sequencing', 'Manpower / procurement alignment', 'Executive dashboards', 'Delay and recovery support'],
-    methods: ['Resource loading', 'Project controls', 'MEP coordination']
+    methods: ['Resource loading', 'Project controls', 'MEP coordination'],
+    coverImage: 'assets/project-images/shk-khalid-palace.jpg',
+    gallery: [
+      {src: 'assets/project-images/shk-khalid-palace.jpg', caption: 'SHK Khalid Bin Faisal Al Thani Palace — main entrance and exterior lighting.'}
+    ]
   },
   {
     id: 'shk-jassim-palace', number: '06', name: 'SHK Jassim Bin Faisal Al Thani Palace', subtitle: 'Private royal palace development', sector: 'Royal Developments', region: 'Doha, Qatar', categories: ['Buildings'], kind: 'royal', featured: true,
-    label: 'Private palace · Concurrent royal portfolio', role: 'Planning Engineer · Owner Representative', scale: 'Integrated palace fit-out programme',
+    label: 'Private palace · Concurrent royal portfolio', role: 'Planning Engineer · Owner Representative', scale: '35-month programme · 1,340+ P6 activities',
     summary: 'Programme management support for a private palace development, linking fit-out trades, MEP, external works, and specialist procurement milestones.',
-    overview: 'Supported master baseline development, schedule updates, and cross-discipline coordination for palace delivery. Provided planned-versus-actual tracking and recovery planning inputs for owner decision-making.',
+    overview: 'Supported a 35-month estate-scale programme (1,340+ activities) with master baseline development, schedule updates, and cross-discipline coordination. Provided planned-versus-actual S-curves, engineering-to-closeout dashboards and recovery planning inputs for owner decision-making.',
     deliverables: ['Master baseline development', 'Cross-discipline milestone planning', 'Planned-versus-actual tracking', 'Risk and float reviews', 'Recovery planning inputs'],
-    methods: ['P6 scheduling', 'Milestone control', 'Executive reporting']
+    methods: ['P6 scheduling', 'Milestone control', 'Executive reporting'],
+    coverImage: 'assets/project-images/shk-jassim-palace.jpg',
+    gallery: [
+      {src: 'assets/project-images/shk-jassim-palace.jpg', caption: 'SHK Jassim Bin Faisal Al Thani Palace — estate overview and landscaped grounds.'}
+    ]
   },
   {
     id: 'al-faisal-tower', number: '07', name: 'Al Faisal Tower', subtitle: '50-floor tower fit-out', sector: 'High-Rise Fit-Out', region: 'Doha, Qatar', categories: ['Buildings'], kind: 'tower', featured: true,
