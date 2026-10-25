@@ -98,11 +98,12 @@
   document.getElementById('current-year').textContent=new Date().getFullYear();
   let toastTimeout;
   function toast(message){const t=document.getElementById('toast');t.textContent=message;t.classList.add('visible');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>t.classList.remove('visible'),2400);}
-  document.getElementById('copy-email').addEventListener('click',async()=>{
-    const email='gamaleldin.yousry@gmail.com';
-    if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(email);toast('Email address copied');return}catch(e){}}
-    const temp=document.createElement('textarea');temp.value=email;temp.style.position='fixed';temp.style.opacity='0';document.body.appendChild(temp);temp.select();try{document.execCommand('copy');toast('Email address copied')}catch(e){toast('Email: '+email)}temp.remove();
-  });
+  async function copyText(value, successMessage, fallbackLabel){
+    if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(value);toast(successMessage);return}catch(e){}}
+    const temp=document.createElement('textarea');temp.value=value;temp.style.position='fixed';temp.style.opacity='0';document.body.appendChild(temp);temp.select();try{document.execCommand('copy');toast(successMessage)}catch(e){toast(fallbackLabel+': '+value)}temp.remove();
+  }
+  document.getElementById('copy-email').addEventListener('click',()=>copyText('gamaleldin.yousry@gmail.com','Email address copied','Email'));
+  document.getElementById('copy-phone').addEventListener('click',()=>copyText('+97477738990','Phone number copied','Phone'));
 
   const caseData=window.PORTFOLIO_CASES||{};
   function el(tag, cls, text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e;}
