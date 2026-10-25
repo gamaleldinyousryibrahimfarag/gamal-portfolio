@@ -186,7 +186,7 @@ window.PORTFOLIO_PROJECTS = [
     methods: ['CPM', 'Infrastructure', 'Schedule analysis']
   },
   {
-    id: 'qrcs', number: '16', name: 'Fereej Abdulaziz Workers Health Center', subtitle: 'FWHC extension · Qatar Red Crescent Society', sector: 'Healthcare', region: 'Fereej Abdulaziz, Qatar', categories: ['Buildings', 'Public Works'], kind: 'health', featured: true,
+    id: 'qrcs', number: '16', name: 'FWHC Extension', subtitle: 'Fereej Abdulaziz Workers Health Center · QRCS', sector: 'Healthcare', region: 'Fereej Abdulaziz, Qatar', categories: ['Buildings', 'Public Works'], kind: 'health', featured: true,
     label: 'Healthcare extension · FWHC', role: 'Planning Engineer', scale: '9-month construction programme',
     summary: 'Planning and controls for the FWHC extension of Fereej Abdulaziz Workers Health Center — civil, structural, MEP and healthcare fit-out delivered in nine months.',
     overview: 'Prepared and updated the Primavera P6 baseline and WBS for the Qatar Red Crescent Society (FWHC) extension at Fereej Abdulaziz Workers Health Center. Coordinated civil and structural sequences, long-lead structural steel procurement, MEP and medical support areas, and closeout within a 9-month delivery programme.',
@@ -198,7 +198,7 @@ window.PORTFOLIO_PROJECTS = [
     ]
   },
   {
-    id: 'residential', number: '17', name: 'Mixed-Use Retail & Residences', subtitle: 'Ground-floor retail · upper residential levels', sector: 'Mixed-Use Development', region: 'Qatar', categories: ['Buildings'], kind: 'residential', featured: false,
+    id: 'residential', number: '17', name: 'Mixed-Use Retail & Residences', subtitle: 'Ground-floor retail · upper residential levels', sector: 'Mixed-Use Development', region: 'Qatar', categories: ['Buildings'], kind: 'residential', featured: true,
     label: 'Multi-storey mixed-use', role: 'Planning Engineer', scale: '36-month programme (~3 years) · 4-storey building',
     summary: 'Primavera P6 planning for a contemporary mixed-use building — street-level retail with multi-storey residences, terraces and rooftop landscaping.',
     overview: 'Developed and maintained a 36-month (~3-year) construction programme from substructure and frame through MEP, façade, retail fit-out and residential finishes. Coordinated civil, structural and building services sequences, manpower histograms and material procurement for ground-floor commercial units and upper residential levels including landscaped roof terraces.',
