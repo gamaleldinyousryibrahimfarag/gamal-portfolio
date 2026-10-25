@@ -194,61 +194,73 @@ window.PORTFOLIO_CASES = {
     ]
   },
   "diriyah": {
-    "eyebrow": "SPECIALIST PACKAGE / MULTI-BUILDING PROGRAMME",
-    "title": "From approvals to installation — 76 buildings",
-    "description": "A simplified sequence from the provided doors-and-windows construction schedule and scope understanding, spanning detailed design, approvals, fabrication, logistics, installation, testing and handover.",
-    "privacy": "Relative phases only. Original contract dates, submittal IDs, milestone commitments, drawings and supply-chain details are withheld.",
-    "source": "Package 3B programme + scope understanding",
+    "eyebrow": "P3B / DOORS & WINDOWS CONSTRUCTION SCHEDULE",
+    "title": "Diriyah Square — 659-day envelope programme (Rev 2)",
+    "description": "Structured from the P3B Doors & Windows Construction Schedule Rev 2 (Diriyah Square Project Submission): design and BIM through DGCL mock-up approval, Code A design approval, MAR procurement, fabrication, grouped sub-frame and doors/windows installation, performance testing, commissioning and handover across Diriyah Square sectors.",
+    "privacy": "Portfolio summary of planning structure only. Shop drawing numbers, MAR references, supplier identities and commercial records are not published.",
+    "source": "P3B-Doors-Windows-Construction-Schedule-Rev2.pdf · checked 27-Jan-26 · 659-day master programme",
     "charts": [
       {
+        "type": "line",
+        "name": "Cumulative programme progress (monthly)",
+        "labels": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22"],
+        "series": [
+          {"name": "Planned", "values": [1.2,2.1,3.5,5.8,9.2,14.5,20.8,28.5,37.2,46.8,56.5,65.2,73.8,81.5,87.6,92.4,95.8,97.6,98.8,99.5,99.8,100.0]},
+          {"name": "Forecast", "values": [1.0,1.8,3.1,5.2,8.5,13.8,19.5,27.0,35.8,45.2,55.0,64.0,72.5,80.2,86.5,91.5,95.0,97.0,98.5,99.2,99.6,99.5]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (schedule snapshot)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 74, 52, 8, 58.5]},
+          {"name": "Forecast", "values": [98, 71, 49, 6, 56.0]}
+        ],
+        "max": 100
+      },
+      {
         "type": "gantt",
-        "name": "Specialist package sequencing",
+        "name": "P3B WBS phases (from Rev 2 schedule)",
         "labels": [
-          "Design & BIM",
-          "Shop drawings / approvals",
-          "Procurement",
-          "Off-site fabrication",
+          "Design & engineering",
+          "BIM & shop drawings",
+          "Mock-up & Code A approval",
+          "Procurement & fabrication",
           "Sub-frame installation",
-          "Doors & windows",
-          "T&C / handover"
+          "Doors & windows install",
+          "Testing & commissioning",
+          "Handover & close-out"
         ],
         "ranges": [
-          [
-            0,
-            4
-          ],
-          [
-            2,
-            6
-          ],
-          [
-            4,
-            8
-          ],
-          [
-            5,
-            10
-          ],
-          [
-            5,
-            12
-          ],
-          [
-            8,
-            14
-          ],
-          [
-            13,
-            16
-          ]
+          [0, 3],
+          [2, 4],
+          [3, 5],
+          [4, 8],
+          [5, 13],
+          [9, 14],
+          [10, 15],
+          [14, 16]
         ]
+      },
+      {
+        "type": "bars",
+        "name": "Doors & windows install by building group",
+        "labels": ["Group A", "Group B", "Group C", "Group D", "Group E", "Welcome halls", "Basement"],
+        "series": [
+          {"name": "Planned", "values": [72, 68, 61, 48, 52, 58, 44]},
+          {"name": "Forecast", "values": [70, 65, 59, 46, 50, 55, 42]}
+        ],
+        "max": 100
       }
     ],
     "insights": [
-      "Integrated multidisciplinary design and BIM deliverables",
-      "Tracked mock-up, materials and IFC/shop drawing approval gates",
-      "Aligned fabrication and deliveries with installation fronts",
-      "Sequenced performance testing, as-built records and final handover"
+      "Built the integrated P3B P6 schedule: 15-Feb-26 programme start through 23-Oct-27 finish (659 days)",
+      "Linked design, BIM (LOD 400), shop drawings and Code A approval to DGCL mock-up gate (23-Apr-26)",
+      "Sequenced MAR submissions, factory fabrication, FAT and first delivery to site (26-Oct-26)",
+      "Planned Group A–E façade and internal sub-frames plus welcome halls and basement installation fronts",
+      "Doors & windows installation 08-Nov-26 to 07-Jul-27 with parallel water, air, acoustic and fire performance testing",
+      "Closed out with commissioning, as-built documentation, snagging and final handover submission"
     ]
   },
   "private-villa": {
@@ -989,6 +1001,159 @@ window.PORTFOLIO_CASES = {
       "Produced executive dashboards tying manpower histograms to S-curve performance",
       "Planned systematic closeout across buildings, services testing and handover documentation"
 ]
+  },
+  "al-faisal-tower": {
+    "eyebrow": "HIGH-RISE FIT-OUT / TOWER PROGRAMME CONTROLS",
+    "title": "Planned versus actual progress - 30-month 50-floor programme",
+    "description": "Portfolio illustration of planning controls for Al Faisal Tower fit-out in West Bay: monthly cumulative S-curve, engineering-procurement-construction-closeout dashboards, vertical zone progress, and relative programme phasing. Metrics are normalized for public display and do not publish contractual dates, tenant names or commercial values.",
+    "privacy": "Illustrative portfolio metrics and owner-supplied tower photographs only. No confidential BOQ, lift vendor contracts or client reporting packs are published.",
+    "source": "P6 tower fit-out master programme | 2,450+ activities | 50 floors | 30-month programme",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Monthly cumulative S-curve",
+        "labels": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],
+        "series": [
+          {"name": "Planned", "values": [0.5,0.7,1.0,1.4,2.0,2.9,4.1,5.8,8.2,11.4,15.6,21.1,27.8,35.7,44.5,53.7,62.6,70.7,77.7,83.4,87.9,91.3,93.8,95.6,96.9,97.8,98.5,99.0,99.3,100.0]},
+          {"name": "Actual", "values": [0.2,0.0,0.0,1.1,0.3,2.0,3.3,5.1,6.6,10.8,14.7,20.9,26.0,35.7,42.9,53.4,61.7,70.5,76.2,82.1,86.2,91.0,93.0,94.1,95.4,96.1,97.0,98.2,98.3,99.5]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (latest period)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 58, 44, 8, 52.5]},
+          {"name": "Actual", "values": [98, 61, 47, 7, 53.2]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "bars",
+        "name": "Vertical zone progress (fit-out fronts)",
+        "labels": ["Podium & lobbies", "Floors 01-15", "Floors 16-35", "Floors 36-50", "T&C / handover"],
+        "series": [
+          {"name": "Planned", "values": [92, 68, 41, 18, 6]},
+          {"name": "Actual", "values": [94, 71, 39, 16, 5]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Programme phases (relative)",
+        "labels": ["Engineering", "Procurement", "Construction", "Closeout"],
+        "ranges": [[0, 5], [3, 10], [6, 12], [10, 12]]
+      }
+    ],
+    "insights": [
+      "Built a 30-month, 2,450-activity P6 logic model with level-based climb schedules across 50 floors",
+      "Coordinated hoist capacity, material hoisting windows and concurrent work fronts on typical office levels",
+      "Tracked engineering submittals and long-lead procurement for lifts, stone cladding and lobby joinery",
+      "Maintained monthly planned-versus-actual S-curves and workstream dashboards for owner executive review",
+      "Sequenced lobby and lift-corridor fit-out (e.g. level 20 zone) ahead of upper-floor handover waves"
+    ]
+  },
+  "aamal-ceo-office-tamim": {
+    "eyebrow": "CITY TOWER / FAST-TRACK EXECUTIVE FIT-OUT",
+    "title": "Aamal CEO office - 9-week programme (~2 months)",
+    "description": "Portfolio illustration of fast-track planning controls for the Aamal Company CEO office of SHK Tamim Bin Faisal Al Thani in City Tower: weekly cumulative S-curve, engineering-procurement-construction-closeout dashboard, and fit-out zone progress. Completed within a 2-3 month envelope. Illustrative metrics only.",
+    "privacy": "Owner-supplied interior photographs for portfolio use. No contractual dates, tenant data or commercial values are published.",
+    "source": "P6 CEO suite programme | 265 activities | City Tower | 9-week fast-track (~2 months)",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Weekly cumulative S-curve",
+        "labels": ["01","02","03","04","05","06","07","08","09"],
+        "series": [
+          {"name": "Planned", "values": [3,8,14,22,34,48,65,84,100]},
+          {"name": "Actual", "values": [2,7,13,21,33,47,66,86,100]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (at handover)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 100, 100, 100, 100]},
+          {"name": "Actual", "values": [100, 100, 100, 98, 99.5]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "bars",
+        "name": "Fit-out zone progress (final)",
+        "labels": ["CEO desk suite", "Boardroom", "Meeting rooms", "Support / MEP", "Snagging"],
+        "series": [
+          {"name": "Planned", "values": [100, 100, 100, 100, 100]},
+          {"name": "Actual", "values": [100, 100, 100, 99, 98]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Fast-track phases (relative)",
+        "labels": ["Engineering", "Procurement", "Construction", "Closeout"],
+        "ranges": [[0, 2], [1, 4], [2, 8], [7, 9]]
+      }
+    ],
+    "insights": [
+      "Delivered CEO desk, boardroom and meeting suites on a 9-week (~2 month) P6 fast-track baseline",
+      "Overlapped shop-drawing review with expedited marble, joinery and furniture procurement",
+      "Protected curtain-wall interfaces while completing MEP second-fix on after-hours fronts",
+      "Used weekly S-curves and workstream dashboards to hold the 2-3 month completion target",
+      "Closed out AV, furnishings and snag lists for executive occupation on schedule"
+    ]
+  },
+  "sh-thani-office-city-tower": {
+    "eyebrow": "CITY TOWER / FAST-TRACK EXECUTIVE FIT-OUT",
+    "title": "SHK Thani office - 12-week programme (~3 months)",
+    "description": "Portfolio illustration of fast-track planning controls for SHK Thani Bin Faisal Al Thani's private executive office in City Tower: weekly S-curve, workstream dashboard and lounge/meeting zone progress. Completed within the 2-3 month maximum envelope. Illustrative metrics only.",
+    "privacy": "Owner-supplied interior photographs for portfolio use. No contractual dates or commercial records are published.",
+    "source": "P6 executive office programme | 240 activities | City Tower | 12-week programme (~3 months)",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Weekly cumulative S-curve",
+        "labels": ["01","02","03","04","05","06","07","08","09","10","11","12"],
+        "series": [
+          {"name": "Planned", "values": [2,5,9,14,21,30,42,56,70,82,92,100]},
+          {"name": "Actual", "values": [1,4,8,13,20,29,41,55,69,81,91,99.5]}
+        ]
+      },
+      {
+        "type": "bars",
+        "name": "Progress by workstream (at handover)",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Planned", "values": [100, 100, 100, 100, 100]},
+          {"name": "Actual", "values": [100, 99, 100, 97, 99.0]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "bars",
+        "name": "Fit-out zone progress (final)",
+        "labels": ["Reception / lounge", "Meeting lounge", "Joinery & library", "MEP / IT", "Handover"],
+        "series": [
+          {"name": "Planned", "values": [100, 100, 100, 100, 100]},
+          {"name": "Actual", "values": [100, 100, 99, 98, 97]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Fast-track phases (relative)",
+        "labels": ["Engineering", "Procurement", "Construction", "Closeout"],
+        "ranges": [[0, 3], [2, 5], [3, 10], [9, 12]]
+      }
+    ],
+    "insights": [
+      "Structured lounge, library and meeting spaces on a 12-week (~3 month) integrated P6 baseline (240 activities)",
+      "Ran parallel procurement and construction to stay inside the 2-3 month completion window",
+      "Used weekly look-aheads to protect live-building MEP and lift interfaces",
+      "Reported engineering, procurement, construction and closeout on executive dashboards",
+      "Completed snag, testing and handover documentation for private occupation on schedule"
+    ]
   },
   "tower-404": {
     "eyebrow": "HIGH-RISE / USER-SUPPLIED SITE PHOTOS",

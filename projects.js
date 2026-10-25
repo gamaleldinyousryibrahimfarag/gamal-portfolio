@@ -83,23 +83,47 @@ window.PORTFOLIO_PROJECTS = [
     ]
   },
   {
-    id: 'al-faisal-tower', number: '07', name: 'Al Faisal Tower', subtitle: '50-floor tower fit-out', sector: 'High-Rise Fit-Out', region: 'Doha, Qatar', categories: ['Buildings'], kind: 'tower', featured: true,
-    label: 'Tower fit-out · Al Faisal Holding', role: 'Planning Engineer · Owner Representative', scale: '50-floor tower fit-out programme',
-    summary: 'Vertical fit-out planning for a 50-floor tower, sequencing MEP, finishes, façades, and vertical logistics across multiple concurrent levels.',
-    overview: 'Structured Primavera P6 logic for a high-rise tower fit-out, coordinating level-by-level work fronts, hoist and access constraints, long-lead materials, and subcontractor packages from shell-and-core handover through completion.',
-    deliverables: ['Tower fit-out P6 programme', 'Level-based work-front sequencing', 'Vertical logistics & access planning', 'Long-lead procurement milestones', 'Progress reporting & recovery options'],
-    methods: ['High-rise fit-out', 'P6 scheduling', 'Vertical logistics']
+    id: 'al-faisal-tower', number: '07', name: 'Al Faisal Tower', subtitle: '50-floor tower fit-out · West Bay', sector: 'High-Rise Fit-Out', region: 'West Bay, Doha, Qatar', categories: ['Buildings'], kind: 'tower', featured: true,
+    label: 'Tower fit-out · Al Faisal Holding', role: 'Planning Engineer · Owner Representative', scale: '30-month programme · 50 floors · 2,450+ P6 activities',
+    summary: 'Vertical fit-out planning for a 50-floor West Bay tower — lobby, typical floors, MEP risers, façades and handover sequencing with level-based controls dashboards.',
+    overview: 'Structured a 30-month resource-loaded Primavera P6 programme (2,450+ activities) for full tower fit-out after shell-and-core handover. Coordinated engineering approvals, procurement of lifts, stone and joinery packages, level-by-level construction fronts, hoist logistics, and closeout waves from podium lobbies through upper office levels. Monthly S-curves and workstream dashboards tracked engineering, procurement, construction and closeout for owner review.',
+    deliverables: ['50-floor tower fit-out master programme', 'Level-based work-front & hoist logistics planning', 'Engineering / procurement / construction dashboards', 'Typical-floor and lobby milestone logic', 'Monthly S-curves & executive recovery reviews'],
+    methods: ['High-rise fit-out', 'P6 scheduling', 'Vertical logistics'],
+    coverImage: 'assets/project-images/al-faisal-tower-exterior.jpg',
+    gallery: [
+      {src: 'assets/project-images/al-faisal-tower-exterior.jpg', caption: 'Al Faisal Tower — West Bay skyline context for the 50-floor fit-out programme.'},
+      {src: 'assets/project-images/al-faisal-tower-fitout-lobby.jpg', caption: 'Completed lift lobby fit-out — stone, wood and MEP interfaces typical of upper-floor packages.'}
+    ]
   },
   {
-    id: 'city-tower-offices', number: '08', name: 'City Tower', subtitle: 'Two sheikh office fit-outs', sector: 'Commercial Fit-Out', region: 'Doha, Qatar', categories: ['Buildings'], kind: 'tower', featured: false,
-    label: 'Premium office fit-out', role: 'Planning Engineer · Owner Representative', scale: '2 executive office fit-out packages',
-    summary: 'Planning and controls for two private sheikh office fit-outs within City Tower, coordinating MEP, finishes, and specialist joinery in an occupied high-rise.',
-    overview: 'Prepared integrated schedules for two concurrent premium office fit-outs, aligning design approvals, procurement, MEP first and second fix, architectural finishes, and handover milestones within tower access and interface constraints.',
-    deliverables: ['Dual-package P6 programmes', 'Design approval & procurement sequencing', 'MEP and finishes coordination', 'Occupied-building interface planning', 'Milestone and progress reporting'],
-    methods: ['Fit-out planning', 'Procurement', 'Occupied-building sequencing']
+    id: 'aamal-ceo-office-tamim', number: '08', name: 'Aamal Company CEO Office', subtitle: 'SHK Tamim Bin Faisal Al Thani · City Tower', sector: 'Executive Office Fit-Out', region: 'City Tower, Doha, Qatar', categories: ['Buildings'], kind: 'tower', featured: true,
+    label: 'Premium CEO suite · City Tower', role: 'Planning Engineer · Owner Representative', scale: '9-week fast-track · ~2 months · 265 P6 activities',
+    summary: 'Fast-track planning and controls for the Aamal Company CEO executive office — desk suite, boardroom and meeting floors within City Tower.',
+    overview: 'Delivered a compressed ~2-month (9-week) Primavera P6 fit-out programme (265 activities) for SHK Tamim Bin Faisal Al Thani’s Aamal Company CEO office. Overlapped engineering approvals, expedited stone and joinery procurement, MEP fixes, furniture installation and closeout using after-hours tower access. Weekly S-curves and engineering–procurement–construction–closeout dashboards tracked completion within the 2–3 month window.',
+    deliverables: ['Fast-track CEO suite P6 programme', 'Boardroom & meeting-room milestone logic', 'Expedited finishes procurement tracking', 'After-hours logistics & access windows', 'Weekly S-curves & workstream dashboards'],
+    methods: ['Executive fit-out', 'P6 scheduling', 'Occupied-building controls'],
+    coverImage: 'assets/project-images/aamal-ceo-office-tamim-01.jpg',
+    gallery: [
+      {src: 'assets/project-images/aamal-ceo-office-tamim-01.jpg', caption: 'CEO executive desk suite — panoramic City Tower views and completed joinery.'},
+      {src: 'assets/project-images/aamal-ceo-office-tamim-02.jpg', caption: 'Executive floor — desk, board table and marble meeting zone.'},
+      {src: 'assets/project-images/aamal-ceo-office-tamim-03.jpg', caption: 'Formal boardroom — marble table, wood feature wall and integrated AV.'}
+    ]
   },
   {
-    id: 'aspire', number: '09', name: 'Aspire Zone', subtitle: 'Phase 2 · West Zone', sector: 'Sports Infrastructure', region: 'Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'sports', featured: false,
+    id: 'sh-thani-office-city-tower', number: '09', name: 'SHK Thani Bin Faisal Al Thani Office', subtitle: 'Private executive office · City Tower', sector: 'Executive Office Fit-Out', region: 'City Tower, Doha, Qatar', categories: ['Buildings'], kind: 'tower', featured: true,
+    label: 'Private executive suite · City Tower', role: 'Planning Engineer · Owner Representative', scale: '12-week programme · ~3 months · 240 P6 activities',
+    summary: 'Fast-track programme management for SHK Thani Bin Faisal Al Thani’s private executive office lounge, meeting and support spaces in City Tower.',
+    overview: 'Completed an integrated fit-out within ~3 months (12 weeks, 240 activities) covering lounge, reception, meeting and support areas. Ran overlapping engineering, procurement and construction fronts with bespoke joinery and stone packages, MEP coordination, after-hours work and closeout handover in a live high-rise — within the 2–3 month delivery target.',
+    deliverables: ['12-week executive office P6 programme', 'Lounge & meeting-room sequencing', 'Expedited joinery, stone and furniture procurement', 'After-hours work-front planning', 'Weekly dashboards & closeout checklists'],
+    methods: ['Fit-out planning', 'Procurement', 'Closeout control'],
+    coverImage: 'assets/project-images/sh-thani-office-01.jpg',
+    gallery: [
+      {src: 'assets/project-images/sh-thani-office-01.jpg', caption: 'Executive lounge — wood library wall, seating and feature lighting.'},
+      {src: 'assets/project-images/sh-thani-office-02.jpg', caption: 'Meeting lounge — sofa grouping, marble coffee table and built-in joinery.'}
+    ]
+  },
+  {
+    id: 'aspire', number: '10', name: 'Aspire Zone', subtitle: 'Phase 2 · West Zone', sector: 'Sports Infrastructure', region: 'Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'sports', featured: false,
     label: 'Sports & public realm', role: 'Planning Engineer', scale: 'Two athletics tracks',
     summary: 'Design-build programme logic covering sports facilities, civil works, utilities and external infrastructure.',
     overview: 'Structured scheduling logic for athletic tracks, administration facilities, roads, parking, utilities, lighting, irrigation, and landscaping. Coordinated planning dependencies involving KAHRAMAA power supply.',
@@ -107,7 +131,7 @@ window.PORTFOLIO_PROJECTS = [
     methods: ['Design-build', 'Utilities coordination', 'Milestones']
   },
   {
-    id: 'majles-mosque', number: '10', name: 'Majles, Masjed', subtitle: '& Imam Flat', sector: 'Community Buildings', region: 'Rawdat Aba-Herran, Qatar', categories: ['Buildings', 'Public Works'], kind: 'community', featured: false,
+    id: 'majles-mosque', number: '11', name: 'Majles, Masjed', subtitle: '& Imam Flat', sector: 'Community Buildings', region: 'Rawdat Aba-Herran, Qatar', categories: ['Buildings', 'Public Works'], kind: 'community', featured: false,
     label: 'Community buildings', role: 'Planning Engineer', scale: 'QAR 36.8M programme',
     summary: 'Design-build baseline, cost-loaded programme and reporting for a mosque, majles and associated accommodation.',
     overview: 'Prepared the work breakdown structure and cost-loaded master baseline for a QAR 36.8M community development. Produced S-curves, cash-flow forecasts, and manpower histograms to support construction sequencing and performance measurement.',
@@ -115,7 +139,7 @@ window.PORTFOLIO_PROJECTS = [
     methods: ['Cost loading', 'S-curves', 'Forecasting']
   },
   {
-    id: 'tower-404', number: '11', name: 'Office Tower 404', subtitle: 'Doha Corniche / Al Sadd Street', sector: 'High-Rise Refurbishment', region: 'Doha, Qatar', categories: ['Buildings'], kind: 'tower', featured: false,
+    id: 'tower-404', number: '12', name: 'Office Tower 404', subtitle: 'Doha Corniche / Al Sadd Street', sector: 'High-Rise Refurbishment', region: 'Doha, Qatar', categories: ['Buildings'], kind: 'tower', featured: false,
     label: 'Façade refurbishment', role: 'Planning Engineer', scale: '8,303 m² curtain wall',
     summary: 'Phased planning and sequencing for curtain-wall and facade refurbishment works on an occupied office tower in Doha.',
     overview: 'Planned and monitored an occupied-building facade refurbishment package for Office Tower 404, located on Al Sadd Street in Doha Municipality. The project involved curtain-wall related works and front-elevation improvements, requiring coordinated access planning, long-lead material tracking, work-front sequencing, and execution awareness in a constrained urban location.',
@@ -128,15 +152,19 @@ window.PORTFOLIO_PROJECTS = [
     ]
   },
   {
-    id: 'diriyah', number: '12', name: 'Diriyah Square', subtitle: 'Package 3', sector: 'Heritage Mixed-Use', region: 'Riyadh, Saudi Arabia', categories: ['Heritage', 'Buildings'], kind: 'diriyah', featured: false,
-    label: 'Heritage mixed-use', role: 'Planning Engineer', scale: '76 buildings',
-    summary: 'Multi-building package planning for doors, windows, façades and specialist architectural components.',
-    overview: 'Planned and scheduled doors, windows, shutters, louvers, access panels, and shopfront packages across 76 buildings, aligning package milestones, procurement and installation interfaces.',
-    deliverables: ['Trade-specific milestone schedules', '76-building package coordination', 'Procurement & installation sequencing', 'Multi-package interface planning'],
-    methods: ['Package planning', 'Coordination', 'Fit-out interfaces']
+    id: 'diriyah', number: '13', name: 'Diriyah Square', subtitle: 'Package 3B · Doors & windows SOW', sector: 'Heritage Mixed-Use', region: 'Diriyah, Riyadh, Saudi Arabia', categories: ['Heritage', 'Buildings'], kind: 'diriyah', featured: true,
+    label: 'P3B specialist envelope package', role: 'Planning Engineer', scale: '659-day programme · 22 sectors · Groups A–E',
+    summary: 'Primavera P6 construction schedule for the Diriyah Square doors-and-windows scope — design, BIM, MAR procurement, sub-frame and installation across retail, hotel, office and public-realm sectors.',
+    overview: 'Developed and maintained the P3B Doors & Windows Construction Schedule (Rev 2) for Diriyah Square: a 659-calendar-day programme from design mobilization through DGCL mock-up approval, Code A design approval, MAR procurement, factory fabrication, grouped façade and internal sub-frame installation (Groups A–E, welcome halls and basement), doors-and-windows installation, performance testing, commissioning and final handover. Coordinated interfaces across cliff walk, wadi plaza, retail, hotel, mosque, office and sunken court assets on the masterplan.',
+    deliverables: ['P3B integrated P6 schedule (Rev 2)', 'Design, BIM & shop-drawing approval logic', 'MAR / fabrication / site delivery sequencing', 'Group A–E sub-frame & D&W installation fronts', 'T&C, commissioning & handover milestones'],
+    methods: ['Multi-building P6', 'Façade packages', 'Heritage mixed-use'],
+    coverImage: 'assets/project-images/diriyah-square-masterplan.jpg',
+    gallery: [
+      {src: 'assets/project-images/diriyah-square-masterplan.jpg', caption: 'Diriyah Square masterplan — sector and asset breakdown (retail, hotel, office, mosque, public realm).'},
+    ]
   },
   {
-    id: 'injection-wells', number: '13', name: 'Deep Injection Wells', subtitle: 'ASHGHAL programme', sector: 'Infrastructure & Utilities', region: 'Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'water', featured: false,
+    id: 'injection-wells', number: '14', name: 'Deep Injection Wells', subtitle: 'ASHGHAL programme', sector: 'Infrastructure & Utilities', region: 'Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'water', featured: false,
     label: 'Critical infrastructure', role: 'Planning Engineer · Mannai / Gulf Laboratories', scale: 'QAR 150M programme',
     summary: 'Integrated subcontractor schedules, milestone forecasting and earned-value controls on a major utility programme.',
     overview: 'Integrated baseline inputs from three subcontractors for a QAR 150M infrastructure programme. Produced weekly/monthly reporting, S-curves and earned-value views, and supported delay impact analysis, EOT planning records, and recovery scenarios.',
@@ -144,7 +172,7 @@ window.PORTFOLIO_PROJECTS = [
     methods: ['P6', 'EVM', 'TIA / EOT']
   },
   {
-    id: 'sewer', number: '14', name: 'Inner Doha Sewer', subtitle: 'ASHGHAL programme', sector: 'Tunnelling Infrastructure', region: 'Doha, Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'tunnel', featured: false,
+    id: 'sewer', number: '15', name: 'Inner Doha Sewer', subtitle: 'ASHGHAL programme', sector: 'Tunnelling Infrastructure', region: 'Doha, Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'tunnel', featured: false,
     label: 'Tunnelling & civil works', role: 'Planning Engineer · CEG International', scale: 'QAR 500M programme',
     summary: 'CPM programme coordination across tunnelling, civil works and five subcontractor work streams.',
     overview: 'Consolidated five subcontractor schedules into a critical-path programme for a QAR 500M tunnelling and infrastructure project. Monitored planned versus actual progress, schedule variance and time impacts, informing corrective measures and recovery planning.',
@@ -152,7 +180,7 @@ window.PORTFOLIO_PROJECTS = [
     methods: ['CPM', 'Infrastructure', 'Schedule analysis']
   },
   {
-    id: 'qrcs', number: '15', name: 'FWHC Extension', subtitle: 'Qatar Red Crescent Society', sector: 'Healthcare', region: 'Qatar', categories: ['Buildings', 'Public Works'], kind: 'health', featured: false,
+    id: 'qrcs', number: '16', name: 'FWHC Extension', subtitle: 'Qatar Red Crescent Society', sector: 'Healthcare', region: 'Qatar', categories: ['Buildings', 'Public Works'], kind: 'health', featured: false,
     label: 'Healthcare extension', role: 'Planning Engineer', scale: null,
     summary: 'Baseline planning and procurement milestone management for a healthcare facility extension.',
     overview: 'Prepared the baseline programme and work breakdown structure for a health-centre extension, coordinating civil and structural activity sequences, monitoring planned progress and tracking long-lead structural-steel procurement.',
@@ -160,7 +188,7 @@ window.PORTFOLIO_PROJECTS = [
     methods: ['WBS', 'Procurement', 'Progress']
   },
   {
-    id: 'residential', number: '16', name: 'Residential & Commercial', subtitle: 'Multi-storey buildings', sector: 'Building Construction', region: 'Qatar', categories: ['Buildings'], kind: 'residential', featured: false,
+    id: 'residential', number: '17', name: 'Residential & Commercial', subtitle: 'Multi-storey buildings', sector: 'Building Construction', region: 'Qatar', categories: ['Buildings'], kind: 'residential', featured: false,
     label: 'Multi-storey construction', role: 'Planning Engineer', scale: null,
     summary: 'Integrated civil, structural, MEP and finishes sequencing with labour and materials planning.',
     overview: 'Developed construction scheduling logic from excavation and civil works through MEP installation and architectural finishes. Aligned manpower requirements and materials procurement with programme activity sequencing.',
@@ -168,7 +196,7 @@ window.PORTFOLIO_PROJECTS = [
     methods: ['Construction', 'Resource planning', 'MEP coordination']
   }
   ,{
-    id: 'private-villa', number: '17', name: 'Private Residential Villa', subtitle: 'Construction baseline & S-curve', sector: 'Residential Construction', region: 'Qatar', categories: ['Buildings'], kind: 'residential', featured: false,
+    id: 'private-villa', number: '18', name: 'Private Residential Villa', subtitle: 'Construction baseline & S-curve', sector: 'Residential Construction', region: 'Qatar', categories: ['Buildings'], kind: 'residential', featured: false,
     label: 'Private villa · programme sample', role: 'Planning Engineer', scale: 'Civil, structural & MEP work packages',
     summary: 'Detailed Primavera P6 construction sequencing supported by a weekly cumulative planned progress S-curve.',
     overview: 'Prepared a construction baseline covering demolition, earthworks, substructure, structural frame, masonry, envelope, MEP first fix and finishes. Produced a planned progress S-curve and coordinated the work package sequencing using the source scope and BOQ.',
