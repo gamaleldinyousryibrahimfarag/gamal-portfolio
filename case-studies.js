@@ -141,11 +141,11 @@ window.PORTFOLIO_CASES = {
     ]
   },
   "aspire": {
-    "eyebrow": "ASPIRE ZONE / SPORTS INFRASTRUCTURE PROGRAMME",
-    "title": "West Zone design-build — athletics & sports realm",
-    "description": "Portfolio illustration of planning controls for Aspire Zone Phase 2 West Zone: design-build programme logic for athletics tracks, sports buildings and external works, with engineering-procurement-construction-closeout dashboards. Informed by West Zone baseline and athletics tender scope examples (not a single merged contract programme).",
+    "eyebrow": "ASPIRE ZONE / ATHLETICS TRAINING BASE UPGRADE",
+    "title": "Upgrade of the Athletics Training Base — Aspire Zone venue",
+    "description": "Portfolio illustration of planning controls for the Upgrade of the Athletics Training Base at the Aspire Zone venue: design-build programme logic for athletics tracks, training facilities and external works, with engineering-procurement-construction-closeout dashboards.",
     "privacy": "Portfolio-approved sports-complex visuals. Tender pricing, proprietary drawings and authority submissions are not published.",
-    "source": "Aspire Zone West Zone baseline + athletics design-build programme examples",
+    "source": "Aspire Zone athletics training base upgrade · design-build programme examples",
     "charts": [
       {
         "type": "line",
@@ -198,10 +198,10 @@ window.PORTFOLIO_CASES = {
       }
     ],
     "insights": [
-      "Structured design-build P6 logic for athletics tracks and West Zone sports facilities",
+      "Structured design-build P6 logic for the athletics training base upgrade at Aspire Zone",
       "Integrated civil, MEP, external works and KAHRAMAA power-supply interfaces",
       "Coordinated engineering, procurement, construction and closeout milestones",
-      "Aligned parking, roads, lighting and irrigation with track and building handover",
+      "Aligned parking, roads, lighting and irrigation with track and training-facility handover",
       "Used milestone dashboards to support tender and delivery-phase reviews"
     ]
   },
@@ -1292,6 +1292,105 @@ window.PORTFOLIO_CASES = {
       "Coordinated procurement and submittal flow for facade-related materials",
       "Aligned execution fronts with access systems and site logistics",
       "Maintained programme logic through inspection and handover stages"
+    ]
+  },
+  "eot-delay-analysis": {
+    "eyebrow": "EOT / TIME IMPACT ANALYSIS",
+    "title": "Extension of time — delay window and fragnet illustration",
+    "description": "Portfolio illustration of extension-of-time (EOT) support: identifying critical delay events, building fragnets, comparing baseline versus impacted completion, and summarising time-impact logic for negotiation support. Synthetic example — not a live claim record.",
+    "privacy": "Illustrative portfolio metrics only. No claim values, correspondence, dispute positions or client identifiers are published.",
+    "source": "Representative EOT / TIA / float review methods on building and infrastructure programmes",
+    "charts": [
+      {
+        "type": "line",
+        "name": "Cumulative progress — baseline vs delayed",
+        "labels": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18"],
+        "series": [
+          {"name": "Baseline programme", "values": [4,9,16,24,34,45,57,68,78,86,92,96,98,99,100,100,100,100]},
+          {"name": "Impacted (with EOT)", "values": [4,8,14,21,30,40,50,58,65,72,78,84,89,93,96,98,99,100]}
+        ]
+      },
+      {
+        "type": "gantt",
+        "name": "Completion milestone shift",
+        "labels": ["Baseline finish", "Delay window", "EOT entitlement (illustrative)", "Revised finish"],
+        "ranges": [[8, 9], [9, 12], [9, 11], [12, 13]]
+      },
+      {
+        "type": "bars",
+        "name": "Delay driver contribution (illustrative)",
+        "labels": ["Design / approvals", "Procurement", "Access / interfaces", "Productivity", "Overall delay exposure"],
+        "series": [
+          {"name": "Contributing days (index)", "values": [32, 28, 22, 18, 100]},
+          {"name": "Mitigated by recovery", "values": [12, 10, 8, 6, 38]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "gantt",
+        "name": "Fragnet logic (relative)",
+        "labels": ["Cause event", "Impact analysis", "Linked successor works", "Recovery option"],
+        "ranges": [[3, 4], [4, 7], [5, 10], [8, 11]]
+      }
+    ],
+    "insights": [
+      "Built time-impact fragnets linking delay causes to successor activities and critical path",
+      "Compared as-planned versus impacted completion and float consumption",
+      "Prepared EOT entitlement summaries with supporting schedule narratives",
+      "Evaluated recovery options against approved delay windows",
+      "Supported consultant / client reviews with clear milestone shift visuals"
+    ]
+  },
+  "recovery-evm": {
+    "eyebrow": "EARNED VALUE / RECOVERY PLANNING",
+    "title": "SPI · CPI performance and recovery scenarios",
+    "description": "Portfolio illustration of earned-value monitoring and recovery planning on a major infrastructure-style programme: schedule performance index (SPI), cost performance index (CPI), forecast completion and scenario comparison. Synthetic example aligned with utility / tunnelling programme controls experience.",
+    "privacy": "Illustrative indices and curves only. No commercial rates, actual cost data or contract values are published.",
+    "source": "Representative EVM dashboards · recovery planning on QAR-scale infrastructure programmes",
+    "charts": [
+      {
+        "type": "bars",
+        "name": "Performance indices (latest period)",
+        "labels": ["SPI", "CPI", "SV %", "CV %", "Portfolio index"],
+        "series": [
+          {"name": "Previous period", "values": [88, 91, 82, 85, 87]},
+          {"name": "Current period", "values": [92, 94, 88, 90, 91]}
+        ],
+        "max": 100
+      },
+      {
+        "type": "line",
+        "name": "Cumulative S-curve — plan vs actual vs forecast",
+        "labels": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16"],
+        "series": [
+          {"name": "Planned", "values": [3,8,14,22,32,44,56,67,76,84,90,94,97,98,99,100]},
+          {"name": "Actual", "values": [2,6,11,18,27,38,49,58,66,74,81,87,91,94,96,97]},
+          {"name": "Recovery forecast", "values": [2,6,11,18,27,38,50,60,70,79,86,92,96,98,99,100]}
+        ]
+      },
+      {
+        "type": "gantt",
+        "name": "Recovery scenario comparison (relative)",
+        "labels": ["Do nothing", "Accelerate critical path", "Added resources", "Re-sequenced works"],
+        "ranges": [[0, 12], [0, 10], [0, 11], [0, 9]]
+      },
+      {
+        "type": "bars",
+        "name": "Workstream recovery focus",
+        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "series": [
+          {"name": "Variance before recovery", "values": [78, 65, 52, 20, 54]},
+          {"name": "After recovery plan", "values": [88, 76, 68, 45, 69]}
+        ],
+        "max": 100
+      }
+    ],
+    "insights": [
+      "Tracked SPI and CPI with integrated progress and cost measurement",
+      "Produced recovery forecasts and scenario comparisons for management decisions",
+      "Linked manpower, procurement and work-front recovery to critical-path activities",
+      "Reported earned-value variances with clear engineering and construction narratives",
+      "Supported EOT and recovery workshops with dashboard-ready exhibits"
     ]
   }
 };

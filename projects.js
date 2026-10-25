@@ -89,8 +89,9 @@ window.PORTFOLIO_PROJECTS = [
     overview: 'Structured a 30-month resource-loaded Primavera P6 programme (2,450+ activities) for full tower fit-out after shell-and-core handover. Coordinated engineering approvals, procurement of lifts, stone and joinery packages, level-by-level construction fronts, hoist logistics, and closeout waves from podium lobbies through upper office levels. Monthly S-curves and workstream dashboards tracked engineering, procurement, construction and closeout for owner review.',
     deliverables: ['50-floor tower fit-out master programme', 'Level-based work-front & hoist logistics planning', 'Engineering / procurement / construction dashboards', 'Typical-floor and lobby milestone logic', 'Monthly S-curves & executive recovery reviews'],
     methods: ['High-rise fit-out', 'P6 scheduling', 'Vertical logistics'],
-    coverImage: 'assets/project-images/al-faisal-tower-exterior.jpg',
+    coverImage: 'assets/project-images/al-faisal-tower-cover.jpg',
     gallery: [
+      {src: 'assets/project-images/al-faisal-tower-cover.jpg', caption: 'Al Faisal Tower — West Bay skyline thumbnail.'},
       {src: 'assets/project-images/al-faisal-tower-exterior.jpg', caption: 'Al Faisal Tower — West Bay skyline context for the 50-floor fit-out programme.'},
       {src: 'assets/project-images/al-faisal-tower-fitout-lobby.jpg', caption: 'Completed lift lobby fit-out — stone, wood and MEP interfaces typical of upper-floor packages.'}
     ]
@@ -123,17 +124,17 @@ window.PORTFOLIO_PROJECTS = [
     ]
   },
   {
-    id: 'aspire', number: '10', name: 'Aspire Zone', subtitle: 'Phase 2 · West Zone · athletics & sports realm', sector: 'Sports Infrastructure', region: 'Aspire Zone, Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'sports', featured: true,
-    label: 'Sports & public realm', role: 'Planning Engineer', scale: 'Design-build programme · athletics tracks & sports facilities',
-    summary: 'Design-build P6 programme for Aspire Zone West Zone — athletics tracks, sports buildings, parking, utilities and external works.',
-    overview: 'Structured Primavera P6 scheduling for Phase 2 West Zone sports infrastructure: athletics tracks, podium and sports-related buildings, roads, parking, utilities, lighting, irrigation and landscaping. Integrated civil, MEP and external-works sequences and KAHRAMAA power-supply dependencies with engineering, procurement, construction and closeout reporting.',
+    id: 'aspire', number: '10', name: 'Upgrade of the Athletics Training Base', subtitle: 'Aspire Zone venue', sector: 'Sports Infrastructure', region: 'Aspire Zone, Qatar', categories: ['Infrastructure', 'Public Works'], kind: 'sports', featured: true,
+    label: 'Aspire Zone · athletics training base', role: 'Planning Engineer', scale: 'Design-build upgrade programme · athletics & sports facilities',
+    summary: 'Planning support for the upgrade of the athletics training base at the Aspire Zone venue — tracks, sports buildings, utilities and external works.',
+    overview: 'Structured Primavera P6 scheduling for the Upgrade of the Athletics Training Base at the Aspire Zone venue: athletics tracks, training and sports-related buildings, roads, parking, utilities, lighting, irrigation and landscaping. Integrated civil, MEP and external-works sequences and KAHRAMAA power-supply dependencies with engineering, procurement, construction and closeout reporting.',
     deliverables: ['Design-build baseline & tender programme logic', 'Athletics track & sports facility sequencing', 'Civil / MEP / external works integration', 'Utility and power-supply interface tracking', 'Milestone dashboards & closeout planning'],
     methods: ['Design-build', 'Utilities coordination', 'Sports infrastructure'],
     coverImage: 'assets/project-images/aspire-zone-01.jpg',
     gallery: [
-      {src: 'assets/project-images/aspire-zone-01.jpg', caption: 'Aspire Zone — sports building and athletics track context at sunset.'},
-      {src: 'assets/project-images/aspire-zone-02.jpg', caption: 'West Zone sports facilities — podium building, parking and landscaped realm.'},
-      {src: 'assets/project-images/aspire-zone-03.jpg', caption: 'Aerial view — athletics track, grandstand and sports complex interface.'}
+      {src: 'assets/project-images/aspire-zone-01.jpg', caption: 'Aspire Zone venue — athletics training base and track context at sunset.'},
+      {src: 'assets/project-images/aspire-zone-02.jpg', caption: 'Athletics training base upgrade — podium building, parking and landscaped realm.'},
+      {src: 'assets/project-images/aspire-zone-03.jpg', caption: 'Aerial view — athletics track, grandstand and Aspire Zone sports interface.'}
     ]
   },
   {
