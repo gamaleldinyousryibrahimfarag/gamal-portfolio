@@ -14,9 +14,9 @@ window.PROJECT_ENRICHMENT = {
     signatureOrder: 1,
     signatureTagline: "Progress dashboards · S-curves · Recovery planning",
     deliveryPhase: "Execution",
-    client: "Private Engineering Office",
+    client: "Private Engineering Office (PEO)",
     consultant: "ICON Consulting Engineering",
-    contractor: "Hekkin Integrating Contracting Co. W.L.L.",
+    contractor: "Al Ali Engineering",
     myRole: "Planning Engineer",
     actualScope:
       "P6 baseline updates, weekly progress dashboards, level-1 schedule reporting, planned-versus-actual analysis and recovery follow-up for additional stores at Al Najada Gold Market (QAR 3.12M).",
@@ -50,9 +50,9 @@ window.PROJECT_ENRICHMENT = {
     signatureOrder: 2,
     signatureTagline: "Manpower control · Progress measurement · Reporting",
     deliveryPhase: "Execution",
-    client: "Government client (portfolio-safe reference)",
-    consultant: "Supervision consultant · multi-building campus",
-    contractor: "Main contractor · structural & MEP packages",
+    client: "Lekhwiya",
+    consultant: "Lekhwiya",
+    contractor: "Al Ali Engineering",
     myRole: "Planning Engineer",
     actualScope:
       "Weekly and monthly progress measurement, manpower histograms, engineering and procurement tracking, and area-based structural progress for multiple buildings.",
@@ -140,9 +140,9 @@ window.PROJECT_ENRICHMENT = {
     signatureOrder: 5,
     signatureTagline: "Façade replacement · Resource planning · Logistics",
     deliveryPhase: "Execution",
-    client: "Building owner / operator (occupied tower)",
-    consultant: "Façade supervision consultant",
-    contractor: "Façade and refurbishment contractor",
+    client: "Private Engineering Office (PEO)",
+    consultant: "ICON Consulting Engineering",
+    contractor: "Al Ali Engineering",
     myRole: "Planning Engineer",
     actualScope:
       "Phased planning for ~8,303 m² curtain-wall replacement on Office Tower 404, Al Sadd Street — access, long-lead materials and occupied-building logistics.",
@@ -196,6 +196,17 @@ window.PROJECT_ENRICHMENT = {
       "Earlier escalation of milestone drift and recovery options",
       "Consistent owner reporting for fit-out and handover decisions"
     ]
+  },
+  "majles-mosque": {
+    deliveryPhase: "Execution",
+    client: "Private Engineering Office (PEO)",
+    consultant: "ICON Consulting Engineering",
+    contractor: "Al Ali Engineering",
+    myRole: "Planning Engineer",
+    actualScope:
+      "Design-build planning for Majles, Masjed and Imam Flat at Rawdat Aba-Herran (QAR 36.8M) — WBS, cost-loaded P6 baseline, S-curves and progress measurement.",
+    planningContribution:
+      "Prepared the work breakdown structure and cost-loaded master programme, produced S-curves, cash-flow forecasts and manpower histograms, and supported construction sequencing and performance reporting for the client and supervision consultant."
   },
   "injection-wells": {
     deliveryPhase: "Execution",

@@ -4,7 +4,7 @@ window.PORTFOLIO_CASES = {
     "dataTier": "real-project-data",
     "eyebrow": "WEEKLY DASHBOARD / CLIENT & CONSULTANT REPORTING",
     "title": "Gold Souq progress dashboard — project controls in action",
-    "description": "This case study is grounded in the user-supplied weekly progress report and level-1 schedule update for the project 'Construction, Completion & Maintenance of Additional Stores at Al Najada Gold Market'. Client: Private Engineering Office. Supervision Consultant: ICON Consulting Engineering. Contractor: Hekkin Integrating Contracting Co. W.L.L.",
+    "description": "This case study is grounded in the user-supplied weekly progress report and level-1 schedule update for the project 'Construction, Completion & Maintenance of Additional Stores at Al Najada Gold Market'. Client: Private Engineering Office (PEO). Supervision Consultant: ICON Consulting Engineering. Contractor: Al Ali Engineering.",
     "privacy": "Portfolio use only. The dashboard and schedule images were shared directly by the portfolio owner. Sensitive commercial detail should not be redistributed beyond the portfolio context.",
     "source": "User-supplied Gold Souq weekly dashboard and level-1 schedule update",
     "charts": [
@@ -57,7 +57,7 @@ window.PORTFOLIO_CASES = {
     ],
     "insights": [
       "Overall portfolio snapshot at report date: planned 29.93% vs actual 32.21% (construction ahead of plan; procurement tracked separately)",
-      "Prepared weekly dashboard reporting for Private Engineering Office and ICON Consulting Engineering",
+      "Prepared weekly dashboard reporting for PEO and ICON Consulting Engineering",
       "Compared planned versus actual performance across preliminaries, engineering, procurement and construction",
       "Linked progress measurement to level-1 schedule updates and float awareness",
       "Used reporting outputs to highlight variance and support recovery-focused follow-up"
@@ -67,7 +67,7 @@ window.PORTFOLIO_CASES = {
     "dataTier": "real-project-data",
     "eyebrow": "LIVE PROJECT CONTROLS / USER-SUPPLIED EXHIBITS",
     "title": "Lekhwiya progress controls — real reporting examples",
-    "description": "This case study is now based on the actual charts and photos you supplied for the Lekhwiya project. It demonstrates how progress was tracked through manpower analysis, engineering status, procurement performance, and area-based structural progress measurement.",
+    "description": "Based on actual charts and photos supplied for the Lekhwiya project (client and consultant: Lekhwiya; contractor: Al Ali Engineering). Demonstrates manpower analysis, engineering status, procurement performance, and area-based structural progress measurement.",
     "privacy": "Portfolio use only. The exhibits were shared directly by the portfolio owner. Underlying detailed records and any sensitive project information should not be redistributed.",
     "source": "User-supplied Lekhwiya charts and site photos",
     "charts": [

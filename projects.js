@@ -176,7 +176,7 @@ window.PORTFOLIO_PROJECTS = [
     role: "Planning Engineer",
     scale: "8,303 m² curtain wall",
     summary: "Phased planning and sequencing for curtain-wall and facade refurbishment works on an occupied office tower in Doha.",
-    overview: "Planned and monitored an occupied-building facade refurbishment package for Office Tower 404, located on Al Sadd Street in Doha Municipality. The project involved curtain-wall related works and front-elevation improvements, requiring coordinated access planning, long-lead material tracking, work-front sequencing, and execution awareness in a constrained urban location.",
+    overview: "Planned and monitored an occupied-building façade refurbishment package for Office Tower 404, Al Sadd Street, Doha. Client: Private Engineering Office (PEO). Supervision Consultant: ICON Consulting Engineering. Contractor: Al Ali Engineering. Scope included curtain-wall works and front-elevation improvements with coordinated access planning, long-lead material tracking and work-front sequencing in a constrained urban location.",
     deliverables: [
       "Façade works sequencing",
       "Long-lead materials tracking",
@@ -341,7 +341,7 @@ window.PORTFOLIO_PROJECTS = [
     role: "Planning Engineer",
     scale: "QAR 36.8M programme",
     summary: "Design-build baseline, cost-loaded programme and reporting for a mosque, majles and associated accommodation.",
-    overview: "Prepared the work breakdown structure and cost-loaded master baseline for a QAR 36.8M community development. Produced S-curves, cash-flow forecasts, and manpower histograms to support construction sequencing and performance measurement.",
+    overview: "Prepared the work breakdown structure and cost-loaded master baseline for Majles, Masjed and Imam Flat at Rawdat Aba-Herran (QAR 36.8M). Client: Private Engineering Office (PEO). Supervision Consultant: ICON Consulting Engineering. Contractor: Al Ali Engineering. Produced S-curves, cash-flow forecasts and manpower histograms to support construction sequencing and performance measurement.",
     deliverables: [
       "Work breakdown structure (WBS)",
       "Cost-loaded P6 programme",
@@ -689,7 +689,7 @@ window.PORTFOLIO_PROJECTS = [
     role: "Planning Engineer",
     scale: "QAR 3.12M additional stores development",
     summary: "Baseline scheduling, dashboard reporting and recovery-focused follow-up for the construction, completion and maintenance of additional stores at Al Najada Gold Market.",
-    overview: "Supported the planning and controls of the Construction, Completion & Maintenance of Additional Stores at Al Najada Gold Market. The project was delivered for the Client: Private Engineering Office, under the Supervision Consultant: ICON Consulting Engineering, with Hekkin Integrating Contracting Co. W.L.L. as Contractor. My involvement included baseline scheduling, level-1 schedule updates, weekly dashboard reporting, S-curve and planned-versus-actual analysis, and recovery-oriented monitoring across preliminaries, engineering, procurement, construction and close-out activities.",
+    overview: "Supported the planning and controls of the Construction, Completion & Maintenance of Additional Stores at Al Najada Gold Market. Client: Private Engineering Office (PEO). Supervision Consultant: ICON Consulting Engineering. Contractor: Al Ali Engineering. My involvement included baseline scheduling, level-1 schedule updates, weekly dashboard reporting, S-curve and planned-versus-actual analysis, and recovery-oriented monitoring across preliminaries, engineering, procurement, construction and close-out activities.",
     deliverables: [
       "Baseline schedule development and updates",
       "Weekly dashboard and S-curve reporting",
@@ -744,7 +744,7 @@ window.PORTFOLIO_PROJECTS = [
     role: "Planning Engineer",
     scale: "Multiple work fronts and building zones",
     summary: "Planning and project-controls support covering engineering, procurement, manpower monitoring, structural progress and recovery-focused reporting.",
-    overview: "Supported planning and management reporting for the Lekhwiya project through weekly and periodic progress measurement, manpower monitoring, planned-versus-actual analysis, and package-level status reviews. The uploaded exhibits show real examples of manpower tracking, engineering progress, procurement performance, and structural progress by area, together with representative site photographs from construction stages.",
+    overview: "Supported planning and management reporting for the Lekhwiya multi-building campus. Client and supervision: Lekhwiya. Contractor: Al Ali Engineering. Weekly and periodic progress measurement, manpower monitoring, planned-versus-actual analysis and package-level status reviews — with portfolio-approved exhibits for manpower, engineering, procurement and structural progress by area.",
     deliverables: [
       "Progress dashboards and planned-versus-actual reporting",
       "Manpower monitoring and labour histogram review",

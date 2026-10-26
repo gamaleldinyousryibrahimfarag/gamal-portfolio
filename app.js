@@ -89,13 +89,25 @@
     empty.hidden=visible.length>0;
     for(const btn of filterButtons){const selected=btn.dataset.filter===activeFilter;btn.classList.toggle('active',selected);btn.setAttribute('aria-pressed',String(selected));}
     renderSignatures();
+    syncProjectCounts();
+  }
+  function syncProjectCounts(){
+    const n=projects.length;
+    const hero=document.getElementById('hero-project-count');
+    if(hero)hero.textContent=String(n);
+    const filt=document.getElementById('filter-all-count');
+    if(filt)filt.textContent=String(n);
+    if(toggleAllBtn&&!allPanel?.hidden){
+      toggleAllBtn.innerHTML=`Hide full index (${n}) <span aria-hidden="true">↑</span>`;
+    }
   }
   if(toggleAllBtn&&allPanel){
     toggleAllBtn.addEventListener('click',()=>{
       const open=allPanel.hidden;
       allPanel.hidden=!open;
       toggleAllBtn.setAttribute('aria-expanded',String(open));
-      toggleAllBtn.innerHTML=open?'Hide full project index <span aria-hidden="true">↑</span>':'Show all 18 projects <span aria-hidden="true">↓</span>';
+      const n=projects.length;
+      toggleAllBtn.innerHTML=open?`Hide full index (${n}) <span aria-hidden="true">↑</span>`:`Show full project index (${n}) <span aria-hidden="true">↓</span>`;
       if(open)allPanel.scrollIntoView({behavior:'smooth',block:'start'});
     });
   }
@@ -118,6 +130,11 @@
     set('dialog-subtitle',p.subtitle);
     set('dialog-summary',p.summary);
     set('dialog-overview',p.overview);
+    const roleScopeEl=document.getElementById('dialog-role-scope');
+    if(roleScopeEl){
+      const parts=[p.myRole||p.role,p.actualScope].filter(Boolean);
+      roleScopeEl.textContent=parts.length?parts.join(' — '):(p.scale||'');
+    }
     set('dialog-location',p.region);
     set('dialog-role',p.myRole||p.role);
     set('dialog-scale',p.scale||'Scope overview');
@@ -142,8 +159,7 @@
         const dt=el('dt','',k);const dd=el('dd','',v);gridEl.appendChild(dt);gridEl.appendChild(dd);
       });
       const scope=document.getElementById('dialog-actual-scope');
-      scope.textContent=p.actualScope||'';
-      scope.hidden=!p.actualScope;
+      if(scope){scope.textContent='';scope.hidden=true;}
     }
     const contrib=document.getElementById('dialog-contribution');
     const contribP=document.getElementById('dialog-planning-contribution');
@@ -296,4 +312,5 @@
   }));
 
   render();
+  syncProjectCounts();
 })();
