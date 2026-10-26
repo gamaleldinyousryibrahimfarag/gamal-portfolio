@@ -1,6 +1,7 @@
 /* Public-safe portfolio exhibits. All synthetic examples are explicitly labelled. */
 window.PORTFOLIO_CASES = {
   "najada-gold-souq": {
+    "dataTier": "real-project-data",
     "eyebrow": "WEEKLY DASHBOARD / CLIENT & CONSULTANT REPORTING",
     "title": "Gold Souq progress dashboard — project controls in action",
     "description": "This case study is grounded in the user-supplied weekly progress report and level-1 schedule update for the project 'Construction, Completion & Maintenance of Additional Stores at Al Najada Gold Market'. Client: Private Engineering Office. Supervision Consultant: ICON Consulting Engineering. Contractor: Hekkin Integrating Contracting Co. W.L.L.",
@@ -55,13 +56,15 @@ window.PORTFOLIO_CASES = {
       }
     ],
     "insights": [
-      "Prepared or supported weekly dashboard reporting for client and consultant review",
+      "Overall portfolio snapshot at report date: planned 29.93% vs actual 32.21% (construction ahead of plan; procurement tracked separately)",
+      "Prepared weekly dashboard reporting for Private Engineering Office and ICON Consulting Engineering",
       "Compared planned versus actual performance across preliminaries, engineering, procurement and construction",
       "Linked progress measurement to level-1 schedule updates and float awareness",
       "Used reporting outputs to highlight variance and support recovery-focused follow-up"
     ]
   },
   "lekhwiya":  {
+    "dataTier": "real-project-data",
     "eyebrow": "LIVE PROJECT CONTROLS / USER-SUPPLIED EXHIBITS",
     "title": "Lekhwiya progress controls — real reporting examples",
     "description": "This case study is now based on the actual charts and photos you supplied for the Lekhwiya project. It demonstrates how progress was tracked through manpower analysis, engineering status, procurement performance, and area-based structural progress measurement.",
@@ -206,6 +209,7 @@ window.PORTFOLIO_CASES = {
     ]
   },
   "diriyah": {
+    "dataTier": "real-project-data",
     "eyebrow": "P3B / DOORS & WINDOWS CONSTRUCTION SCHEDULE",
     "title": "Diriyah Square — 659-day envelope programme (Rev 2)",
     "description": "Structured from the P3B Doors & Windows Construction Schedule Rev 2 (Diriyah Square Project Submission): design and BIM through DGCL mock-up approval, Code A design approval, MAR procurement, fabrication, grouped sub-frame and doors/windows installation, performance testing, commissioning and handover across Diriyah Square sectors.",
@@ -276,6 +280,7 @@ window.PORTFOLIO_CASES = {
     ]
   },
   "private-villa": {
+    "dataTier": "illustrative",
     "eyebrow": "BASELINE / COST & RESOURCE PLANNING",
     "title": "Planned progress S-curve — weekly cumulative",
     "description": "Reconstructed from the supplied residential villa planned S-curve. The x-axis is normalized to relative project weeks; client, location, dates and commercial BOQ values are omitted.",
@@ -1295,6 +1300,7 @@ window.PORTFOLIO_CASES = {
     ]
   },
   "eot-delay-analysis": {
+    "dataTier": "real-project-data",
     "eyebrow": "ASHGHAL DEEP INJECTION WELLS · EOT / TIA",
     "title": "Extension of time — injection plant slip & permit window (2022)",
     "description": "Time-impact analysis prepared on the ASHGHAL Deep Injection Wells Programme (QAR 150M, integrated P6 baseline across three subcontractors). A May–July 2022 delay slice was driven by late factory acceptance of the high-pressure injection package, deferred night-work permits on a live corridor compound, and a tie-in survey hold on Subcontractor C’s collector interface. Fragnets were inserted on the well-cluster-4 injection chain; as-planned versus impacted completion was compared and net EOT entitlement was quantified after float and concurrency review for consultant submission support.",
@@ -1343,6 +1349,7 @@ window.PORTFOLIO_CASES = {
     ]
   },
   "recovery-evm": {
+    "dataTier": "real-project-data",
     "eyebrow": "ASHGHAL DEEP INJECTION WELLS · EVM / RECOVERY",
     "title": "SPI · CPI tracking and recovery scenarios (2022–2023)",
     "description": "Earned-value controls on the same Deep Injection Wells programme: monthly BCWS / BCWP / ACWP measurement across engineering, procurement, well drilling & injection, testing and close-out. At control period 14 (Oct 2022) SPI fell to 0.86 and CPI to 0.92 as cluster 3–4 injection lagged the baseline. Recovery scenarios were tested in P6 — status quo, critical-path acceleration, added injection crew, and cluster resequencing — with manpower and procurement actions implemented through Q1 2023 to restore SPI to 0.94 by period 19.",

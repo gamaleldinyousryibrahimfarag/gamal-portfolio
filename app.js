@@ -1,9 +1,31 @@
 (function(){
   'use strict';
+  const enrichment = window.PROJECT_ENRICHMENT || {};
+  const signatureIds = window.SIGNATURE_PROJECT_IDS || [];
+  function mergeProject(p) {
+    const e = enrichment[p.id] || {};
+    return {
+      ...p,
+      ...e,
+      name: e.signatureCardTitle || p.name,
+      subtitle: e.signatureCardSubtitle || e.signatureTagline || p.subtitle,
+      categories: p.categories,
+      deliverables: p.deliverables,
+      methods: p.methods
+    };
+  }
   const projects = (Array.isArray(window.PORTFOLIO_PROJECTS) ? window.PORTFOLIO_PROJECTS : [])
+    .map(mergeProject)
     .slice()
     .sort((a, b) => (a.sortOrder ?? Number(a.number)) - (b.sortOrder ?? Number(b.number)));
+  const signatureProjects = signatureIds
+    .map(id => projects.find(p => p.id === id))
+    .filter(Boolean)
+    .sort((a, b) => (a.signatureOrder || 0) - (b.signatureOrder || 0));
   const grid = document.getElementById('project-grid');
+  const signatureGrid = document.getElementById('signature-grid');
+  const allPanel = document.getElementById('all-projects-panel');
+  const toggleAllBtn = document.getElementById('toggle-all-projects');
   const search = document.getElementById('project-search');
   const count = document.getElementById('result-count');
   const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
@@ -40,25 +62,42 @@
     }
     return illustration(project.kind);
   }
-  function buildCard(project,index){
+  function phaseBadge(phase){return phase?`<span class="phase-badge phase-${String(phase).toLowerCase().replace(/[^a-z]+/g,'-')}">${safeText(phase)}</span>`:'';}
+  function buildCard(project,index,opts){
+    const signature=opts&&opts.signature;
     const article = document.createElement('article');
-    article.className='project-card';
+    article.className='project-card'+(signature?' project-card--signature':'');
     article.style.animationDelay=`${Math.min(index,9)*35}ms`;
-    article.innerHTML = `<button type="button" class="project-button" aria-label="View ${safeText(project.name)} — ${safeText(project.subtitle)} project details"><span class="project-cover" data-kind="${safeText(project.kind)}">${projectMedia(project)}<span class="cover-tag">${safeText(project.region)}</span><span class="cover-number">${safeText(project.number)}</span></span><span class="project-card-body"><span class="project-sector">${safeText(project.sector)}</span><h3>${safeText(project.name)}</h3><span class="project-subtitle">${safeText(project.subtitle)}</span><span class="project-description">${safeText(project.summary)}</span><span class="project-bottom"><span>VIEW PROJECT CASE</span><span aria-hidden="true">↗</span></span></span></button>`;
+    const tagline=project.signatureTagline?`<span class="project-tagline">${safeText(project.signatureTagline)}</span>`:'';
+    article.innerHTML = `<button type="button" class="project-button" aria-label="View ${safeText(project.name)} — ${safeText(project.subtitle)} project details"><span class="project-cover" data-kind="${safeText(project.kind)}">${projectMedia(project)}<span class="cover-tag">${safeText(project.region)}</span>${signature?'':'<span class="cover-number">'+safeText(project.number)+'</span>'}</span><span class="project-card-body">${phaseBadge(project.deliveryPhase)}<span class="project-sector">${safeText(project.sector)}</span><h3>${safeText(project.name)}</h3><span class="project-subtitle">${safeText(project.subtitle)}</span>${tagline}<span class="project-description">${safeText(project.summary)}</span><span class="project-bottom"><span>OPEN CASE STUDY</span><span aria-hidden="true">↗</span></span></span></button>`;
     article.querySelector('button').addEventListener('click',e=>openProject(project.id,e.currentTarget));
     return article;
+  }
+  function renderSignatures(){
+    if(!signatureGrid)return;
+    signatureGrid.replaceChildren(...signatureProjects.map((p,i)=>buildCard(p,i,{signature:true})));
   }
   function render(){
     const term = search.value.trim().toLowerCase();
     const visible = projects.filter(p=>{
       const sectorMatch=activeFilter==='All'||p.categories.includes(activeFilter);
-      const haystack=[p.name,p.subtitle,p.sector,p.region,p.summary,p.overview,...p.deliverables,...p.methods].join(' ').toLowerCase();
+      const haystack=[p.name,p.subtitle,p.sector,p.region,p.summary,p.overview,p.actualScope,p.planningContribution,...p.deliverables,...p.methods].join(' ').toLowerCase();
       return sectorMatch && (!term||haystack.includes(term));
     });
-    grid.replaceChildren(...visible.map(buildCard));
+    grid.replaceChildren(...visible.map((p,i)=>buildCard(p,i)));
     count.textContent=`Showing ${visible.length} of ${projects.length} projects`;
     empty.hidden=visible.length>0;
     for(const btn of filterButtons){const selected=btn.dataset.filter===activeFilter;btn.classList.toggle('active',selected);btn.setAttribute('aria-pressed',String(selected));}
+    renderSignatures();
+  }
+  if(toggleAllBtn&&allPanel){
+    toggleAllBtn.addEventListener('click',()=>{
+      const open=allPanel.hidden;
+      allPanel.hidden=!open;
+      toggleAllBtn.setAttribute('aria-expanded',String(open));
+      toggleAllBtn.innerHTML=open?'Hide full project index <span aria-hidden="true">↑</span>':'Show all 18 projects <span aria-hidden="true">↓</span>';
+      if(open)allPanel.scrollIntoView({behavior:'smooth',block:'start'});
+    });
   }
   const evidenceProjectLink={
     'eot-delay-analysis':'injection-wells',
@@ -80,7 +119,7 @@
     set('dialog-summary',p.summary);
     set('dialog-overview',p.overview);
     set('dialog-location',p.region);
-    set('dialog-role',p.role);
+    set('dialog-role',p.myRole||p.role);
     set('dialog-scale',p.scale||'Scope overview');
     set('dialog-visual-label',p.label.toUpperCase());
     set('dialog-visual-index',p.number);
@@ -88,6 +127,44 @@
     visual.querySelectorAll('.cover-grid,.cover-illustration,.cover-photo').forEach(n=>n.remove());
     visual.insertAdjacentHTML('afterbegin',projectMedia(p));
     const ul=document.getElementById('dialog-deliverables');ul.replaceChildren(...p.deliverables.map(t=>{const li=document.createElement('li');li.textContent=t;return li;}));
+    const badges=document.getElementById('dialog-badges');
+    badges.replaceChildren();
+    if(p.deliveryPhase){const b=el('span','phase-badge phase-'+String(p.deliveryPhase).toLowerCase().replace(/[^a-z]+/g,'-'),p.deliveryPhase);badges.appendChild(b);}
+    if(p.signature){badges.appendChild(el('span','sig-badge','Signature case study'));}
+    const stake=document.getElementById('dialog-stakeholders');
+    const gridEl=document.getElementById('stakeholder-grid');
+    const hasStake=p.client||p.consultant||p.contractor||p.myRole;
+    stake.hidden=!hasStake;
+    if(hasStake){
+      gridEl.replaceChildren();
+      [['Client',p.client],['Consultant',p.consultant],['Contractor',p.contractor],['My role',p.myRole||p.role]].forEach(([k,v])=>{
+        if(!v)return;
+        const dt=el('dt','',k);const dd=el('dd','',v);gridEl.appendChild(dt);gridEl.appendChild(dd);
+      });
+      const scope=document.getElementById('dialog-actual-scope');
+      scope.textContent=p.actualScope||'';
+      scope.hidden=!p.actualScope;
+    }
+    const contrib=document.getElementById('dialog-contribution');
+    const contribP=document.getElementById('dialog-planning-contribution');
+    contrib.hidden=!p.planningContribution;
+    if(p.planningContribution)contribP.textContent=p.planningContribution;
+    const snapWrap=document.getElementById('dialog-progress-snapshot');
+    if(p.progressSnapshot){
+      snapWrap.hidden=false;
+      document.getElementById('snapshot-planned').textContent=p.progressSnapshot.planned+'%';
+      document.getElementById('snapshot-actual').textContent=p.progressSnapshot.actual+'%';
+      document.getElementById('snapshot-note').textContent=(p.progressSnapshot.label?p.progressSnapshot.label+'. ':'')+(p.progressSnapshot.note||'');
+    }else snapWrap.hidden=true;
+    const caso=document.getElementById('dialog-caso');
+    const hasCaso=(p.challenges&&p.challenges.length)||(p.actions&&p.actions.length)||(p.outcomes&&p.outcomes.length);
+    caso.hidden=!hasCaso;
+    if(hasCaso){
+      const fill=(id,items)=>{const u=document.getElementById(id);u.replaceChildren(...(items||[]).map(t=>el('li','',t)));};
+      fill('dialog-challenges',p.challenges);
+      fill('dialog-actions',p.actions);
+      fill('dialog-outcomes',p.outcomes);
+    }
     renderCaseStudy(caseStudyId||p.evidenceCase||p.id);
     renderProjectGallery(p);
   }
@@ -112,6 +189,24 @@
   document.getElementById('copy-phone').addEventListener('click',()=>copyText('+97477738990','Phone number copied','Phone'));
 
   const caseData=window.PORTFOLIO_CASES||{};
+  const chartLightbox=document.getElementById('chart-lightbox');
+  const chartLightboxContent=document.getElementById('chart-lightbox-content');
+  const chartExpandBtn=document.getElementById('chart-expand-btn');
+  let lastChartNode=null;
+  function openChartLightbox(node){
+    if(!chartLightbox||!node)return;
+    chartLightboxContent.replaceChildren(node.cloneNode(true));
+    if(typeof chartLightbox.showModal==='function')chartLightbox.showModal();
+    else chartLightbox.setAttribute('open','');
+  }
+  if(chartExpandBtn)chartExpandBtn.addEventListener('click',()=>openChartLightbox(lastChartNode));
+  document.getElementById('chart-lightbox-close')?.addEventListener('click',()=>chartLightbox?.close?.());
+  chartLightbox?.addEventListener('click',e=>{if(e.target===chartLightbox)chartLightbox.close();});
+  const backTop=document.getElementById('back-to-top');
+  if(backTop){
+    const onScroll=()=>backTop.classList.toggle('visible',window.scrollY>480);
+    window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  }
   function el(tag, cls, text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e;}
   function pointPath(values,w,h,max){return values.map((n,i)=>`${i?'L':'M'}${(i/Math.max(1,values.length-1)*w).toFixed(1)},${(h-((+n||0)/max)*h).toFixed(1)}`).join(' ');}
   function drawChart(ch){
@@ -175,8 +270,22 @@
     document.getElementById('case-privacy').textContent=obj.privacy;
     const ul=document.getElementById('case-insights');ul.replaceChildren(...obj.insights.map(item=>el('li','',item)));
     const tabs=document.getElementById('case-tabs'),plot=document.getElementById('case-plot');tabs.replaceChildren();
-    obj.charts.forEach((ch,i)=>{const btn=el('button','case-tab'+(i?'':' active'),ch.name);btn.type='button';btn.setAttribute('aria-pressed',(!i).toString());btn.addEventListener('click',()=>{tabs.querySelectorAll('button').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});btn.classList.add('active');btn.setAttribute('aria-pressed','true');plot.replaceChildren(drawChart(ch))});tabs.appendChild(btn)});
-    plot.replaceChildren(drawChart(obj.charts[0]));
+    const tierEl=document.getElementById('case-data-tier');
+    const tier=obj.dataTier||(id==='private-villa'?'illustrative':'programme-record');
+    if(tierEl){
+      tierEl.hidden=false;
+      const illustrative=tier==='illustrative';
+      tierEl.className='case-data-tier '+(illustrative?'is-illustrative':'is-real');
+      tierEl.textContent=illustrative?'Illustrative data — reconstructed for public portfolio (not a live performance claim).':'Real project / programme-record data — values reflect the cited reporting period or approved exhibits.';
+    }
+    function showChart(ch){
+      const node=drawChart(ch);
+      lastChartNode=node;
+      plot.replaceChildren(node);
+      if(chartExpandBtn)chartExpandBtn.hidden=false;
+    }
+    obj.charts.forEach((ch,i)=>{const btn=el('button','case-tab'+(i?'':' active'),ch.name);btn.type='button';btn.setAttribute('aria-pressed',(!i).toString());btn.addEventListener('click',()=>{tabs.querySelectorAll('button').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});btn.classList.add('active');btn.setAttribute('aria-pressed','true');showChart(ch)});tabs.appendChild(btn)});
+    showChart(obj.charts[0]);
   }
   document.querySelectorAll('[data-evidence-project]').forEach(node=>node.addEventListener('click',()=>{
     const caseId=node.dataset.evidenceProject;
