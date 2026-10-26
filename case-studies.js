@@ -428,7 +428,7 @@ window.PORTFOLIO_CASES = {
   "shk-mohammed-palace": {
     "eyebrow": "OWNER REPRESENTATIVE / PALACE PROGRAMME CONTROLS",
     "title": "Planned versus actual progress - 28-month programme (~2 yr 4 mo)",
-    "description": "Portfolio illustration of planning controls for SHK Mohammed Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
+    "description": "Portfolio illustration of planning controls for His Highness Sheikh Mohammed Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
     "privacy": "Illustrative portfolio metrics derived from planning methods applied on the project. No confidential BOQ, subcontractor pricing or client reporting packs are published.",
     "source": "P6 palace master programme | 1,120+ activities | 28-month programme (~2 yr 4 mo)",
     "charts": [
@@ -572,7 +572,7 @@ window.PORTFOLIO_CASES = {
   "shk-tamim-palace": {
     "eyebrow": "OWNER REPRESENTATIVE / PALACE PROGRAMME CONTROLS",
     "title": "Planned versus actual progress - 31-month programme (~2 yr 7 mo)",
-    "description": "Portfolio illustration of planning controls for SHK Tamim Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
+    "description": "Portfolio illustration of planning controls for His Highness Sheikh Tamim Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
     "privacy": "Illustrative portfolio metrics derived from planning methods applied on the project. No confidential BOQ, subcontractor pricing or client reporting packs are published.",
     "source": "P6 palace master programme | 980+ activities | 31-month programme (~2 yr 7 mo)",
     "charts": [
@@ -725,7 +725,7 @@ window.PORTFOLIO_CASES = {
   "shk-khalid-palace": {
     "eyebrow": "OWNER REPRESENTATIVE / PALACE PROGRAMME CONTROLS",
     "title": "Planned versus actual progress - 24-month programme (~2 yr)",
-    "description": "Portfolio illustration of planning controls for SHK Khalid Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
+    "description": "Portfolio illustration of planning controls for His Highness Sheikh Khalid Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
     "privacy": "Illustrative portfolio metrics derived from planning methods applied on the project. No confidential BOQ, subcontractor pricing or client reporting packs are published.",
     "source": "P6 palace master programme | 860+ activities | 24-month programme (~2 yr)",
     "charts": [
@@ -857,7 +857,7 @@ window.PORTFOLIO_CASES = {
   "shk-jassim-palace": {
     "eyebrow": "OWNER REPRESENTATIVE / PALACE PROGRAMME CONTROLS",
     "title": "Planned versus actual progress - 35-month programme (~2 yr 11 mo)",
-    "description": "Portfolio illustration of planning controls for SHK Jassim Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
+    "description": "Portfolio illustration of planning controls for His Highness Sheikh Jassim Bin Faisal Al Thani Palace: monthly cumulative S-curve, workstream progress across engineering, procurement, construction and closeout, and relative programme phasing. Durations and curves are normalized for public display and do not publish contractual dates or commercial values.",
     "privacy": "Illustrative portfolio metrics derived from planning methods applied on the project. No confidential BOQ, subcontractor pricing or client reporting packs are published.",
     "source": "P6 palace master programme | 1,340+ activities | 35-month programme (~2 yr 11 mo)",
     "charts": [
@@ -1073,7 +1073,7 @@ window.PORTFOLIO_CASES = {
   "aamal-ceo-office-tamim": {
     "eyebrow": "CITY TOWER / FAST-TRACK EXECUTIVE FIT-OUT",
     "title": "Aamal CEO office - 9-week programme (~2 months)",
-    "description": "Portfolio illustration of fast-track planning controls for the Aamal Company CEO office of SHK Tamim Bin Faisal Al Thani in City Tower: weekly cumulative S-curve, engineering-procurement-construction-closeout dashboard, and fit-out zone progress. Completed within a 2-3 month envelope. Illustrative metrics only.",
+    "description": "Portfolio illustration of fast-track planning controls for the Aamal Company CEO office of His Highness Sheikh Tamim Bin Faisal Al Thani in City Tower: weekly cumulative S-curve, engineering-procurement-construction-closeout dashboard, and fit-out zone progress. Completed within a 2-3 month envelope. Illustrative metrics only.",
     "privacy": "Owner-supplied interior photographs for portfolio use. No contractual dates, tenant data or commercial values are published.",
     "source": "P6 CEO suite programme | 265 activities | City Tower | 9-week fast-track (~2 months)",
     "charts": [
@@ -1123,8 +1123,8 @@ window.PORTFOLIO_CASES = {
   },
   "sh-thani-office-city-tower": {
     "eyebrow": "CITY TOWER / FAST-TRACK EXECUTIVE FIT-OUT",
-    "title": "SHK Thani office - 12-week programme (~3 months)",
-    "description": "Portfolio illustration of fast-track planning controls for SHK Thani Bin Faisal Al Thani's private executive office in City Tower: weekly S-curve, workstream dashboard and lounge/meeting zone progress. Completed within the 2-3 month maximum envelope. Illustrative metrics only.",
+    "title": "His Highness Sheikh Thani office - 12-week programme (~3 months)",
+    "description": "Portfolio illustration of fast-track planning controls for His Highness Sheikh Thani Bin Faisal Al Thani's private executive office in City Tower: weekly S-curve, workstream dashboard and lounge/meeting zone progress. Completed within the 2-3 month maximum envelope. Illustrative metrics only.",
     "privacy": "Owner-supplied interior photographs for portfolio use. No contractual dates or commercial records are published.",
     "source": "P6 executive office programme | 240 activities | City Tower | 12-week programme (~3 months)",
     "charts": [

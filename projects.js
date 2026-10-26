@@ -87,7 +87,7 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "shk-mohammed-palace",
     number: "03",
-    name: "SHK Mohammed Bin Faisal Al Thani Palace",
+    name: "His Highness Sheikh Mohammed Bin Faisal Al Thani Palace",
     subtitle: "Private royal palace development",
     sector: "Royal Developments",
     region: "Doha, Qatar",
@@ -117,7 +117,7 @@ window.PORTFOLIO_PROJECTS = [
     gallery: [
       {
         src: "assets/project-images/shk-mohammed-palace.jpg",
-        caption: "Aerial view of SHK Mohammed Bin Faisal Al Thani Palace — courtyard, domes and formal landscaping."
+        caption: "Aerial view of His Highness Sheikh Mohammed Bin Faisal Al Thani Palace — courtyard, domes and formal landscaping."
       }
     ],
     sortOrder: 3
@@ -125,7 +125,7 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "shk-khalid-palace",
     number: "04",
-    name: "SHK Khalid Bin Faisal Al Thani Palace",
+    name: "His Highness Sheikh Khalid Bin Faisal Al Thani Palace",
     subtitle: "Private royal palace development",
     sector: "Royal Developments",
     region: "Doha, Qatar",
@@ -155,7 +155,7 @@ window.PORTFOLIO_PROJECTS = [
     gallery: [
       {
         src: "assets/project-images/shk-khalid-palace.jpg",
-        caption: "SHK Khalid Bin Faisal Al Thani Palace — main entrance and exterior lighting."
+        caption: "His Highness Sheikh Khalid Bin Faisal Al Thani Palace — main entrance and exterior lighting."
       }
     ],
     sortOrder: 4
@@ -192,7 +192,7 @@ window.PORTFOLIO_PROJECTS = [
     gallery: [
       {
         src: "assets/project-images/tower-404-front.jpg",
-        caption: "Front elevation view of Office Tower 404 during facade works."
+        caption: "Street-level view of Office Tower 404 on Al Sadd Street — main entrance and curtain-wall façade."
       },
       {
         src: "assets/project-images/tower-404-side.jpg",
@@ -204,7 +204,7 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "shk-tamim-palace",
     number: "06",
-    name: "SHK Tamim Bin Faisal Al Thani Palace",
+    name: "His Highness Sheikh Tamim Bin Faisal Al Thani Palace",
     subtitle: "Private royal palace development",
     sector: "Royal Developments",
     region: "Doha, Qatar",
@@ -234,7 +234,7 @@ window.PORTFOLIO_PROJECTS = [
     gallery: [
       {
         src: "assets/project-images/shk-tamim-palace.jpg",
-        caption: "SHK Tamim Bin Faisal Al Thani Palace — main atrium and interior fit-out."
+        caption: "His Highness Sheikh Tamim Bin Faisal Al Thani Palace — main atrium and interior fit-out."
       }
     ],
     sortOrder: 6
@@ -242,7 +242,7 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "shk-jassim-palace",
     number: "07",
-    name: "SHK Jassim Bin Faisal Al Thani Palace",
+    name: "His Highness Sheikh Jassim Bin Faisal Al Thani Palace",
     subtitle: "Private royal palace development",
     sector: "Royal Developments",
     region: "Doha, Qatar",
@@ -272,7 +272,7 @@ window.PORTFOLIO_PROJECTS = [
     gallery: [
       {
         src: "assets/project-images/shk-jassim-palace.jpg",
-        caption: "SHK Jassim Bin Faisal Al Thani Palace — estate overview and landscaped grounds."
+        caption: "His Highness Sheikh Jassim Bin Faisal Al Thani Palace — estate overview and landscaped grounds."
       }
     ],
     sortOrder: 7
@@ -327,8 +327,8 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "majles-mosque",
     number: "09",
-    name: "Majles, Masjed",
-    subtitle: "& Imam Flat",
+    name: "Mosque, Majlis & Imam Flat",
+    subtitle: "Community buildings · Rawdat Aba-Herran",
     sector: "Community Buildings",
     region: "Rawdat Aba-Herran, Qatar",
     categories: [
@@ -337,11 +337,11 @@ window.PORTFOLIO_PROJECTS = [
     ],
     kind: "community",
     featured: false,
-    label: "Community buildings",
+    label: "Mosque · Majlis · Imam accommodation",
     role: "Planning Engineer",
     scale: "QAR 36.8M programme",
-    summary: "Design-build baseline, cost-loaded programme and reporting for a mosque, majles and associated accommodation.",
-    overview: "Prepared the work breakdown structure and cost-loaded master baseline for Majles, Masjed and Imam Flat at Rawdat Aba-Herran (QAR 36.8M). Client: Private Engineering Office (PEO). Supervision Consultant: ICON Consulting Engineering. Contractor: Al Ali Engineering. Produced S-curves, cash-flow forecasts and manpower histograms to support construction sequencing and performance measurement.",
+    summary: "Design-build baseline, cost-loaded programme and reporting for a mosque, majlis meeting hall, and imam flat.",
+    overview: "Prepared the work breakdown structure and cost-loaded master baseline for a mosque, majlis, and imam flat at Rawdat Aba-Herran (QAR 36.8M). Client: Private Engineering Office (PEO). Supervision Consultant: ICON Consulting Engineering. Contractor: Al Ali Engineering. Produced S-curves, cash-flow forecasts and manpower histograms to support construction sequencing and performance measurement.",
     deliverables: [
       "Work breakdown structure (WBS)",
       "Cost-loaded P6 programme",
@@ -542,7 +542,7 @@ window.PORTFOLIO_PROJECTS = [
     id: "aamal-ceo-office-tamim",
     number: "14",
     name: "Aamal Company CEO Office",
-    subtitle: "SHK Tamim Bin Faisal Al Thani · City Tower",
+    subtitle: "His Highness Sheikh Tamim Bin Faisal Al Thani · City Tower",
     sector: "Executive Office Fit-Out",
     region: "City Tower, Doha, Qatar",
     categories: [
@@ -554,7 +554,7 @@ window.PORTFOLIO_PROJECTS = [
     role: "Planning Engineer · Owner Representative",
     scale: "9-week fast-track · ~2 months · 265 P6 activities",
     summary: "Fast-track planning and controls for the Aamal Company CEO executive office — desk suite, boardroom and meeting floors within City Tower.",
-    overview: "Delivered a compressed ~2-month (9-week) Primavera P6 fit-out programme (265 activities) for SHK Tamim Bin Faisal Al Thani’s Aamal Company CEO office. Overlapped engineering approvals, expedited stone and joinery procurement, MEP fixes, furniture installation and closeout using after-hours tower access. Weekly S-curves and engineering–procurement–construction–closeout dashboards tracked completion within the 2–3 month window.",
+    overview: "Delivered a compressed ~2-month (9-week) Primavera P6 fit-out programme (265 activities) for His Highness Sheikh Tamim Bin Faisal Al Thani’s Aamal Company CEO office. Overlapped engineering approvals, expedited stone and joinery procurement, MEP fixes, furniture installation and closeout using after-hours tower access. Weekly S-curves and engineering–procurement–construction–closeout dashboards tracked completion within the 2–3 month window.",
     deliverables: [
       "Fast-track CEO suite P6 programme",
       "Boardroom & meeting-room milestone logic",
@@ -587,7 +587,7 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "sh-thani-office-city-tower",
     number: "15",
-    name: "SHK Thani Bin Faisal Al Thani Office",
+    name: "His Highness Sheikh Thani Bin Faisal Al Thani Office",
     subtitle: "Private executive office · City Tower",
     sector: "Executive Office Fit-Out",
     region: "City Tower, Doha, Qatar",
@@ -599,7 +599,7 @@ window.PORTFOLIO_PROJECTS = [
     label: "Private executive suite · City Tower",
     role: "Planning Engineer · Owner Representative",
     scale: "12-week programme · ~3 months · 240 P6 activities",
-    summary: "Fast-track programme management for SHK Thani Bin Faisal Al Thani’s private executive office lounge, meeting and support spaces in City Tower.",
+    summary: "Fast-track programme management for His Highness Sheikh Thani Bin Faisal Al Thani’s private executive office lounge, meeting and support spaces in City Tower.",
     overview: "Completed an integrated fit-out within ~3 months (12 weeks, 240 activities) covering lounge, reception, meeting and support areas. Ran overlapping engineering, procurement and construction fronts with bespoke joinery and stone packages, MEP coordination, after-hours work and closeout handover in a live high-rise — within the 2–3 month delivery target.",
     deliverables: [
       "12-week executive office P6 programme",

@@ -204,7 +204,7 @@ window.PROJECT_ENRICHMENT = {
     contractor: "Al Ali Engineering",
     myRole: "Planning Engineer",
     actualScope:
-      "Design-build planning for Majles, Masjed and Imam Flat at Rawdat Aba-Herran (QAR 36.8M) — WBS, cost-loaded P6 baseline, S-curves and progress measurement.",
+      "Design-build planning for a mosque, majlis, and imam flat at Rawdat Aba-Herran (QAR 36.8M) — WBS, cost-loaded P6 baseline, S-curves and progress measurement.",
     planningContribution:
       "Prepared the work breakdown structure and cost-loaded master programme, produced S-curves, cash-flow forecasts and manpower histograms, and supported construction sequencing and performance reporting for the client and supervision consultant."
   },
