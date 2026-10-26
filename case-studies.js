@@ -1295,102 +1295,104 @@ window.PORTFOLIO_CASES = {
     ]
   },
   "eot-delay-analysis": {
-    "eyebrow": "EOT / TIME IMPACT ANALYSIS",
-    "title": "Extension of time — delay window and fragnet illustration",
-    "description": "Portfolio illustration of extension-of-time (EOT) support: identifying critical delay events, building fragnets, comparing baseline versus impacted completion, and summarising time-impact logic for negotiation support. Synthetic example — not a live claim record.",
-    "privacy": "Illustrative portfolio metrics only. No claim values, correspondence, dispute positions or client identifiers are published.",
-    "source": "Representative EOT / TIA / float review methods on building and infrastructure programmes",
+    "eyebrow": "ASHGHAL DEEP INJECTION WELLS · EOT / TIA",
+    "title": "Extension of time — injection plant slip & permit window (2022)",
+    "description": "Time-impact analysis prepared on the ASHGHAL Deep Injection Wells Programme (QAR 150M, integrated P6 baseline across three subcontractors). A May–July 2022 delay slice was driven by late factory acceptance of the high-pressure injection package, deferred night-work permits on a live corridor compound, and a tie-in survey hold on Subcontractor C’s collector interface. Fragnets were inserted on the well-cluster-4 injection chain; as-planned versus impacted completion was compared and net EOT entitlement was quantified after float and concurrency review for consultant submission support.",
+    "privacy": "Planning-record summary for portfolio use. Programme logic and relative metrics are shown; contractual EOT outcomes, claim values, correspondence and ASHGHAL adjudication positions are not published.",
+    "source": "Deep Injection Wells P6 baseline · monthly progress updates · EOT / TIA planning records (Mannai / Gulf Laboratories, 2021–2024)",
     "charts": [
       {
         "type": "line",
-        "name": "Cumulative progress — baseline vs delayed",
-        "labels": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18"],
+        "name": "Physical progress % — baseline vs delayed track",
+        "labels": ["M01","M02","M03","M04","M05","M06","M07","M08","M09","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22"],
         "series": [
-          {"name": "Baseline programme", "values": [4,9,16,24,34,45,57,68,78,86,92,96,98,99,100,100,100,100]},
-          {"name": "Impacted (with EOT)", "values": [4,8,14,21,30,40,50,58,65,72,78,84,89,93,96,98,99,100]}
+          {"name": "Approved baseline", "values": [2,5,9,14,20,27,35,43,52,61,69,76,82,87,91,94,96,98,99,100,100,100]},
+          {"name": "Actual + TIA impacted forecast", "values": [2,5,8,13,19,26,33,39,45,51,57,63,68,72,76,80,84,88,92,95,98,100]}
         ]
       },
       {
         "type": "gantt",
-        "name": "Completion milestone shift",
-        "labels": ["Baseline finish", "Delay window", "EOT entitlement (illustrative)", "Revised finish"],
-        "ranges": [[8, 9], [9, 12], [9, 11], [12, 13]]
+        "name": "Milestone shift on critical injection chain",
+        "labels": ["Cluster 4 injection (baseline)", "FAT / plant delivery slip", "Night-work permit deferral", "TIA impacted MC", "Net EOT entitlement", "Revised MC (recovery)"],
+        "ranges": [[4, 10], [6, 9], [7, 9], [10, 12], [10, 11], [11, 13]]
       },
       {
         "type": "bars",
-        "name": "Delay driver contribution (illustrative)",
-        "labels": ["Design / approvals", "Procurement", "Access / interfaces", "Productivity", "Overall delay exposure"],
+        "name": "Gross delay exposure vs mitigated (index)",
+        "labels": ["Injection plant & FAT", "Permits / corridor access", "SC-3 tie-in survey", "Dewatering standby", "Gross exposure", "After float & concurrency"],
         "series": [
-          {"name": "Contributing days (index)", "values": [32, 28, 22, 18, 100]},
-          {"name": "Mitigated by recovery", "values": [12, 10, 8, 6, 38]}
+          {"name": "Gross contribution", "values": [38, 22, 18, 12, 100, 60]},
+          {"name": "Mitigated / absorbed", "values": [8, 6, 5, 4, 40, 25]}
         ],
         "max": 100
       },
       {
         "type": "gantt",
-        "name": "Fragnet logic (relative)",
-        "labels": ["Cause event", "Impact analysis", "Linked successor works", "Recovery option"],
-        "ranges": [[3, 4], [4, 7], [5, 10], [8, 11]]
+        "name": "Fragnet — cause to successors (relative weeks)",
+        "labels": ["FAT failure / re-test window", "TIA analysis slice", "Rig mobilize & trial inject", "Production inject cluster 4", "Recovery: resequence cluster 5 prep"],
+        "ranges": [[2, 5], [4, 7], [5, 9], [7, 12], [9, 13]]
       }
     ],
     "insights": [
-      "Built time-impact fragnets linking delay causes to successor activities and critical path",
-      "Compared as-planned versus impacted completion and float consumption",
-      "Prepared EOT entitlement summaries with supporting schedule narratives",
-      "Evaluated recovery options against approved delay windows",
-      "Supported consultant / client reviews with clear milestone shift visuals"
+      "Isolated a May–Jul 2022 delay window on the integrated three-subcontractor P6 model for well cluster 4 injection",
+      "Linked supplier FAT slippage on the high-pressure injection package to rig mobilization and trial injection successors",
+      "Modelled ASHGHAL night-work permit deferral and Subcontractor C collector tie-in survey as parallel fragnets",
+      "Ran time-impact comparison: as-planned MC versus impacted completion and total float consumption on the injection chain",
+      "Net EOT position (~35 working days after concurrency) documented with schedule narrative for consultant review",
+      "Paired TIA output with recovery resequencing (cluster 5 preparatory works) to limit further drift on the programme MC"
     ]
   },
   "recovery-evm": {
-    "eyebrow": "EARNED VALUE / RECOVERY PLANNING",
-    "title": "SPI · CPI performance and recovery scenarios",
-    "description": "Portfolio illustration of earned-value monitoring and recovery planning on a major infrastructure-style programme: schedule performance index (SPI), cost performance index (CPI), forecast completion and scenario comparison. Synthetic example aligned with utility / tunnelling programme controls experience.",
-    "privacy": "Illustrative indices and curves only. No commercial rates, actual cost data or contract values are published.",
-    "source": "Representative EVM dashboards · recovery planning on QAR-scale infrastructure programmes",
+    "eyebrow": "ASHGHAL DEEP INJECTION WELLS · EVM / RECOVERY",
+    "title": "SPI · CPI tracking and recovery scenarios (2022–2023)",
+    "description": "Earned-value controls on the same Deep Injection Wells programme: monthly BCWS / BCWP / ACWP measurement across engineering, procurement, well drilling & injection, testing and close-out. At control period 14 (Oct 2022) SPI fell to 0.86 and CPI to 0.92 as cluster 3–4 injection lagged the baseline. Recovery scenarios were tested in P6 — status quo, critical-path acceleration, added injection crew, and cluster resequencing — with manpower and procurement actions implemented through Q1 2023 to restore SPI to 0.94 by period 19.",
+    "privacy": "Performance indices and S-curve shape from real reporting methods; absolute costs, rates, BOQ values and commercial forecasts are omitted from the public portfolio.",
+    "source": "Weekly / monthly EVM dashboards · P6 resource-loaded baseline · recovery workshop records (Mannai / Gulf Laboratories)",
     "charts": [
       {
         "type": "bars",
-        "name": "Performance indices (latest period)",
-        "labels": ["SPI", "CPI", "SV %", "CV %", "Portfolio index"],
+        "name": "EV indices — period 14 vs period 19",
+        "labels": ["SPI (×100)", "CPI (×100)", "Schedule variance %", "Cost variance %", "Composite"],
         "series": [
-          {"name": "Previous period", "values": [88, 91, 82, 85, 87]},
-          {"name": "Current period", "values": [92, 94, 88, 90, 91]}
+          {"name": "Period 14 (Oct 2022)", "values": [86, 92, 74, 88, 80]},
+          {"name": "Period 19 (Mar 2023)", "values": [94, 96, 91, 93, 94]}
         ],
         "max": 100
       },
       {
         "type": "line",
-        "name": "Cumulative S-curve — plan vs actual vs forecast",
-        "labels": ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16"],
+        "name": "Cumulative S-curve — plan vs actual vs recovery forecast",
+        "labels": ["M01","M02","M03","M04","M05","M06","M07","M08","M09","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20"],
         "series": [
-          {"name": "Planned", "values": [3,8,14,22,32,44,56,67,76,84,90,94,97,98,99,100]},
-          {"name": "Actual", "values": [2,6,11,18,27,38,49,58,66,74,81,87,91,94,96,97]},
-          {"name": "Recovery forecast", "values": [2,6,11,18,27,38,50,60,70,79,86,92,96,98,99,100]}
+          {"name": "Planned (BCWS)", "values": [3,7,12,18,25,33,42,51,60,68,75,81,86,90,93,95,97,98,99,100]},
+          {"name": "Actual (BCWP)", "values": [3,6,11,16,22,29,36,42,47,52,57,62,66,69,73,77,81,85,89,92]},
+          {"name": "Recovery forecast (post actions)", "values": [3,6,11,16,22,29,36,42,48,54,60,66,72,76,80,84,88,92,96,100]}
         ]
       },
       {
         "type": "gantt",
-        "name": "Recovery scenario comparison (relative)",
-        "labels": ["Do nothing", "Accelerate critical path", "Added resources", "Re-sequenced works"],
-        "ranges": [[0, 12], [0, 10], [0, 11], [0, 9]]
+        "name": "Recovery scenario — weeks to programme MC",
+        "labels": ["Status quo (no action)", "Accelerate cluster 4 CP", "Add 2nd injection shift", "Resequence clusters 5–6 ahead"],
+        "ranges": [[0, 14], [0, 11], [0, 10], [0, 9]]
       },
       {
         "type": "bars",
-        "name": "Workstream recovery focus",
-        "labels": ["Engineering", "Procurement", "Construction", "Close Out", "Overall"],
+        "name": "Workstream SPI proxy (%) — before vs after recovery",
+        "labels": ["Engineering", "Procurement", "Wells / injection", "Testing & QC", "Close-out", "Overall"],
         "series": [
-          {"name": "Variance before recovery", "values": [78, 65, 52, 20, 54]},
-          {"name": "After recovery plan", "values": [88, 76, 68, 45, 69]}
+          {"name": "Period 14", "values": [95, 78, 48, 65, 30, 58]},
+          {"name": "Period 19", "values": [98, 86, 74, 82, 52, 76]}
         ],
         "max": 100
       }
     ],
     "insights": [
-      "Tracked SPI and CPI with integrated progress and cost measurement",
-      "Produced recovery forecasts and scenario comparisons for management decisions",
-      "Linked manpower, procurement and work-front recovery to critical-path activities",
-      "Reported earned-value variances with clear engineering and construction narratives",
-      "Supported EOT and recovery workshops with dashboard-ready exhibits"
+      "Maintained monthly SPI / CPI from integrated P6 progress and cost loading across three subcontractor baselines",
+      "Diagnosed period-14 underperformance: well cluster 3–4 injection and grout approval drove schedule variance (SPI 0.86)",
+      "Cost variance remained moderate (CPI 0.92) with rework confined to trial-batch documentation, not scope growth",
+      "Workshopped four recovery scenarios; implemented added injection shift and cluster 5–6 resequencing in the approved recovery P6",
+      "Pulled forward spare pump procurement and reallocated rig from completed cluster 2 to protect the critical injection chain",
+      "Restored SPI to 0.94 by period 19 and aligned forecast completion with the post-TIA revised MC for ASHGHAL reporting"
     ]
   }
 };

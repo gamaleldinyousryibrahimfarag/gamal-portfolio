@@ -1,6 +1,8 @@
 (function(){
   'use strict';
-  const projects = Array.isArray(window.PORTFOLIO_PROJECTS) ? window.PORTFOLIO_PROJECTS : [];
+  const projects = (Array.isArray(window.PORTFOLIO_PROJECTS) ? window.PORTFOLIO_PROJECTS : [])
+    .slice()
+    .sort((a, b) => (a.sortOrder ?? Number(a.number)) - (b.sortOrder ?? Number(b.number)));
   const grid = document.getElementById('project-grid');
   const search = document.getElementById('project-search');
   const count = document.getElementById('result-count');
@@ -58,14 +60,18 @@
     empty.hidden=visible.length>0;
     for(const btn of filterButtons){const selected=btn.dataset.filter===activeFilter;btn.classList.toggle('active',selected);btn.setAttribute('aria-pressed',String(selected));}
   }
-  function openProject(id,trigger){
+  const evidenceProjectLink={
+    'eot-delay-analysis':'injection-wells',
+    'recovery-evm':'injection-wells'
+  };
+  function openProject(id,trigger,caseStudyId){
     const idx=projects.findIndex(p=>p.id===id);if(idx<0)return;
     activeProject=idx;lastTrigger=trigger||lastTrigger;
-    populateDialog(projects[idx]);
+    populateDialog(projects[idx],caseStudyId);
     if(!dialog.open){if(typeof dialog.showModal==='function'){dialog.showModal()}else{dialog.setAttribute('open','');}}
     dialog.querySelector('.dialog-scroll').scrollTop=0;
   }
-  function populateDialog(p){
+  function populateDialog(p,caseStudyId){
     const set=(id,value)=>{document.getElementById(id).textContent=value;};
     set('dialog-counter',`SELECTED PROJECT / ${p.number} OF ${String(projects.length).padStart(2,'0')}`);
     set('dialog-kicker',p.sector);
@@ -82,7 +88,7 @@
     visual.querySelectorAll('.cover-grid,.cover-illustration,.cover-photo').forEach(n=>n.remove());
     visual.insertAdjacentHTML('afterbegin',projectMedia(p));
     const ul=document.getElementById('dialog-deliverables');ul.replaceChildren(...p.deliverables.map(t=>{const li=document.createElement('li');li.textContent=t;return li;}));
-    renderCaseStudy(p.id);
+    renderCaseStudy(caseStudyId||p.evidenceCase||p.id);
     renderProjectGallery(p);
   }
   function closeDialog(){if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open');}
@@ -172,7 +178,13 @@
     obj.charts.forEach((ch,i)=>{const btn=el('button','case-tab'+(i?'':' active'),ch.name);btn.type='button';btn.setAttribute('aria-pressed',(!i).toString());btn.addEventListener('click',()=>{tabs.querySelectorAll('button').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});btn.classList.add('active');btn.setAttribute('aria-pressed','true');plot.replaceChildren(drawChart(ch))});tabs.appendChild(btn)});
     plot.replaceChildren(drawChart(obj.charts[0]));
   }
-  document.querySelectorAll('[data-evidence-project]').forEach(node=>node.addEventListener('click',e=>{openProject(node.dataset.evidenceProject,node);let top=document.getElementById('case-evidence');if(top&&!top.hidden)top.scrollIntoView({block:'start',behavior:'smooth'});}));
+  document.querySelectorAll('[data-evidence-project]').forEach(node=>node.addEventListener('click',()=>{
+    const caseId=node.dataset.evidenceProject;
+    const projectId=evidenceProjectLink[caseId]||caseId;
+    openProject(projectId,node,caseId);
+    const top=document.getElementById('case-evidence');
+    if(top&&!top.hidden)top.scrollIntoView({block:'start',behavior:'smooth'});
+  }));
 
   render();
 })();
