@@ -58,7 +58,7 @@ window.PORTFOLIO_PROJECTS = [
     name: "Deep Injection Wells",
     subtitle: "ASHGHAL programme",
     sector: "Infrastructure & Utilities",
-    region: "Qatar",
+    region: "Doha, Qatar",
     categories: [
       "Infrastructure",
       "Public Works"
@@ -440,7 +440,7 @@ window.PORTFOLIO_PROJECTS = [
     name: "Mixed-Use Retail & Residences",
     subtitle: "Ground-floor retail · upper residential levels",
     sector: "Mixed-Use Development",
-    region: "Qatar",
+    region: "Doha, Qatar",
     categories: [
       "Buildings"
     ],
@@ -490,7 +490,7 @@ window.PORTFOLIO_PROJECTS = [
     name: "Private Residential Villa",
     subtitle: "Luxury villa · construction baseline & S-curve",
     sector: "Residential Construction",
-    region: "Qatar",
+    region: "Doha, Qatar",
     categories: [
       "Buildings"
     ],
@@ -730,10 +730,10 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "lekhwiya",
     number: "18",
-    name: "Lekhwiya Project",
-    subtitle: "Progress reporting, manpower & site delivery",
+    name: "Lekhwiya Multi-Building Project",
+    subtitle: "Government facilities · structural steel sequencing · Qatar",
     sector: "Government Facilities",
-    region: "Qatar",
+    region: "Doha, Qatar",
     categories: [
       "Buildings",
       "Public Works"
@@ -743,17 +743,18 @@ window.PORTFOLIO_PROJECTS = [
     label: "Government facilities",
     role: "Planning Engineer",
     scale: "Multiple work fronts and building zones",
-    summary: "Planning and project-controls support covering engineering, procurement, manpower monitoring, structural progress and recovery-focused reporting.",
-    overview: "Supported planning and management reporting for the Lekhwiya multi-building campus. Client and supervision: Lekhwiya. Contractor: Al Ali Engineering. Weekly and periodic progress measurement, manpower monitoring, planned-versus-actual analysis and package-level status reviews — with portfolio-approved exhibits for manpower, engineering, procurement and structural progress by area.",
+    summary: "Planned structural steel erection and building-by-building construction sequences, aligning P6 activities with engineering, procurement, manpower and site execution. Monitored planned-versus-actual structural progress and developed recovery programmes to mitigate delays.",
+    overview: "Lekhwiya multi-building campus, Doha, Qatar. Client and supervision: Lekhwiya. Contractor: Al Ali Engineering. Planned structural steel erection and building-by-building construction sequences in Primavera P6, linking engineering approvals, procurement, manpower deployment and site execution. Monitored planned-versus-actual structural progress by zone, maintained progress dashboards and manpower histograms, and prepared recovery programmes for delayed work fronts — planning and controls support only (not structural design).",
     deliverables: [
+      "Building-by-building steel erection & construction sequencing (P6)",
       "Progress dashboards and planned-versus-actual reporting",
       "Manpower monitoring and labour histogram review",
       "Engineering and procurement progress tracking",
-      "Area-based structural progress measurement",
-      "Recovery follow-up and milestone risk visibility"
+      "Structural progress measurement by area · recovery programmes"
     ],
     methods: [
-      "Progress measurement",
+      "Steel structure planning",
+      "Erection sequencing",
       "Manpower control",
       "Recovery planning"
     ],

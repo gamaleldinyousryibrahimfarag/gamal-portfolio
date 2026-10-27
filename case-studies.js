@@ -67,7 +67,7 @@ window.PORTFOLIO_CASES = {
     "dataTier": "real-project-data",
     "eyebrow": "LIVE PROJECT CONTROLS / USER-SUPPLIED EXHIBITS",
     "title": "Lekhwiya progress controls — real reporting examples",
-    "description": "Based on actual charts and photos supplied for the Lekhwiya project (client and consultant: Lekhwiya; contractor: Al Ali Engineering). Demonstrates manpower analysis, engineering status, procurement performance, and area-based structural progress measurement.",
+    "description": "Based on actual charts and photos supplied for the Lekhwiya multi-building project, Doha, Qatar (client and consultant: Lekhwiya; contractor: Al Ali Engineering). Illustrates structural steel erection sequencing in P6, manpower analysis, engineering and procurement status, and planned-versus-actual structural progress by area — planning controls only, not structural design.",
     "privacy": "Portfolio use only. The exhibits were shared directly by the portfolio owner. Underlying detailed records and any sensitive project information should not be redistributed.",
     "source": "User-supplied Lekhwiya charts and site photos",
     "charts": [

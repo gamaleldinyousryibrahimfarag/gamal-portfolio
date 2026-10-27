@@ -48,31 +48,31 @@ window.PROJECT_ENRICHMENT = {
   lekhwiya: {
     signature: true,
     signatureOrder: 2,
-    signatureTagline: "Manpower control · Progress measurement · Reporting",
+    signatureTagline: "Steel erection sequencing · Manpower · Recovery planning",
     deliveryPhase: "Execution",
     client: "Lekhwiya",
     consultant: "Lekhwiya",
     contractor: "Al Ali Engineering",
     myRole: "Planning Engineer",
     actualScope:
-      "Weekly and monthly progress measurement, manpower histograms, engineering and procurement tracking, and area-based structural progress for multiple buildings.",
+      "Planned structural steel erection and building-by-building sequences for the Lekhwiya multi-building campus (Doha, Qatar) — P6 activities aligned with engineering, procurement, manpower and site execution; structural progress monitoring and recovery planning (not structural design).",
     planningContribution:
-      "Built progress dashboards, reviewed planned-versus-actual manpower by trade, measured engineering and procurement performance, and prepared recovery-oriented commentary for delayed work fronts.",
+      "Structured steel erection and construction sequences in P6, built progress dashboards, reviewed planned-versus-actual manpower by trade, measured engineering and procurement performance, tracked structural advancement by building zone, and developed recovery programmes for delayed work fronts.",
     challenges: [
-      "Multiple buildings with parallel structural and MEP work fronts",
-      "Daily labour deployment variance against plan",
-      "Need to separate engineering, procurement and construction narratives"
+      "Multiple buildings with parallel steel erection and finishing trades",
+      "Daily labour deployment variance against planned structural fronts",
+      "Separating engineering, procurement and site execution narratives"
     ],
     actions: [
+      "Sequenced structural steel erection building-by-building in P6",
       "Tracked daily planned vs actual manpower with trade breakdown",
       "Measured engineering and procurement % complete separately from site works",
-      "Reported structural progress by building zone (e.g. ASCC, electrical rooms)",
-      "Escalated milestone risks for resequencing and recovery"
+      "Reported structural progress by zone and escalated recovery options"
     ],
     outcomes: [
-      "Portfolio-approved exhibits show real reporting structure used on site",
+      "Clearer recruiter-facing steel structure planning and erection sequencing experience",
       "Earlier visibility on structural advancement vs finishing trades",
-      "Management-ready dashboards for follow-up and recovery decisions"
+      "Management-ready dashboards and recovery programmes for follow-up"
     ]
   },
   diriyah: {
