@@ -1,148 +1,141 @@
 window.DIGITAL_PORTFOLIO = {
   profile:
-    "Civil engineer and engineering-management professional with six years of experience across owner-representative, consultancy and contractor environments. Combines construction project controls with hands-on development of digital applications and AI-enabled workflows for procurement, document control, operational reporting and service discovery. Connects business needs to practical system logic: mapping processes, building tools, validating outputs, troubleshooting issues and supporting day-to-day use across teams.",
-  pillars: [
-    {
-      title: "Build & automate",
-      text: "Develop practical applications and AI-assisted workflows that convert repetitive business tasks into structured digital processes."
-    },
-    {
-      title: "Operate & improve",
-      text: "Validate outputs, resolve data and workflow issues, support users and refine tools for reliable day-to-day operation."
-    },
-    {
-      title: "Coordinate & deliver",
-      text: "Connect site engineering, finance, procurement, document control and management around clear handoffs, responsibilities and records."
-    }
-  ],
-  systems: [
-    {
-      title: "Primavera P6 progress-update automation",
-      text: "Spreadsheet- and script-assisted P6 update workflows: activity mapping, progress normalization, date checks, import preparation and error logging."
-    },
-    {
-      title: "Procurement management application",
-      text: "Cross-functional application connecting site engineers, finance/accounting and the procurement lead through a security-focused workflow."
-    },
-    {
-      title: "AI-powered document control",
-      text: "AI vision-enabled intake that interprets incoming emails, identifies concerned engineers, routes correspondence, files records and creates a log."
-    },
-    {
-      title: "Management performance systems",
-      text: "Structured P6 / Excel / Power BI reporting for planned vs actual progress, resource and cost loading, critical-path exposure and recovery actions."
-    },
-    {
-      title: "Automotive services application",
-      text: "Service-discovery features for automotive categories, vehicle price information and nearby service providers."
-    },
-    {
-      title: "Predictive AI & historical-data modelling",
-      text: "Training and experimentation on historical datasets to identify patterns and explore forecasts of future outcomes."
-    }
-  ],
-  workflows: [
-    {
-      id: "controls",
-      num: "01",
-      title: "Project controls automation",
-      image: "assets/digital-portfolio/case-project-controls-automation.jpg",
-      alt: "Case study — site progress through validation, programme update, dashboards and management actions",
-      task: "Field progress arrives in registers and spreadsheets with inconsistent formats, dates and work-package mapping.",
-      automation:
-        "Validate inputs, normalize progress, prepare programme updates, refresh KPIs (SPI/CPI, S-curves) and surface recovery actions.",
-      involvement:
-        "Designed the end-to-end update path from site inputs to import-ready schedules and executive reporting."
-    },
+    "Civil engineer and engineering-management professional with six years across owner-representative, consultancy and contractor environments. I combine construction project controls with hands-on digital delivery: mapping processes, building applications, validating outputs, supporting users and improving workflows — without claiming production deployments where work remains prototype or portfolio demonstration.",
+  hero: {
+    eyebrow: "GAMAL FARAG / ENGINEERING & DIGITAL OPERATIONS",
+    title: "I turn complex operations into",
+    titleEm: "working digital systems.",
+    intro:
+      "I bridge engineering, business requirements and technology — building practical solutions that connect teams, automate workflows, improve controls and support daily operations.",
+    tags: ["Project controls", "Digital applications", "Process automation"]
+  },
+  howIWork: {
+    heading: "I turn operational challenges into",
+    headingEm: "working digital solutions.",
+    sub: "From requirement to an operational system — one end-to-end process.",
+    steps: [
+      { title: "Understand", detail: "Business need" },
+      { title: "Structure", detail: "Workflow & roles" },
+      { title: "Build", detail: "Working solution" },
+      { title: "Validate", detail: "Test & secure" },
+      { title: "Operate", detail: "Run & improve" }
+    ]
+  },
+  caseStudies: [
     {
       id: "procurement",
-      num: "02",
-      title: "Procurement operations workflow",
+      num: "01",
+      tier: "primary",
+      title: "Procurement management system",
+      subtitle: "Site · finance · procurement — one workflow",
       image: "assets/digital-portfolio/case-procurement-granis.jpg",
-      alt: "Case study — cross-functional procurement web workflow from site request to audit log",
-      task: "Site requests, budget checks, RFQs, POs and deliveries spread across engineers, finance and procurement.",
-      automation:
-        "Ten-stage workflow with role-based access, approvals, attachments, live package status and audit trail.",
-      involvement:
-        "Product design and workflow logic connecting site, finance and procurement in one secure environment."
+      alt: "Procurement operations case study visual",
+      deliveryStatus: "Working prototype · synthetic demo data only",
+      problem:
+        "Material requests, budget checks and purchasing steps were scattered across email and spreadsheets, with unclear ownership between site, finance and procurement.",
+      myRole:
+        "Defined the workflow, role permissions, approval stages and audit trail; designed the application logic and tested scenarios with synthetic packages.",
+      workflow:
+        "Site request → technical review → budget check → procurement review → RFQ / vendor comparison → PO → delivery tracking → receipt → closeout log.",
+      features: [
+        "Role-based access for site engineers, accountants and procurement officers",
+        "Multi-stage approvals with clear owner per gate",
+        "Attachment placeholders and package status tracking",
+        "Approval history and time-stamped audit log (demo)"
+      ],
+      testing:
+        "Walkthrough tests with three demo personas; validation of state transitions, blocked actions when role mismatches, and log completeness.",
+      securityNote:
+        "Designed for role separation and auditability — not presented as a certified security assessment.",
+      demoId: "procurement"
     },
     {
       id: "document-control",
-      num: "03",
-      title: "Document control & email routing",
-      image: "assets/digital-portfolio/case-document-control.jpg",
-      alt: "Case study — correspondence intake, classification, engineer routing, filing and log register",
-      task: "Incoming project email and attachments need consistent classification, routing and searchable filing.",
-      automation:
-        "Review attachments, apply routing rules, assign concerned engineers, file to structure and maintain turnaround logs.",
-      involvement:
-        "Built workflow automation for intake, traceable filing and action tracking (illustrative portfolio metrics)."
-    }
-  ],
-  processSteps: [
-    { num: "01", title: "Understand", detail: "Task & users" },
-    { num: "02", title: "Design", detail: "Workflow & rules" },
-    { num: "03", title: "Automate", detail: "Application & AI" },
-    { num: "04", title: "Operate", detail: "Test, support, improve" }
-  ],
-  valueChain: [
-    {
-      title: "Understand",
-      text: "Translate real site requests into practical requirements"
-    },
-    {
-      title: "Build & test",
-      text: "Python, Excel/VBA, AI-assisted development, with validation"
-    },
-    {
-      title: "Operate & improve",
-      text: "Support users, resolve issues and refine the workflow"
-    }
-  ],
-  applications: [
-    {
-      num: "01",
-      title: "Procurement management application",
-      subtitle: "Cross-functional business workflow · web application",
-      image: "assets/digital-portfolio/case-procurement-granis.jpg",
-      alt: "Procurement operations case study — site, finance and procurement dashboard",
-      points: [
-        "Site engineers, accountants and procurement officers share one workflow from request to closeout.",
-        "Role-based access, multi-stage approvals, attachment control and live package status.",
-        "Audit trail and secure handling for end-to-end procurement visibility."
-      ]
-    },
-    {
       num: "02",
-      title: "AI-powered document control application",
-      subtitle: "Correspondence routing · filing · log register",
+      tier: "primary",
+      title: "Intelligent document control",
+      subtitle: "Email intake · routing · filing · log",
       image: "assets/digital-portfolio/case-document-control.jpg",
-      alt: "Document control case study — email routing and turnaround tracking",
-      points: [
-        "Centralizes incoming email, attachment review and document classification.",
-        "Routing rules assign the concerned engineer; structured filing and log register.",
-        "Portfolio illustration: faster routing, traceable records and turnaround visibility."
-      ]
+      alt: "Document control and correspondence routing case study",
+      deliveryStatus: "Workflow prototype · illustrative correspondence",
+      problem:
+        "Project correspondence and submittals arrived by email with inconsistent filing, slow routing to the right discipline engineer and weak turnaround visibility.",
+      myRole:
+        "Mapped intake rules, routing logic, filing structure and log register; built and tested the automation path on sample messages (drawing / submittal).",
+      workflow:
+        "Incoming email → attachment review → document classification → concerned engineer assignment → structured filing → log register → action tracking.",
+      features: [
+        "Classification by document type and discipline",
+        "Routing rules to assign responsible engineer",
+        "Structured filing path and searchable log entry",
+        "Turnaround status on demo records (not measured client KPIs)"
+      ],
+      testing:
+        "Scenario tests on synthetic emails (piping layout revision, material submittal); verified routing, filing path and log creation.",
+      securityNote: "Demo uses fictional project references only.",
+      demoId: "document-control"
     },
     {
+      id: "project-controls",
       num: "03",
+      tier: "primary",
+      title: "Project controls automation",
+      subtitle: "Site updates → validation → programme → dashboard",
+      image: "assets/digital-portfolio/case-project-controls-automation.jpg",
+      alt: "Project controls automation case study",
+      deliveryStatus: "Automation prototype · demo progress data",
+      problem:
+        "Weekly site progress arrived in Excel with inconsistent IDs, dates and percentages, making P6 updates and management reporting slow and error-prone.",
+      myRole:
+        "Built the validation and normalization path, prepared import-ready structures and linked outputs to SPI/CPI-style dashboards for review (demo metrics).",
+      workflow:
+        "Site progress inputs → data validation → update preparation → programme update concept → dashboard & management actions.",
+      features: [
+        "Progress normalization and date / ID checks",
+        "Validation log with pass / review flags",
+        "P6-ready export concept (demo file label)",
+        "Planned vs actual dashboard with illustrative SPI/CPI"
+      ],
+      testing:
+        "Test rows including intentional errors; confirmed blocking, review flags and dashboard refresh on clean data.",
+      securityNote: "No live client programmes or confidential schedules published.",
+      demoId: "project-controls"
+    },
+    {
+      id: "automotive",
+      num: "04",
+      tier: "beyond",
       title: "Automotive services application",
-      subtitle: "Consumer-facing service discovery",
+      subtitle: "Service discovery · pricing · location",
       image: "assets/digital-portfolio/app-automotive-services.png",
-      alt: "Illustrative automotive services app mockup",
-      points: [
-        "Automotive service categories and vehicle price information.",
-        "Location-based discovery of nearby car service providers.",
-        "Combines pricing context, categories and maps into one application."
-      ]
+      alt: "Automotive services app illustrative mockup",
+      deliveryStatus: "Product concept · portfolio demo",
+      problem: "Users needed combined service categories, price context and nearby providers in one mobile-friendly flow.",
+      myRole: "Defined features, user paths and UI mockups for discovery and location-based search.",
+      workflow: "Browse categories → view price bands → locate nearby service centres (demo).",
+      features: ["Service categories", "Vehicle price information", "Nearby provider discovery"],
+      testing: "Navigation and content structure tests on mock data.",
+      securityNote: "Consumer-facing concept; no production deployment claimed.",
+      demoId: null
+    },
+    {
+      id: "predictive",
+      num: "05",
+      tier: "beyond",
+      title: "Predictive modelling with historical data",
+      subtitle: "Patterns · forecasts · decision support",
+      image: "assets/digital-portfolio/case-predictive-modelling.jpg",
+      alt: "Predictive modelling case study visual",
+      deliveryStatus: "Analytics experiment · synthetic historical series",
+      problem: "Teams needed a structured way to explore patterns in historical operational data and discuss forecast scenarios.",
+      myRole: "Prepared datasets, trained and evaluated models on demo history; documented assumptions and limitations.",
+      workflow: "Historical data → preparation → pattern analysis → model training → forecast output → review.",
+      features: ["Feature preparation checklist", "Model validation metrics on demo split", "Forecast chart with confidence band (illustrative)"],
+      testing: "Hold-out evaluation on synthetic series; documented MAE/RMSE as demo-only metrics.",
+      securityNote: "All numbers in visuals are illustrative — not client performance claims.",
+      demoId: "predictive"
     }
   ],
-  predictive: {
-    title: "Predictive modelling with historical data",
-    image: "assets/digital-portfolio/case-predictive-modelling.jpg",
-    alt: "Case study — historical data through preparation, training, forecast output and decision support",
-    text: "Consolidate historical records, prepare features, train and validate models (e.g. gradient boosting), and produce forecast outputs with confidence bands for trend, scenario and performance outlook — illustrative analytics product for portfolio use."
-  },
   engineeringHighlights: [
     { name: "Four Palaces Programme", location: "Doha, Qatar", note: "Owner-side controls across four parallel royal developments." },
     { name: "Souq Al Najada – Gold Souq", location: "Doha, Qatar", note: "Resource- and cost-aware sequencing and recovery logic." },
@@ -154,13 +147,13 @@ window.DIGITAL_PORTFOLIO = {
   capabilities: [
     "Python",
     "Excel / VBA",
-    "Application workflow design",
+    "Workflow design",
     "AI-assisted development",
-    "AI vision document workflows",
-    "Predictive modelling",
+    "Role-based workflows",
+    "Audit & approval logic",
     "Primavera P6",
     "Power BI",
-    "Procurement automation",
-    "AutoCAD & Revit"
+    "Procurement operations",
+    "Predictive modelling (demo)"
   ]
 };
