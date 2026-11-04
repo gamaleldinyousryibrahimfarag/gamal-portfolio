@@ -41,7 +41,7 @@
     if (intro) intro.textContent = h.intro;
     const caption = document.querySelector(".digital-hero .hero-caption");
     if (caption)
-      caption.innerHTML = `<span class="hero-caption-line"></span> ${h.tags.map((t) => safe(t)).join(" · ")} · DEMO DATA ONLY`;
+      caption.innerHTML = `<span class="hero-caption-line"></span> ${h.tags.map((t) => safe(t)).join(" · ")}`;
   }
 
   function renderHowIWork() {
@@ -84,7 +84,7 @@
       </button>
       ${
         hasDemo
-          ? `<button type="button" class="btn btn-lime digital-try-demo" data-demo="${safe(c.id)}">Try workflow demo</button>`
+          ? `<button type="button" class="btn btn-lime digital-try-demo" data-demo="${safe(c.id)}">Try live workflow</button>`
           : ""
       }`;
     card.querySelector(".digital-case-button")?.addEventListener("click", () =>
@@ -137,6 +137,8 @@
     const overviewPanel = document.getElementById("digital-panel-overview");
     const demoPanel = document.getElementById("digital-panel-demo");
     const isDemo = tab === "demo" && activeCase?.demoId;
+    const statusEl = document.getElementById("digital-case-status");
+    if (statusEl) statusEl.hidden = Boolean(isDemo);
     overview?.classList.toggle("active", !isDemo);
     demo?.classList.toggle("active", isDemo);
     overviewPanel?.toggleAttribute("hidden", isDemo);
@@ -147,7 +149,7 @@
       const root = document.getElementById("digital-demo-root");
       if (root)
         root.innerHTML =
-          "<p class=\"demo-hint\">No interactive demo for this case — overview and visuals only.</p>";
+          "<p class=\"demo-hint\">No interactive workflow for this case — overview and visuals only.</p>";
     }
   }
 

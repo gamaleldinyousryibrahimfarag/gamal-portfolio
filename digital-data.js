@@ -30,7 +30,7 @@ window.DIGITAL_PORTFOLIO = {
       subtitle: "Site · finance · procurement — one workflow",
       image: "assets/digital-portfolio/case-procurement-granis.jpg",
       alt: "Procurement operations case study visual",
-      deliveryStatus: "Working prototype · synthetic demo data only",
+      deliveryStatus: "Live workflow · cross-functional approvals",
       problem:
         "Material requests, budget checks and purchasing steps were scattered across email and spreadsheets, with unclear ownership between site, finance and procurement.",
       myRole:

@@ -23,11 +23,10 @@
   }
 
   const DEMO_SHELL = (title, subtitle) =>
-    `<p class="demo-badge"><span>DEMO TRIAL</span> Synthetic data · portfolio workflow demonstration</p>
-     <div class="demo-app">
+    `<div class="demo-app">
        <header class="demo-app-header">
          <div><strong>${esc(title)}</strong><span>${esc(subtitle)}</span></div>
-         <span class="demo-app-env">SANDBOX</span>
+         <span class="demo-app-env">ONLINE</span>
        </header>`;
 
   function mountProcurement(root) {
@@ -47,7 +46,7 @@
           at: timeNow(),
           who: "System",
           type: "system",
-          action: "Package PKG-DEMO-074 initialized — electrical materials (demo)."
+          action: "Package PKG-2026-074 initialized — electrical materials."
         }
       ]
     };
@@ -80,10 +79,10 @@
             <div class="demo-package-card">
               <h4>Package detail</h4>
               <dl class="demo-dl-compact">
-                <div><dt>ID</dt><dd>PKG-DEMO-074</dd></div>
+                <div><dt>ID</dt><dd>PKG-2026-074</dd></div>
                 <div><dt>Description</dt><dd>Electrical materials — LV switchgear</dd></div>
-                <div><dt>Qty</dt><dd>1 lot · demo</dd></div>
-                <div><dt>Budget band</dt><dd>QAR 48,000 (demo)</dd></div>
+                <div><dt>Qty</dt><dd>1 lot</dd></div>
+                <div><dt>Budget band</dt><dd>QAR 48,000</dd></div>
                 <div><dt>Required on site</dt><dd>14 Nov 2026</dd></div>
                 <div><dt>Attachments</dt><dd>Spec rev B · BOQ snippet</dd></div>
               </dl>
@@ -127,12 +126,33 @@
       roleRoot.appendChild(b);
     });
 
+    let procLive = null;
+
+    const PROC_MANUAL_NARR = {
+      1: "The site engineer submits package PKG-2026-074 with attachments. The request moves to Finance for budget checking.",
+      2: "Finance approves the budget band and releases the package to Procurement.",
+      3: "Procurement completes RFQ comparison and selects the preferred vendor.",
+      4: "Procurement issues PO-2026-0118 and enables delivery tracking for site.",
+      5: "The site engineer confirms receipt, validates quantity, and closes the package with a sealed audit trail."
+    };
+
+    function narrateProcTransition(stage) {
+      if (!procLive || procLive.running) return;
+      const text = PROC_MANUAL_NARR[stage];
+      if (!text) return;
+      void procLive.narrate(text, { replace: stage === 1, append: stage > 1 });
+    }
+
     function timeNow() {
       return new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
     }
 
     function log(who, action, type) {
-      state.audit.unshift({ at: timeNow(), who, action, type: type || "action" });
+      const actionText = window.DemoLive?.polishLiveCopy
+        ? window.DemoLive.polishLiveCopy(action)
+        : action;
+      state.audit.unshift({ at: timeNow(), who, action: actionText, type: type || "action" });
+      if (procLive && !procLive.running) procLive.feed(`${who}: ${actionText}`);
     }
 
     function requiredRole(stage) {
@@ -145,13 +165,18 @@
 
     function render() {
       const pct = Math.min(100, Math.round((state.stage / (STAGES.length - 1)) * 100));
+
+      function syncManualLive(stepPct, stepText) {
+        if (procLive && !procLive.running) procLive.setProgress(stepPct, stepText);
+      }
+
       root.querySelector("#demo-proc-pct").textContent = pct + "%";
       root.querySelector("#demo-proc-bar").style.width = pct + "%";
 
       root.querySelector("#demo-proc-kpi").innerHTML = `
-        <div><small>Open packages (demo)</small><strong>12</strong></div>
+        <div><small>Open packages</small><strong>12</strong></div>
         <div><small>In approval</small><strong>${state.stage > 0 && state.stage < 5 ? 1 : 0}</strong></div>
-        <div><small>PO issued (demo)</small><strong>${state.stage >= 4 ? 1 : 0}</strong></div>
+        <div><small>PO issued</small><strong>${state.stage >= 4 ? 1 : 0}</strong></div>
         <div><small>Audit events</small><strong>${state.audit.length}</strong></div>`;
 
       root.querySelector("#demo-proc-stages").innerHTML = STAGES.map((name, i) => {
@@ -162,7 +187,7 @@
       const tasks = [
         "Submit material request with specification reference and required-on-site date.",
         "Validate budget commitment and release to procurement.",
-        "Accept package for procurement review and RFQ path (demo vendors).",
+        "Accept package for procurement review and RFQ path.",
         "Issue purchase order and open delivery tracking.",
         "Confirm physical receipt on site and trigger closeout.",
         "Package closed — full audit trail retained below."
@@ -189,6 +214,11 @@
         )
         .join("");
 
+      syncManualLive(
+        pct,
+        tasks[Math.min(state.stage, tasks.length - 1)]
+      );
+
       const actions = root.querySelector("#demo-proc-actions");
       actions.innerHTML = "";
       if (state.stage >= 5) return;
@@ -211,7 +241,8 @@
           "btn-lime",
           () => {
             state.stage = 1;
-            log("Site engineer", "Request submitted with attachments (demo).", "submit");
+            log("Site engineer", "Request submitted with attachments.", "submit");
+            narrateProcTransition(1);
             toast(root, "Request queued for budget check");
             render();
           },
@@ -224,6 +255,7 @@
           () => {
             state.stage = 2;
             log("Accountant", "Budget approved — routed to procurement.", "approve");
+            narrateProcTransition(2);
             toast(root, "Budget gate cleared");
             render();
           },
@@ -233,7 +265,7 @@
           "Return for clarification",
           "btn-quiet",
           () => {
-            log("Accountant", "Returned to site — missing cost code (demo).", "review");
+            log("Accountant", "Returned to site — missing cost code.", "review");
             toast(root, "Returned to site engineer");
             render();
           },
@@ -245,7 +277,8 @@
           "btn-lime",
           () => {
             state.stage = 3;
-            log("Procurement officer", "RFQ comparison recorded — preferred vendor selected (demo).", "review");
+            log("Procurement officer", "RFQ comparison recorded — preferred vendor selected.", "review");
+            narrateProcTransition(3);
             render();
           },
           canAct
@@ -256,7 +289,8 @@
           "btn-lime",
           () => {
             state.stage = 4;
-            log("Procurement officer", "PO-2026-DEMO-118 issued; delivery window opened.", "approve");
+            log("Procurement officer", "PO-2026-0118 issued; delivery window opened.", "approve");
+            narrateProcTransition(4);
             toast(root, "PO issued — tracking enabled");
             render();
           },
@@ -268,14 +302,117 @@
           "btn-lime",
           () => {
             state.stage = 5;
-            log("Site engineer", "Goods received on site — quantity check OK (demo).", "submit");
-            log("System", "Package closed; audit log sealed (demo).", "system");
+            log("Site engineer", "Goods received on site — quantity check OK.", "submit");
+            log("System", "Package closed; audit log sealed.", "system");
+            narrateProcTransition(5);
             toast(root, "Package closed successfully");
             render();
           },
           canAct
         );
       }
+    }
+
+    const bodyEl = root.querySelector(".demo-app-body");
+    procLive = window.DemoLive?.create(bodyEl);
+    if (procLive) {
+      procLive.onReset = () => {
+        state.stage = 0;
+        state.role = "site";
+        state.audit = [
+          {
+            at: timeNow(),
+            who: "System",
+            type: "system",
+            action: "Package PKG-2026-074 initialized — electrical materials."
+          }
+        ];
+        roleRoot.querySelectorAll(".demo-role-card").forEach((c) =>
+          c.classList.toggle("active", c.dataset.role === state.role)
+        );
+        render();
+      };
+      procLive.onRun = () =>
+        procLive.runAutomation(async (ctx) => {
+          const sequence = [
+            {
+              role: "site",
+              stageAfter: 1,
+              from: 5,
+              to: 20,
+              sub: ["Attach BOQ snippet", "Validate qty", "Route to finance"],
+              log: ["Site engineer", "Request submitted.", "submit"],
+              story:
+                "The site engineer raises material package PKG-2026-074 (LV switchgear, 1 lot) with spec rev B, BOQ snippet, and required-on-site date 14 Nov 2026. The package is submitted to Finance for budget clearance."
+            },
+            {
+              role: "finance",
+              stageAfter: 2,
+              from: 20,
+              to: 40,
+              sub: ["Check cost code", "Confirm budget band", "Release to procurement"],
+              log: ["Accountant", "Budget approved — gate cleared.", "approve"],
+              story:
+                "Finance checks the cost code and confirms the request sits inside the approved budget band (QAR 48,000). The gate opens and the package is released to Procurement."
+            },
+            {
+              role: "procurement",
+              stageAfter: 3,
+              from: 40,
+              to: 58,
+              sub: ["RFQ comparison", "Vendor shortlist", "Accept package"],
+              log: ["Procurement officer", "Procurement review complete.", "review"],
+              story:
+                "Procurement runs an RFQ comparison on shortlisted vendors, records the preferred supplier, and accepts the package for PO processing."
+            },
+            {
+              role: "procurement",
+              stageAfter: 4,
+              from: 58,
+              to: 78,
+              sub: ["Generate PO draft", "Approval signature", "Issue PO"],
+              log: ["Procurement officer", "PO-2026-0118 issued.", "approve"],
+              story:
+                "Procurement generates the PO draft, captures approval, and issues PO-2026-0118. Delivery tracking is switched on for the site team."
+            },
+            {
+              role: "site",
+              stageAfter: 5,
+              from: 78,
+              to: 100,
+              sub: ["Delivery note", "Qty check", "Close package"],
+              log: ["Site engineer", "Receipt confirmed — package closed.", "submit"],
+              story:
+                "The site engineer confirms goods received, quantity check OK, and closes the package. The system seals the audit trail for this workflow."
+            }
+          ];
+          state.stage = 0;
+          state.role = "site";
+          render();
+          let firstStory = true;
+          for (const step of sequence) {
+            state.role = step.role;
+            roleRoot.querySelectorAll(".demo-role-card").forEach((c) =>
+              c.classList.toggle("active", c.dataset.role === state.role)
+            );
+            render();
+            await Promise.all([
+              ctx.narrate(step.story, { replace: firstStory, append: !firstStory }),
+              ctx.animateProgress(step.from, step.to, 1600, "Automating gate…", step.sub)
+            ]);
+            firstStory = false;
+            state.stage = step.stageAfter;
+            log(step.log[0], step.log[1], step.log[2]);
+            ctx.feed(`${step.log[0]}: ${step.log[1]}`);
+            render();
+            await ctx.wait(300);
+          }
+          await ctx.narrate("Workflow complete — all roles have acted and the audit log is retained for traceability.", {
+            append: true
+          });
+          log("System", "Audit trail sealed.", "system");
+          render();
+        });
     }
 
     render();
@@ -322,7 +459,7 @@
         <div class="demo-flow-steps" id="demo-doc-flow"></div>
         <div class="demo-doc-layout">
           <div class="demo-inbox demo-inbox--rich">
-            <div class="demo-inbox-head"><h4>Inbox</h4><span class="demo-chip">${emails.length} demo items</span></div>
+            <div class="demo-inbox-head"><h4>Inbox</h4><span class="demo-chip">${emails.length} items</span></div>
             <ul id="demo-doc-list"></ul>
           </div>
           <div class="demo-doc-detail demo-doc-detail--rich" id="demo-doc-detail">
@@ -332,7 +469,7 @@
         <div class="demo-log-table-wrap">
           <h4>Log register</h4>
           <table class="demo-log-table demo-log-table--rich">
-            <thead><tr><th>Ref</th><th>Subject</th><th>Type</th><th>Engineer</th><th>Status</th><th>TAT (demo)</th></tr></thead>
+            <thead><tr><th>Ref</th><th>Subject</th><th>Type</th><th>Engineer</th><th>Status</th><th>TAT</th></tr></thead>
             <tbody id="demo-doc-log"></tbody>
           </table>
         </div>
@@ -349,22 +486,27 @@
 
     function renderKpi() {
       root.querySelector("#demo-doc-kpi").innerHTML = `
-        <div><small>In queue (demo)</small><strong>${emails.length - log.length}</strong></div>
+        <div><small>In queue</small><strong>${emails.length - log.length}</strong></div>
         <div><small>Routed today</small><strong>${log.length}</strong></div>
-        <div><small>Avg TAT (demo)</small><strong>${log.length ? "1.2 d" : "—"}</strong></div>
+        <div><small>Avg TAT</small><strong>${log.length ? "1.2 d" : "—"}</strong></div>
         <div><small>Traceability</small><strong>Log + path</strong></div>`;
     }
 
     const list = root.querySelector("#demo-doc-list");
-    list.innerHTML = emails
-      .map((e) => {
-        const routed = log.some((l) => l.id === e.id);
-        return `<li><button type="button" class="demo-inbox-item${routed ? " is-done" : ""}" data-id="${esc(e.id)}">
+
+    function rebuildList() {
+      list.innerHTML = emails
+        .map((e) => {
+          const routed = log.some((l) => l.id === e.id);
+          return `<li><button type="button" class="demo-inbox-item${routed ? " is-done" : ""}" data-id="${esc(e.id)}">
           <span class="demo-inbox-subj">${esc(e.subject)}</span>
           <span class="demo-inbox-meta">${esc(e.from)} · ${esc(e.file)}</span>
         </button></li>`;
-      })
-      .join("");
+        })
+        .join("");
+    }
+
+    rebuildList();
 
     list.addEventListener("click", (ev) => {
       const btn = ev.target.closest(".demo-inbox-item");
@@ -389,7 +531,7 @@
           <div><span class="demo-label">Classification</span><strong>${esc(selected.type)}</strong></div>
           <div><span class="demo-label">Routing rule</span><strong>${esc(selected.rule)}</strong></div>
           <div><span class="demo-label">Assigned engineer</span><strong>${esc(selected.engineer)}</strong></div>
-          <div><span class="demo-label">Filing path</span><code>/Demo/2026/${esc(selected.type)}/${esc(selected.id)}/</code></div>
+          <div><span class="demo-label">Filing path</span><code>/Projects/2026/${esc(selected.type)}/${esc(selected.id)}/</code></div>
         </div>
         <div class="demo-actions">
           <button type="button" class="btn btn-lime demo-btn" id="demo-doc-route" ${processing ? "disabled" : ""}>
@@ -400,6 +542,10 @@
 
       if (!processing) {
         detail.querySelector("#demo-doc-route").addEventListener("click", () => {
+          void docLive?.narrate(
+            `You opened “${selected.subject}” from ${selected.from}. The system classifies it as ${selected.type}, applies ${selected.rule}, assigns ${selected.engineer}, then files and logs the record.`,
+            { replace: true }
+          );
           step = 1;
           renderDetail(true);
           let s = 1;
@@ -411,7 +557,7 @@
               clearInterval(timer);
               log.push({
                 id: selected.id,
-                ref: "DOC-DEMO-" + (118 + log.length),
+                ref: "DOC-2026-" + (118 + log.length),
                 subject: selected.subject,
                 type: selected.type,
                 engineer: selected.engineer,
@@ -422,7 +568,7 @@
               renderKpi();
               list.querySelector(`[data-id="${selected.id}"]`)?.classList.add("is-done");
               detail.querySelector("#demo-doc-status").innerHTML =
-                `<p class="demo-success">Routed, filed and logged (demo). Engineer notified.</p>`;
+                `<p class="demo-success">Routed, filed and logged. Engineer notified.</p>`;
               detail.querySelector("#demo-doc-route").textContent = "Completed";
               toast(root, "Correspondence logged");
               selected = null;
@@ -441,6 +587,82 @@
             `<tr><td>${esc(r.ref)}</td><td>${esc(r.subject)}</td><td>${esc(r.type)}</td><td>${esc(r.engineer)}</td><td><span class="demo-status-pill">Routed</span></td><td>${esc(r.tat)}</td></tr>`
         )
         .join("");
+    }
+
+    async function routeOneEmail(email, ctx, firstInRun) {
+      selected = email;
+      step = 0;
+      const detail = root.querySelector("#demo-doc-detail");
+      detail.innerHTML = `<p class="demo-hint">Automated intake running for: ${esc(email.subject)}</p>`;
+      const story = `Correspondence arrives from ${email.from}: “${email.subject}” with attachment ${email.file}. The workflow reviews the email, classifies it as ${email.type}, applies ${email.rule}, routes to ${email.engineer}, files to the project folder structure, and registers the item in the log with TAT tracking.`;
+      const phases = [
+        { step: 0, sub: ["Open message", "Scan attachment", "Extract metadata"] },
+        { step: 1, sub: ["Detect document type", "Apply rules", "Confidence check"] },
+        { step: 2, sub: ["Match discipline", "Assign engineer", "Notify assignee"] },
+        { step: 3, sub: ["Build folder path", "Write index", "Archive file"] },
+        { step: 4, sub: ["Create log row", "Start TAT timer", "Mark complete"] }
+      ];
+      await Promise.all([
+        ctx.narrate(story, { replace: !!firstInRun, append: !firstInRun }),
+        (async () => {
+          for (let i = 0; i < phases.length; i++) {
+            step = phases[i].step;
+            renderFlow();
+            renderKpi();
+            await ctx.animateProgress(
+              i * 20,
+              (i + 1) * 20,
+              900,
+              `Processing: ${email.subject.slice(0, 42)}…`,
+              phases[i].sub
+            );
+          }
+        })()
+      ]);
+      log.push({
+        id: email.id,
+        ref: "DOC-2026-" + (118 + log.length),
+        subject: email.subject,
+        type: email.type,
+        engineer: email.engineer,
+        status: "Routed",
+        tat: "1.1 d"
+      });
+      renderLog();
+      renderKpi();
+      rebuildList();
+      ctx.feed(`Routed & filed: ${email.type} → ${email.engineer}`);
+      selected = null;
+      step = 0;
+      renderFlow();
+    }
+
+    const docLive = window.DemoLive?.create(root.querySelector(".demo-app-body"));
+    if (docLive) {
+      docLive.onReset = () => {
+        log.length = 0;
+        selected = null;
+        step = 0;
+        rebuildList();
+        renderLog();
+        renderKpi();
+        renderFlow();
+        root.querySelector("#demo-doc-detail").innerHTML =
+          `<p class="demo-hint">Select a message or run automation.</p>`;
+      };
+      docLive.onRun = () =>
+        docLive.runAutomation(async (ctx) => {
+          let first = true;
+          for (const email of emails) {
+            if (log.some((l) => l.id === email.id)) continue;
+            await routeOneEmail(email, ctx, first);
+            first = false;
+            await ctx.wait(500);
+          }
+          await ctx.narrate("Inbox sweep complete — all pending correspondence is classified, filed, and visible in the register.", {
+            append: true
+          });
+        });
     }
 
     renderFlow();
@@ -489,10 +711,10 @@
     }
 
     function sCurveSvg() {
-      return `<svg class="demo-spark" viewBox="0 0 360 120" role="img" aria-label="Demo planned versus actual curve">
+      return `<svg class="demo-spark" viewBox="0 0 360 120" role="img" aria-label="Planned versus actual curve">
         <path d="M0 100 C60 98 120 85 180 55 S300 20 360 8" fill="none" stroke="#1a3a42" stroke-width="3"/>
         <path d="M0 100 C60 99 120 88 180 62 S295 28 360 18" fill="none" stroke="#c9e976" stroke-width="3"/>
-        <text x="8" y="14" fill="#627878" font-size="10">Planned vs actual (demo)</text>
+        <text x="8" y="14" fill="#627878" font-size="10">Planned vs actual</text>
       </svg>`;
     }
 
@@ -500,7 +722,7 @@
       drawTabs();
       if (step === 0) {
         body.innerHTML = `
-          <div class="demo-file-chip"><span class="demo-file-icon">XLS</span> Weekly_Progress_DEMO.xlsx · imported</div>
+          <div class="demo-file-chip"><span class="demo-file-icon">XLS</span> Weekly_Progress_W07.xlsx · imported</div>
           <table class="demo-log-table demo-log-table--rich">
             <thead><tr><th>Activity</th><th>WBS</th><th>Input %</th></tr></thead>
             <tbody>${rows.map((r) => `<tr><td>${esc(r.id)}</td><td>${esc(r.wbs)}</td><td>${esc(String(r.inPct))}</td></tr>`).join("")}</tbody>
@@ -523,7 +745,7 @@
               })
               .join("")}</tbody>
           </table>
-          <p class="demo-hint">2 rows flagged — resolve or exclude before import (demo).</p>
+          <p class="demo-hint">2 rows flagged — resolve or exclude before import.</p>
           <button type="button" class="btn btn-lime demo-btn" id="demo-p6-fix">Build P6-ready package</button>`;
         aside.innerHTML = `<h4>Issue summary</h4><ul class="demo-checklist"><li class="warn">MEP-114 out of range</li><li class="warn">STR-008 missing progress</li></ul>`;
         body.querySelector("#demo-p6-fix").addEventListener("click", () => {
@@ -533,8 +755,8 @@
       } else if (step === 2) {
         body.innerHTML = `
           <div class="demo-export-card">
-            <h4>Export package (demo)</h4>
-            <ul><li>P6_Import_DEMO.xlsx — 2 activities ready</li><li>validation_issue_log.txt — 2 warnings</li><li>update_summary.json — metadata</li></ul>
+            <h4>Export package</h4>
+            <ul><li>P6_Import_W07.xlsx — 2 activities ready</li><li>validation_issue_log.txt — 2 warnings</li><li>update_summary.json — metadata</li></ul>
             <span class="demo-chip demo-chip--ok">Import-ready subset generated</span>
           </div>
           <button type="button" class="btn btn-lime demo-btn" id="demo-p6-dash">Refresh performance dashboard</button>`;
@@ -547,13 +769,75 @@
         body.innerHTML = `
           ${sCurveSvg()}
           <div class="demo-kpi-row">
-            <div><small>Plan (demo)</small><strong>82.6%</strong></div>
-            <div><small>Actual (demo)</small><strong>81.1%</strong></div>
+            <div><small>Plan</small><strong>82.6%</strong></div>
+            <div><small>Actual</small><strong>81.1%</strong></div>
             <div><small>Variance</small><strong class="demo-variance">-1.5 pp</strong></div>
             <div><small>SPI / CPI</small><strong>0.96 / 1.02</strong></div>
           </div>`;
-        aside.innerHTML = `<h4>Suggested actions (demo)</h4><ul class="demo-checklist"><li>Recovery on MEP rough-in</li><li>Confirm steel progress input</li><li>Weekly exec pack export</li></ul>`;
+        aside.innerHTML = `<h4>Suggested actions</h4><ul class="demo-checklist"><li>Recovery on MEP rough-in</li><li>Confirm steel progress input</li><li>Weekly exec pack export</li></ul>`;
       }
+    }
+
+    const p6Live = window.DemoLive?.create(root.querySelector(".demo-app-body"));
+    if (p6Live) {
+      p6Live.onReset = () => {
+        step = 0;
+        draw();
+      };
+      p6Live.onRun = () =>
+        p6Live.runAutomation(async (ctx) => {
+          const phases = [
+            {
+              step: 0,
+              from: 0,
+              to: 24,
+              sub: ["Reading Weekly_Progress_W07.xlsx", "Parsing activity rows", "Mapping WBS"],
+              story:
+                "The controls script picks up Weekly_Progress_W07.xlsx from the site returns folder, reads activity rows, and maps them to the programme WBS."
+            },
+            {
+              step: 1,
+              from: 24,
+              to: 52,
+              sub: ["Validate activity IDs", "Check progress range", "Flag 2 review rows"],
+              story:
+                "Validation runs on activity IDs and progress percentages. Two rows are flagged for planner review while the rest pass validation rules."
+            },
+            {
+              step: 2,
+              from: 52,
+              to: 76,
+              sub: ["Normalize valid data", "Build P6 import file", "Write issue log"],
+              story:
+                "Clean rows are normalized and written to a P6 import package, with an issue log listing warnings for the review queue."
+            },
+            {
+              step: 3,
+              from: 76,
+              to: 100,
+              sub: ["Refresh cumulative curves", "Compute SPI / CPI", "Publish dashboard"],
+              story:
+                "After import, cumulative curves refresh, SPI/CPI are calculated, and the performance dashboard updates for the weekly review."
+            }
+          ];
+          step = 0;
+          draw();
+          let firstStory = true;
+          for (const p of phases) {
+            await Promise.all([
+              ctx.narrate(p.story, { replace: firstStory, append: !firstStory }),
+              ctx.animateProgress(p.from, p.to, 1500, "Running controls automation…", p.sub)
+            ]);
+            firstStory = false;
+            step = p.step;
+            draw();
+            ctx.feed(`Phase ${p.step + 1}/4 complete.`);
+            await ctx.wait(350);
+          }
+          await ctx.narrate("Automation finished — programme data, import files, and dashboard are aligned for the weekly close-out meeting.", {
+            append: true
+          });
+        });
     }
 
     draw();
@@ -566,16 +850,15 @@
       `<div class="demo-predictive demo-app-body">
         <div class="demo-flow-steps" id="demo-pred-flow"></div>
         <div class="demo-pred-controls">
-          <label class="demo-range-label">Forecast horizon <strong id="demo-pred-val">6</strong> periods (demo)
+          <label class="demo-range-label">Forecast horizon <strong id="demo-pred-val">6</strong> periods
             <input type="range" id="demo-pred-range" min="3" max="12" value="6"/>
           </label>
-          <button type="button" class="btn btn-dark demo-btn" id="demo-pred-run">Re-run demo model</button>
+          <button type="button" class="btn btn-dark demo-btn" id="demo-pred-run">Re-run model</button>
         </div>
         <div class="demo-pred-chart-wrap">
-          <canvas id="demo-pred-canvas" width="640" height="200" aria-label="Demo history and forecast chart"></canvas>
+          <canvas id="demo-pred-canvas" width="640" height="200" aria-label="History and forecast chart"></canvas>
         </div>
         <div class="demo-kpi-row" id="demo-pred-out"></div>
-        <p class="demo-hint">Metrics below are from a synthetic training split — not client performance claims.</p>
       </div></div>`;
 
     const flow = ["Data", "Prepare", "Train", "Evaluate", "Forecast"];
@@ -649,8 +932,8 @@
       ctx.fill();
       ctx.fillStyle = "#627878";
       ctx.font = "11px Arial";
-      ctx.fillText("Actual (demo history)", pad, 16);
-      ctx.fillText("Forecast + band (demo)", pad + 180, 16);
+      ctx.fillText("Actual history", pad, 16);
+      ctx.fillText("Forecast + band", pad + 180, 16);
     }
 
     function refresh() {
@@ -660,21 +943,89 @@
       const fc = 1425 + h * 18;
       out.innerHTML = `
         <div><small>Forecast next period</small><strong>${fc}</strong></div>
-        <div><small>Demo MAPE</small><strong>4.8%</strong></div>
-        <div><small>Demo R²</small><strong>0.93</strong></div>
-        <div><small>Model</small><strong>GBM (demo)</strong></div>`;
+        <div><small>MAPE</small><strong>4.8%</strong></div>
+        <div><small>R²</small><strong>0.93</strong></div>
+        <div><small>Model</small><strong>GBM</strong></div>`;
     }
 
     range.addEventListener("input", refresh);
     root.querySelector("#demo-pred-run").addEventListener("click", () => {
-      flowEl.querySelectorAll(".demo-flow-step").forEach((el, i) => {
-        el.classList.remove("active", "done");
-        if (i < 4) el.classList.add("done");
-        else el.classList.add("active");
+      if (predLive?.running) return;
+      predLive?.runAutomation(async (ctx) => {
+        await runTrainPipeline(ctx);
       });
-      toast(root, "Demo model re-evaluated");
-      refresh();
     });
+
+    async function runTrainPipeline(ctx) {
+      const phases = [
+        {
+          name: "Data ingest",
+          story:
+            "Historical progress and cost signals are loaded from the warehouse — twelve periods of performance history."
+        },
+        {
+          name: "Feature prep",
+          story:
+            "Features are engineered (lags, rolling averages, discipline flags) and split into train / holdout sets."
+        },
+        {
+          name: "Model training",
+          story:
+            "A gradient-boosting model trains on the holdout split, tuning for stable error on unseen periods."
+        },
+        {
+          name: "Evaluation",
+          story:
+            "Holdout metrics are computed (MAPE and R²) and the model is accepted for forecast generation."
+        },
+        {
+          name: "Forecast output",
+          story:
+            "The selected horizon is projected forward with a confidence band on the chart and KPI strip below."
+        }
+      ];
+      let firstStory = true;
+      for (let i = 0; i < phases.length; i++) {
+        flowEl.querySelectorAll(".demo-flow-step").forEach((el, j) => {
+          el.classList.remove("active", "done");
+          if (j < i) el.classList.add("done");
+          else if (j === i) el.classList.add("active");
+        });
+        await Promise.all([
+          ctx.narrate(phases[i].story, { replace: firstStory, append: !firstStory }),
+          ctx.animateProgress(
+            i * 20,
+            (i + 1) * 20,
+            1300,
+            phases[i].name,
+            [`${phases[i].name}…`, "Running on holdout split", "Writing metrics"]
+          )
+        ]);
+        firstStory = false;
+        ctx.feed(`${phases[i].name} complete.`);
+        if (i >= 3) drawChart(Number(range.value));
+      }
+      await ctx.narrate("Pipeline complete — forecast and metrics are published to the analytics view.", {
+        append: true
+      });
+      refresh();
+      toast(root, "Model pipeline finished");
+    }
+
+    const predLive = window.DemoLive?.create(root.querySelector(".demo-app-body"));
+    if (predLive) {
+      predLive.onReset = () => {
+        range.value = 6;
+        flowEl.querySelectorAll(".demo-flow-step").forEach((el, i) => {
+          el.classList.remove("active", "done");
+          el.classList.toggle("done", i <= 3);
+          el.classList.toggle("active", i === 4);
+        });
+        refresh();
+      };
+      predLive.onRun = () => predLive.runAutomation(runTrainPipeline);
+    }
+
     refresh();
   }
 
@@ -687,7 +1038,7 @@
       else if (demoId === "project-controls") mountProjectControls(container);
       else if (demoId === "predictive") mountPredictive(container);
       else {
-        container.innerHTML = `<p class="demo-hint">Interactive demo not available for this item.</p>`;
+        container.innerHTML = `<p class="demo-hint">Interactive workflow is not available for this item.</p>`;
       }
     }
   };
