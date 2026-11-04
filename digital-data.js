@@ -43,40 +43,40 @@ window.DIGITAL_PORTFOLIO = {
   ],
   workflows: [
     {
-      id: "p6",
+      id: "controls",
       num: "01",
-      title: "P6 progress update automation",
-      image: "assets/digital-portfolio/workflow-p6-console.png",
-      alt: "Illustrative P6 update console — activity validation workflow",
-      task: "Repeated weekly activity updates from Excel, with inconsistent dates, IDs and percentages.",
+      title: "Project controls automation",
+      image: "assets/digital-portfolio/case-project-controls-automation.jpg",
+      alt: "Case study — site progress through validation, programme update, dashboards and management actions",
+      task: "Field progress arrives in registers and spreadsheets with inconsistent formats, dates and work-package mapping.",
       automation:
-        "Read inputs, check activity IDs, normalize progress and dates, prepare import data and flag errors.",
+        "Validate inputs, normalize progress, prepare programme updates, refresh KPIs (SPI/CPI, S-curves) and surface recovery actions.",
       involvement:
-        "Built and iterated the update workflow; tested P6 data handling, validation and error logging."
+        "Designed the end-to-end update path from site inputs to import-ready schedules and executive reporting."
     },
     {
       id: "procurement",
       num: "02",
-      title: "Procurement package & contract control",
-      image: "assets/digital-portfolio/workflow-procurement-control.png",
-      alt: "Illustrative procurement control board — package milestones",
-      task: "Multiple package approvals, purchasing stages, lead times and site dependencies to coordinate.",
+      title: "Procurement operations workflow",
+      image: "assets/digital-portfolio/case-procurement-granis.jpg",
+      alt: "Case study — cross-functional procurement web workflow from site request to audit log",
+      task: "Site requests, budget checks, RFQs, POs and deliveries spread across engineers, finance and procurement.",
       automation:
-        "Structure submittal, PO, payment and delivery gates; monitor package status and exceptions.",
+        "Ten-stage workflow with role-based access, approvals, attachments, live package status and audit trail.",
       involvement:
-        "Developed procurement programmes and tracking logic linking supplier commitments to construction readiness."
+        "Product design and workflow logic connecting site, finance and procurement in one secure environment."
     },
     {
-      id: "reporting",
+      id: "document-control",
       num: "03",
-      title: "Performance reporting & actions",
-      image: "assets/digital-portfolio/workflow-performance-dashboard.png",
-      alt: "Illustrative progress and recovery dashboard",
-      task: "Turn scattered site, cost and P6 progress information into clear management priorities.",
+      title: "Document control & email routing",
+      image: "assets/digital-portfolio/case-document-control.jpg",
+      alt: "Case study — correspondence intake, classification, engineer routing, filing and log register",
+      task: "Incoming project email and attachments need consistent classification, routing and searchable filing.",
       automation:
-        "Standardize updates, compare plan vs actual, surface milestone drift and build dashboards.",
+        "Review attachments, apply routing rules, assign concerned engineers, file to structure and maintain turnaround logs.",
       involvement:
-        "Prepared reporting frameworks, reviewed outputs and coordinated recovery priorities with teams."
+        "Built workflow automation for intake, traceable filing and action tracking (illustrative portfolio metrics)."
     }
   ],
   processSteps: [
@@ -103,25 +103,25 @@ window.DIGITAL_PORTFOLIO = {
     {
       num: "01",
       title: "Procurement management application",
-      subtitle: "Cross-functional business workflow",
-      image: "assets/digital-portfolio/app-procurement-cross-functional.png",
-      alt: "Illustrative procurement application — site, finance and procurement connected",
+      subtitle: "Cross-functional business workflow · web application",
+      image: "assets/digital-portfolio/case-procurement-granis.jpg",
+      alt: "Procurement operations case study — site, finance and procurement dashboard",
       points: [
-        "Site engineers, finance/accounting and the procurement lead work through one coordinated workflow.",
-        "Security-focused process flow connecting stakeholders and procurement handoffs.",
-        "Brings participating functions into one connected digital environment."
+        "Site engineers, accountants and procurement officers share one workflow from request to closeout.",
+        "Role-based access, multi-stage approvals, attachment control and live package status.",
+        "Audit trail and secure handling for end-to-end procurement visibility."
       ]
     },
     {
       num: "02",
       title: "AI-powered document control application",
-      subtitle: "AI vision · correspondence routing · records",
-      image: "assets/digital-portfolio/app-ai-document-control.png",
-      alt: "Illustrative AI document control workflow",
+      subtitle: "Correspondence routing · filing · log register",
+      image: "assets/digital-portfolio/case-document-control.jpg",
+      alt: "Document control case study — email routing and turnaround tracking",
       points: [
-        "AI vision interprets incoming email content and identifies responsible engineers.",
-        "Routes correspondence, files the record and creates a searchable log.",
-        "Reduces manual handling and supports consistent routing and traceability."
+        "Centralizes incoming email, attachment review and document classification.",
+        "Routing rules assign the concerned engineer; structured filing and log register.",
+        "Portfolio illustration: faster routing, traceable records and turnaround visibility."
       ]
     },
     {
@@ -138,10 +138,10 @@ window.DIGITAL_PORTFOLIO = {
     }
   ],
   predictive: {
-    title: "Predictive AI & historical-data modelling",
-    image: "assets/digital-portfolio/workflow-predictive-ai.png",
-    alt: "Illustrative model lifecycle — data, training, evaluation, iteration",
-    text: "Trained and experimented with AI models on historical datasets to identify past patterns and explore predictions of future outcomes. Applied a data-driven approach to model development and evaluation."
+    title: "Predictive modelling with historical data",
+    image: "assets/digital-portfolio/case-predictive-modelling.jpg",
+    alt: "Case study — historical data through preparation, training, forecast output and decision support",
+    text: "Consolidate historical records, prepare features, train and validate models (e.g. gradient boosting), and produce forecast outputs with confidence bands for trend, scenario and performance outlook — illustrative analytics product for portfolio use."
   },
   engineeringHighlights: [
     { name: "Four Palaces Programme", location: "Doha, Qatar", note: "Owner-side controls across four parallel royal developments." },

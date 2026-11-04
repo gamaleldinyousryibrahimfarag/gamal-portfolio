@@ -56,7 +56,10 @@
     if (!root) return;
     root.replaceChildren(
       ...data.workflows.map((w) => {
-        const card = el("article", "digital-workflow-card");
+        const card = el(
+          "article",
+          "digital-workflow-card" + (w.image.includes("case-") ? " digital-card--case" : "")
+        );
         card.innerHTML = `
           <div class="digital-workflow-visual">
             <img src="${safe(w.image)}" alt="${safe(w.alt)}" loading="lazy" decoding="async" width="640" height="360"/>
@@ -80,7 +83,10 @@
     if (!root) return;
     root.replaceChildren(
       ...data.applications.map((a) => {
-        const card = el("article", "digital-app-card");
+        const card = el(
+          "article",
+          "digital-app-card" + (a.image.includes("case-") ? " digital-card--case" : "")
+        );
         card.innerHTML = `
           <div class="digital-app-visual">
             <img src="${safe(a.image)}" alt="${safe(a.alt)}" loading="lazy" decoding="async" width="720" height="400"/>
@@ -129,6 +135,7 @@
     const block = document.getElementById("digital-predictive");
     if (!block || !data.predictive) return;
     const p = data.predictive;
+    block.className = "digital-predictive-block digital-card--case";
     block.innerHTML = `
       <div class="digital-predictive-copy">
         <h3>${safe(p.title)}</h3>
