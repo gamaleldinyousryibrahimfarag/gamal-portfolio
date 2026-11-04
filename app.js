@@ -1,5 +1,9 @@
 (function(){
   'use strict';
+  if (new URLSearchParams(window.location.search).get('view') === 'digital') {
+    window.location.replace('digital.html');
+    return;
+  }
   const enrichment = window.PROJECT_ENRICHMENT || {};
   const signatureIds = window.SIGNATURE_PROJECT_IDS || [];
   function mergeProject(p) {
