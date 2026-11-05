@@ -102,8 +102,35 @@ window.DIGITAL_PORTFOLIO = {
       demoId: "project-controls"
     },
     {
-      id: "automotive",
+      id: "fieldnote-v3",
       num: "04",
+      tier: "primary",
+      title: "Fieldnote V3 · Interactive PM monitoring",
+      subtitle: "Executive cockpit · gantt · milestones · schedule health",
+      image: "assets/digital-portfolio/workflow-performance-dashboard.png",
+      alt: "Fieldnote interactive programme monitoring dashboard",
+      deliveryStatus: "Interactive dashboard · sample programme dataset",
+      problem:
+        "Programme reviews relied on static exports and disconnected views—KPIs, phase progress, gantt logic, and milestone slips were hard to explore in one sitting during steering meetings.",
+      myRole:
+        "Designed and built the Fieldnote V3 monitoring experience: PM cockpit metrics, interactive gantt and activity views, milestone baseline vs forecast comparison, filters, and presentation mode for reviews.",
+      workflow:
+        "Import / connect programme data → normalize activities & milestones → monitor KPIs and phase progress → drill into gantt & watchlist → compare baseline vs forecast → export or present.",
+      features: [
+        "PM cockpit with progress, SPI-style health, and overdue activity signals",
+        "Interactive gantt with baseline bars and today marker",
+        "Milestone comparison (baseline vs current forecast) with date deltas",
+        "Activity register, logic checks, and presentation mode for meetings"
+      ],
+      testing:
+        "Navigation, filter, and drill-down paths tested across dashboard, gantt, milestone, and upload flows; presentation mode verified for review layouts.",
+      securityNote:
+        "Portfolio embed uses a sample programme only—no confidential client schedules or commercial data published.",
+      demoId: "fieldnote-v3"
+    },
+    {
+      id: "automotive",
+      num: "05",
       tier: "beyond",
       title: "Automotive services application",
       subtitle: "Service discovery · pricing · location",
@@ -120,7 +147,7 @@ window.DIGITAL_PORTFOLIO = {
     },
     {
       id: "predictive",
-      num: "05",
+      num: "06",
       tier: "beyond",
       title: "Predictive modelling with historical data",
       subtitle: "Patterns · forecasts · decision support",
@@ -154,6 +181,7 @@ window.DIGITAL_PORTFOLIO = {
     "Primavera P6",
     "Power BI",
     "Procurement operations",
-    "Predictive modelling (demo)"
+    "Interactive PM dashboards",
+    "Predictive modelling"
   ]
 };

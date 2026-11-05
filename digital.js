@@ -127,6 +127,8 @@
       ? `<img src="${safe(activeCase.image)}" alt="${safe(activeCase.alt)}"/>`
       : "";
 
+    dialog.classList.toggle("digital-case-dialog--wide", activeCase.demoId === "fieldnote-v3");
+
     setCaseTab(tab || "overview");
     dialog.showModal();
   }

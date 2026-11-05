@@ -1029,6 +1029,18 @@
     refresh();
   }
 
+  function mountFieldnoteEmbed(root) {
+    const src = "assets/demos/fieldnote-v3-interactive-pm.html";
+    root.innerHTML = `
+      <div class="demo-embed">
+        <div class="demo-embed-toolbar">
+          <p class="demo-embed-lead"><strong>Fieldnote V3</strong> — explore the full monitoring cockpit below (sidebar navigation, gantt, milestones, presentation mode).</p>
+          <a class="btn btn-outline demo-btn" href="${src}" target="_blank" rel="noopener noreferrer">Open full screen ↗</a>
+        </div>
+        <iframe class="demo-embed-frame" src="${src}" title="Fieldnote V3 Interactive PM Monitoring" loading="lazy"></iframe>
+      </div>`;
+  }
+
   window.DigitalDemos = {
     mount(demoId, container) {
       if (!container) return;
@@ -1037,6 +1049,7 @@
       else if (demoId === "document-control") mountDocumentControl(container);
       else if (demoId === "project-controls") mountProjectControls(container);
       else if (demoId === "predictive") mountPredictive(container);
+      else if (demoId === "fieldnote-v3") mountFieldnoteEmbed(container);
       else {
         container.innerHTML = `<p class="demo-hint">Interactive workflow is not available for this item.</p>`;
       }
